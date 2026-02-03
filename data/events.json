@@ -1,0 +1,188 @@
+[
+  {
+    "name": "KubeCon + CloudNativeCon Europe 2026",
+    "city": "Paris",
+    "country": "France",
+    "start_date": "2026-04-14",
+    "website": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/",
+    "event_type": "conference",
+    "end_date": "2026-04-17",
+    "topics": [
+      "kubernetes",
+      "cloud native",
+      "devops"
+    ],
+    "cfp_deadline": "2026-02-15",
+    "cfp_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/program/cfp/",
+    "description": "The Cloud Native Computing Foundation's flagship conference bringing together adopters and technologists from leading open source and cloud native communities.",
+    "relevance_score": 0.95,
+    "last_updated": "2026-02-03T10:00:00",
+    "id": "kubecon2026eu"
+  },
+  {
+    "name": "DevOpsDays Paris 2026",
+    "city": "Paris",
+    "country": "France",
+    "start_date": "2026-05-20",
+    "website": "https://devopsdays.org/events/2026-paris/",
+    "event_type": "conference",
+    "end_date": "2026-05-21",
+    "topics": [
+      "devops",
+      "ci/cd",
+      "platform engineering"
+    ],
+    "cfp_deadline": "2026-03-01",
+    "cfp_url": "https://www.papercall.io/devopsdays-paris-2026",
+    "description": "DevOpsDays is a worldwide series of technical conferences covering topics of software development, IT infrastructure operations, and the intersection between them.",
+    "relevance_score": 0.9,
+    "last_updated": "2026-02-03T10:00:00",
+    "id": "devopsdays-paris"
+  },
+  {
+    "name": "Tekton Community Summit",
+    "city": "Bangalore",
+    "country": "India",
+    "start_date": "2026-06-10",
+    "website": "https://tekton.dev/community/",
+    "event_type": "meetup",
+    "end_date": "2026-06-10",
+    "topics": [
+      "tekton",
+      "ci/cd",
+      "kubernetes",
+      "gitops"
+    ],
+    "cfp_deadline": "2026-04-15",
+    "cfp_url": "https://github.com/tektoncd/community/issues",
+    "description": "Community gathering for Tekton users and contributors to share experiences and best practices.",
+    "relevance_score": 0.95,
+    "last_updated": "2026-02-03T10:00:00",
+    "id": "tekton-summit-blr"
+  },
+  {
+    "name": "All Day DevOps 2026",
+    "city": "Tel Aviv",
+    "country": "Israel",
+    "start_date": "2026-10-15",
+    "website": "https://www.alldaydevops.com/",
+    "event_type": "conference",
+    "end_date": "2026-10-15",
+    "topics": [
+      "devops",
+      "ci/cd",
+      "security",
+      "cloud native"
+    ],
+    "cfp_deadline": "2026-06-01",
+    "cfp_url": "https://www.alldaydevops.com/",
+    "description": "A 24-hour virtual conference covering DevOps, DevSecOps, and related topics.",
+    "relevance_score": 0.85,
+    "last_updated": "2026-02-03T10:00:00",
+    "id": "all-day-devops"
+  },
+  {
+    "name": "Red Hat Summit Connect",
+    "city": "Raleigh",
+    "country": "USA",
+    "start_date": "2026-09-22",
+    "website": "https://www.redhat.com/en/summit",
+    "event_type": "conference",
+    "end_date": "2026-09-23",
+    "topics": [
+      "kubernetes",
+      "containers",
+      "platform engineering",
+      "devops"
+    ],
+    "cfp_deadline": null,
+    "cfp_url": null,
+    "description": "Red Hat's annual technology conference covering enterprise open source solutions.",
+    "relevance_score": 0.8,
+    "last_updated": "2026-02-03T10:00:00",
+    "id": "redhat-summit-raleigh"
+  },
+  {
+    "name": "DevConf.CZ 2026",
+    "city": "Brno",
+    "country": "Czech Republic",
+    "start_date": "2026-06-12",
+    "website": "https://devconf.cz/cz/",
+    "event_type": "conference",
+    "end_date": "2026-06-14",
+    "topics": [
+      "devops",
+      "containers",
+      "kubernetes",
+      "cloud native"
+    ],
+    "cfp_deadline": "2026-02-10",
+    "cfp_url": "https://devconf.cz/cz/cfp",
+    "description": "DevConf.CZ is the annual, free, Red Hat sponsored community conference for developers, admins, and users of Linux and JBoss applications.",
+    "relevance_score": 0.88,
+    "last_updated": "2026-02-03T10:00:00",
+    "id": "devconf-brno"
+  },
+  {
+    "name": "Platform Engineering Meetup Pune",
+    "city": "Pune",
+    "country": "India",
+    "start_date": "2026-03-15",
+    "website": "https://www.meetup.com/platform-engineering-pune/",
+    "event_type": "meetup",
+    "end_date": null,
+    "topics": [
+      "platform engineering",
+      "kubernetes",
+      "devops"
+    ],
+    "cfp_deadline": "2026-02-20",
+    "cfp_url": "https://www.meetup.com/platform-engineering-pune/",
+    "description": "Monthly meetup for platform engineering practitioners in Pune.",
+    "relevance_score": 0.75,
+    "last_updated": "2026-02-03T10:00:00",
+    "id": "platform-eng-pune"
+  },
+  {
+    "name": "DevOps Israel Summit 2026",
+    "city": "Tel Aviv",
+    "country": "Israel",
+    "start_date": "2026-10-15",
+    "website": "https://example.com/devops-israel-2026",
+    "event_type": "conference",
+    "end_date": "2026-10-16",
+    "topics": [
+      "DevOps",
+      "CI/CD",
+      "Platform Engineering",
+      "Kubernetes",
+      "Cloud Native"
+    ],
+    "cfp_deadline": "2026-07-15",
+    "cfp_url": "https://example.com/devops-israel-2026/cfp",
+    "description": "A premier conference focusing on the latest trends and best practices in DevOps, CI/CD, and Platform Engineering in Israel.",
+    "relevance_score": 0.7,
+    "last_updated": "2026-02-03T16:19:39.466449",
+    "id": "b1808d1923d0"
+  },
+  {
+    "name": "Tel Aviv Kubernetes Meetup - Advanced CI/CD Strategies",
+    "city": "Tel Aviv",
+    "country": "Israel",
+    "start_date": "2027-03-22",
+    "website": "https://www.meetup.com/tel-aviv-kubernetes-meetup/",
+    "event_type": "meetup",
+    "end_date": null,
+    "topics": [
+      "Kubernetes",
+      "CI/CD",
+      "DevOps"
+    ],
+    "cfp_deadline": null,
+    "cfp_url": null,
+    "description": "Regular meetup for the Tel Aviv Kubernetes community, with a special session on advanced CI/CD strategies for cloud-native applications.",
+    "relevance_score": 0.7,
+    "last_updated": "2026-02-03T16:19:39.466481",
+    "id": "a36a51d3294d"
+  }
+]

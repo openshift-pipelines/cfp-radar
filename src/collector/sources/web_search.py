@@ -14,7 +14,10 @@ from ..models import Event
 async def search_events() -> list[Event]:
     """Use Gemini to search for and extract event information."""
     if not GEMINI_API_KEY:
+        print("Warning: GEMINI_API_KEY not set, skipping AI search")
         return []
+
+    print(f"Starting Gemini search with API key: {GEMINI_API_KEY[:3]}...")
 
     client = genai.Client(api_key=GEMINI_API_KEY)
     events = []
@@ -59,16 +62,19 @@ Only include events that:
 Return ONLY the JSON, no other text."""
 
         try:
+            print(f"Querying Gemini for {city}, {country}...")
             response = client.models.generate_content(
                 model="gemini-2.5-flash-lite",
                 contents=prompt,
             )
             content = response.text
+            print(f"Gemini response for {city}: {len(content)} chars")
             parsed_events = _parse_response(content, city, country)
+            print(f"Parsed {len(parsed_events)} events for {city}")
             events.extend(parsed_events)
 
         except Exception as e:
-            print(f"Error searching events for {city}: {e}")
+            print(f"Error searching events for {city}: {type(e).__name__}: {e}")
             continue
 
     return events
