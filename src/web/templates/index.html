@@ -6,9 +6,88 @@
     <title>Tech Events & CFP Tracker</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Tech Grid Pattern Background */
+        body {
+            background: linear-gradient(135deg, #1e3a8a 0%, #4c1d95 50%, #6b21a8 100%);
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        /* Base grid pattern overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(0, 217, 255, 0.1) 50px,
+                    rgba(0, 217, 255, 0.1) 51px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(0, 217, 255, 0.1) 50px,
+                    rgba(0, 217, 255, 0.1) 51px
+                );
+            pointer-events: none;
+        }
+
+        /* Animated accent grid lines (every 5th line glows) */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 250px,
+                    rgba(59, 130, 246, 0.2) 250px,
+                    rgba(59, 130, 246, 0.2) 252px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 250px,
+                    rgba(59, 130, 246, 0.2) 250px,
+                    rgba(59, 130, 246, 0.2) 252px
+                );
+            animation: gridPulse 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        /* Grid pulse animation */
+        @keyframes gridPulse {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.3; }
+        }
+
         .cfp-urgent { background-color: #fef2f2; border-left: 4px solid #ef4444; }
         .cfp-soon { background-color: #fffbeb; border-left: 4px solid #f59e0b; }
         .cfp-open { background-color: #f0fdf4; border-left: 4px solid #22c55e; }
+
+        /* Main container with glassmorphism effect */
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
 
         /* Country Filter Styles */
         .country-filter-container {
@@ -16,7 +95,7 @@
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 24px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .country-filter-pills {
@@ -114,10 +193,10 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="min-h-screen">
     <div class="container mx-auto px-4 py-8">
         <header class="mb-8">
-            <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg overflow-hidden shadow-lg mb-4 max-w-2xl mx-auto">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg overflow-hidden shadow-lg mb-4 max-w-4xl mx-auto">
                 <img src="logo-optimized.png" alt="Tech Events & CFP Tracker" class="w-full h-auto">
             </div>
         </header>
