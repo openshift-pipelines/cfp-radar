@@ -74,28 +74,47 @@
             50% { opacity: 0.3; }
         }
 
-        .cfp-urgent { background-color: #fef2f2; border-left: 4px solid #ef4444; }
-        .cfp-soon { background-color: #fffbeb; border-left: 4px solid #f59e0b; }
-        .cfp-open { background-color: #f0fdf4; border-left: 4px solid #22c55e; }
+        .cfp-urgent {
+            background-color: rgba(30, 41, 59, 0.7) !important;
+            border-left: 4px solid #ef4444;
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+        }
+        .cfp-soon {
+            background-color: rgba(30, 41, 59, 0.7) !important;
+            border-left: 4px solid #f59e0b;
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+        }
+        .cfp-open {
+            background-color: rgba(30, 41, 59, 0.7) !important;
+            border-left: 4px solid #22c55e;
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+        }
 
-        /* Main container with glassmorphism effect */
+        /* Main container with dark glassmorphism effect */
         .container {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(15, 23, 42, 0.9);
             border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(10px);
             padding: 2rem;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            color: #f1f5f9;
+        }
+
+        /* Legend text color */
+        .container .text-sm {
+            color: #e2e8f0;
         }
 
         /* Country Filter Styles */
         .country-filter-container {
-            background: white;
+            background: rgba(30, 41, 59, 0.8);
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 24px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            border: 1px solid rgba(100, 116, 139, 0.3);
         }
 
         .country-filter-pills {
@@ -111,11 +130,12 @@
             gap: 8px;
             padding: 10px 20px;
             border-radius: 50px;
-            border: 2px solid #e5e7eb;
-            background: #f9fafb;
+            border: 2px solid rgba(71, 85, 105, 0.5);
+            background: rgba(51, 65, 85, 0.6);
             cursor: pointer;
             transition: all 0.3s ease;
             user-select: none;
+            color: #e2e8f0;
         }
 
         .country-pill:hover {
@@ -165,6 +185,80 @@
 
         .event-card {
             transition: opacity 0.3s ease, transform 0.3s ease;
+            background: rgba(30, 41, 59, 0.7) !important;
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Event card text colors */
+        .event-card h3,
+        .event-card h3 a {
+            color: #f1f5f9 !important;
+        }
+
+        .event-card h3 a:hover {
+            color: #60a5fa !important;
+        }
+
+        .event-card p,
+        .event-card .text-gray-600 {
+            color: #cbd5e1 !important;
+        }
+
+        .event-card .text-gray-500,
+        .event-card .text-sm {
+            color: #94a3b8 !important;
+        }
+
+        .event-card .text-gray-800 {
+            color: #f1f5f9 !important;
+        }
+
+        /* Topic tags styling for dark theme */
+        .event-card .bg-blue-100 {
+            background: rgba(59, 130, 246, 0.25) !important;
+            color: #93c5fd !important;
+            border: 1px solid rgba(59, 130, 246, 0.4);
+        }
+
+        .event-card .bg-gray-100 {
+            background: rgba(71, 85, 105, 0.4) !important;
+            color: #cbd5e1 !important;
+            border: 1px solid rgba(100, 116, 139, 0.4);
+        }
+
+        /* CFP deadline colors stay vibrant */
+        .event-card .text-red-600 {
+            color: #fca5a5 !important;
+            font-weight: 600;
+        }
+
+        .event-card .text-yellow-600 {
+            color: #fcd34d !important;
+            font-weight: 600;
+        }
+
+        .event-card .text-green-600 {
+            color: #86efac !important;
+            font-weight: 600;
+        }
+
+        /* Submit CFP button - sleek tech style */
+        .event-card .bg-green-600 {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%) !important;
+            border: 1px solid rgba(139, 92, 246, 0.5) !important;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3) !important;
+            font-weight: 600 !important;
+            transition: all 0.3s ease !important;
+            color: #ffffff !important;
+        }
+
+        .event-card .bg-green-600:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%) !important;
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5) !important;
+            transform: translateY(-2px) !important;
+            border-color: rgba(139, 92, 246, 0.8) !important;
+            color: #ffffff !important;
         }
 
         .filter-fade-in {
@@ -180,6 +274,19 @@
                 opacity: 1;
                 transform: scale(1);
             }
+        }
+
+        /* Empty state styling for dark theme */
+        #event-list .bg-white {
+            background: rgba(30, 41, 59, 0.7) !important;
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            color: #94a3b8 !important;
+        }
+
+        /* Footer styling for dark theme */
+        footer {
+            border-color: rgba(71, 85, 105, 0.5) !important;
+            color: #94a3b8 !important;
         }
 
         @media (max-width: 640px) {
