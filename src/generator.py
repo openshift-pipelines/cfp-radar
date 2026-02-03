@@ -16,6 +16,7 @@ def generate_html(events: list, output_file: str) -> None:
         events: List of Event objects
         output_file: Path to write HTML file to
     """
+
     # Sort by CFP deadline (upcoming first), then by start date
     def sort_key(e):
         cfp_priority = e.cfp_deadline if e.cfp_deadline else date(2099, 12, 31)
@@ -63,4 +64,5 @@ def generate_html(events: list, output_file: str) -> None:
     logo_src = os.path.join("data", "logo-optimized.png")
     if os.path.exists(logo_src):
         logo_dst = os.path.join(output_dir, "logo-optimized.png")
-        shutil.copy2(logo_src, logo_dst)
+        if not os.path.exists(logo_dst):
+            shutil.copy2(logo_src, logo_dst)
