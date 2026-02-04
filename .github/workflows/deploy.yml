@@ -27,7 +27,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           mkdir -p data
-          uv run cfp-radar collect data/index.html
+          uv run cfp-radar collect --no-ai data/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
