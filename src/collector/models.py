@@ -22,8 +22,11 @@ class Event:
     topics: list[str] = field(default_factory=list)
     cfp_deadline: date | None = None
     cfp_url: str | None = None
+    cfp_status: str = "check"  # open | closed | check
     description: str = ""
-    relevance_score: float = 0.5
+    relevance_score: float = 0.5  # 1-5 scale (5 = highly relevant for Tekton/CI-CD)
+    venue: str | None = None
+    expected_attendees: int | None = None
     last_updated: datetime = field(default_factory=datetime.now)
     id: str = ""
 
