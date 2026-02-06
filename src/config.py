@@ -7,38 +7,35 @@ import yaml
 DEFAULT_CONFIG_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "config.yaml")
 _config_file = None
 
-_DEFAULT_CITIES = [
-    {"city": "Paris", "country": "France"},
-    {"city": "Bangalore", "country": "India"},
-    {"city": "Pune", "country": "India"},
-    {"city": "Tel Aviv", "country": "Israel"},
-    {"city": "Raleigh", "country": "USA"},
-    {"city": "Brno", "country": "Czech Republic"},
-]
-
-
-def load_cities(config_file=None):
-    """Load cities from YAML config file."""
-    path = config_file or _config_file or DEFAULT_CONFIG_FILE
-    if os.path.exists(path):
-        with open(path) as f:
-            data = yaml.safe_load(f)
-            return data.get("cities", _DEFAULT_CITIES)
-    return _DEFAULT_CITIES
-
 
 def set_config_file(path):
-    """Set the config file path for subsequent load_cities() calls."""
+    """Set the config file path for subsequent load calls."""
     global _config_file
     _config_file = path
 
 
-def get_target_cities():
-    """Get target cities, reloading from config if needed."""
-    return load_cities()
+def load_countries(config_file=None):
+    """Load countries from YAML config file."""
+    path = config_file or _config_file or DEFAULT_CONFIG_FILE
+    if os.path.exists(path):
+        with open(path) as f:
+            data = yaml.safe_load(f)
+            return data.get("countries", [])
+    return []
 
 
-TARGET_CITIES = load_cities()
+def load_global_conferences(config_file=None):
+    """Load global conferences from YAML config file."""
+    path = config_file or _config_file or DEFAULT_CONFIG_FILE
+    if os.path.exists(path):
+        with open(path) as f:
+            data = yaml.safe_load(f)
+            return data.get("global_conferences", [])
+    return []
+
+
+TARGET_COUNTRIES = load_countries()
+GLOBAL_CONFERENCES = load_global_conferences()
 
 TOPICS = [
     "ci/cd",

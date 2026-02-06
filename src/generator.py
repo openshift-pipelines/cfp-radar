@@ -6,7 +6,7 @@ from datetime import date
 
 from jinja2 import Environment, FileSystemLoader
 
-from .config import TARGET_CITIES, TOPICS
+from .config import TOPICS
 
 
 def generate_html(events: list, output_file: str) -> None:
@@ -38,13 +38,9 @@ def generate_html(events: list, output_file: str) -> None:
     env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
     template = env.get_template("index.html")
 
-    cities = [c["city"] for c in TARGET_CITIES]
-
     html = template.render(
         events=events,
-        cities=cities,
         topics=TOPICS[:8],
-        selected_city=None,
         selected_topic=None,
         has_cfp=None,
         today=date.today(),

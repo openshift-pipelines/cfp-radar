@@ -1,13 +1,62 @@
-cities:
-  - city: Paris
-    country: France
-  - city: Bangalore
-    country: India
-  - city: Pune
-    country: India
-  - city: Tel Aviv
-    country: Israel
-  - city: Raleigh
-    country: USA
-  - city: Brno
-    country: Czech Republic
+countries:
+  # North America
+  - USA
+  - Canada
+
+  # Europe (KubeCon EU + major tech hubs)
+  - Netherlands      # KubeCon EU (Amsterdam)
+  - Spain            # KubeCon EU (Valencia, Barcelona)
+  - France           # KubeCon EU (Paris)
+  - Germany          # KubeCon EU (Berlin)
+  - UK               # KubeCon EU (London)
+  - Denmark          # KubeCon EU (Copenhagen)
+  - Belgium          # Devoxx
+  - Ireland          # Tech hub
+  - Sweden           # Tech hub
+  - Switzerland      # Tech hub
+  - Poland           # Devoxx Poland
+  - Austria          # Tech conferences
+  - Italy            # Tech conferences
+  - Portugal         # Web Summit
+  - Czech Republic   # DevConf
+  - Finland          # Tech hub
+  - Norway           # Tech hub
+  - Greece           # Devoxx Greece
+
+  # Asia Pacific
+  - India            # KubeCon India
+  - China            # KubeCon China
+  - Japan            # KubeCon Japan
+  - Singapore        # Major tech hub
+  - Australia        # KubeCon AU
+  - South Korea      # Major tech hub
+  - Taiwan           # Tech hub
+
+  # Middle East
+  - Israel           # Tech hub
+  - UAE              # Dubai tech conferences
+
+  # Latin America
+  - Brazil           # Largest LATAM tech scene
+  - Argentina        # Growing tech scene
+  - Mexico           # Tech hub
+
+global_conferences:
+  # CNCF / Kubernetes ecosystem
+  - kubecon
+  - cloudnativecon
+  - gitopscon
+  - ciliumcon
+  - backstagecon
+  - argocon
+
+  # CD Foundation (Tekton's home)
+  - cdcon
+
+  # DevOps / Platform
+  - devopsdays
+  - platformcon
+  - devoxx
+
+  # Linux Foundation
+  - open source summit

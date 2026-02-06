@@ -3,7 +3,7 @@
 import httpx
 from datetime import date, datetime
 from ..models import Event
-from ...config import TARGET_CITIES, TOPICS
+from ...config import TARGET_COUNTRIES, GLOBAL_CONFERENCES, TOPICS
 
 
 CONFS_TECH_BASE = "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences"
@@ -36,22 +36,22 @@ async def fetch_conferences(year: int | None = None) -> list[Event]:
 def _parse_conferences(data: list[dict], category: str) -> list[Event]:
     """Parse conference data from confs.tech format."""
     events = []
-    target_cities_lower = {c["city"].lower() for c in TARGET_CITIES}
-    target_countries = {c["country"].lower() for c in TARGET_CITIES}
+    target_countries_lower = {c.lower() for c in TARGET_COUNTRIES}
+    global_confs_lower = [gc.lower() for gc in GLOBAL_CONFERENCES]
 
     for conf in data:
         city = conf.get("city", "")
         country = conf.get("country", "")
+        name_lower = conf.get("name", "").lower()
 
-        # Check if event is in our target locations
-        city_match = city.lower() in target_cities_lower
-        country_match = country.lower() in target_countries
+        # Check if event is in our target countries or is a global conference
+        country_match = country.lower() in target_countries_lower
+        global_conf_match = any(gc in name_lower for gc in global_confs_lower)
 
-        if not (city_match or country_match):
+        if not (country_match or global_conf_match):
             continue
 
         # Check topic relevance
-        name_lower = conf.get("name", "").lower()
         topics_found = [t for t in TOPICS if t.lower() in name_lower]
 
         # Add category as topic

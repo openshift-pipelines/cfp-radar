@@ -4,7 +4,7 @@ import httpx
 from bs4 import BeautifulSoup
 from datetime import date, datetime
 from ..models import Event
-from ...config import TARGET_CITIES, TOPICS
+from ...config import TARGET_COUNTRIES, GLOBAL_CONFERENCES, TOPICS
 
 
 PAPERCALL_URL = "https://www.papercall.io/events"
@@ -43,8 +43,8 @@ def _parse_papercall_page(html: str) -> list[Event]:
     events = []
     soup = BeautifulSoup(html, "html.parser")
 
-    target_cities_lower = {c["city"].lower() for c in TARGET_CITIES}
-    target_countries = {c["country"].lower() for c in TARGET_CITIES}
+    target_countries_lower = {c.lower() for c in TARGET_COUNTRIES}
+    global_confs_lower = [gc.lower() for gc in GLOBAL_CONFERENCES]
 
     # Find event cards
     for card in soup.select(".event-card, .event-listing, article.event"):
@@ -58,14 +58,14 @@ def _parse_papercall_page(html: str) -> list[Event]:
             location_elem = card.select_one(".location, .event-location, .city")
             location = location_elem.get_text(strip=True) if location_elem else ""
 
-            # Check if in target location
+            # Check if in target location or is a global conference
             location_lower = location.lower()
-            in_target = any(city in location_lower for city in target_cities_lower)
-            in_target = in_target or any(
-                country in location_lower for country in target_countries
-            )
+            name_lower = name.lower()
 
-            if not in_target:
+            country_match = any(country in location_lower for country in target_countries_lower)
+            global_conf_match = any(gc in name_lower for gc in global_confs_lower)
+
+            if not (country_match or global_conf_match):
                 continue
 
             # Get dates
@@ -92,7 +92,6 @@ def _parse_papercall_page(html: str) -> list[Event]:
             city, country = _parse_location(location)
 
             # Check topic relevance
-            name_lower = name.lower()
             topics_found = [t for t in TOPICS if t.lower() in name_lower]
 
             event = Event(

@@ -8,7 +8,7 @@ import httpx
 from google import genai
 from google.genai import types
 
-from ...config import GEMINI_API_KEY, TARGET_CITIES, TOPICS
+from ...config import GEMINI_API_KEY, TARGET_COUNTRIES, TOPICS
 from ..models import Event
 
 
@@ -23,15 +23,12 @@ async def search_events() -> list[Event]:
     client = genai.Client(api_key=GEMINI_API_KEY)
     events = []
 
-    for location in TARGET_CITIES:
-        city = location["city"]
-        country = location["country"]
-
+    for country in TARGET_COUNTRIES:
         # Build search query for Gemini
         topics_str = ", ".join(TOPICS[:5])
         current_year = date.today().year
 
-        prompt = f"""Search for upcoming tech conferences and meetups in {city}, {country} for {current_year} and {current_year + 1}.
+        prompt = f"""Search for upcoming tech conferences and meetups in {country} for {current_year} and {current_year + 1}.
 
 Focus on events related to: {topics_str}
 
@@ -40,7 +37,7 @@ For each event you find, provide the following information in JSON format:
   "events": [
     {{
       "name": "Event Name",
-      "city": "{city}",
+      "city": "City Name",
       "country": "{country}",
       "start_date": "YYYY-MM-DD",
       "end_date": "YYYY-MM-DD or null",
@@ -55,7 +52,7 @@ For each event you find, provide the following information in JSON format:
 }}
 
 Only include events that:
-1. Are actually in {city}, {country}
+1. Are actually in {country}
 2. Are related to DevOps, CI/CD, Cloud Native, Kubernetes, or Platform Engineering
 3. Have dates in the future or within the last month
 4. You are reasonably confident about
@@ -63,7 +60,7 @@ Only include events that:
 Return ONLY the JSON, no other text."""
 
         try:
-            print(f"Querying Gemini for {city}, {country}...")
+            print(f"Querying Gemini for {country}...")
             response = client.models.generate_content(
                 model="gemini-3-flash-preview",
                 contents=prompt,
@@ -72,19 +69,19 @@ Return ONLY the JSON, no other text."""
                 ),
             )
             content = response.text
-            print(f"Gemini response for {city}: {len(content)} chars")
-            parsed_events = _parse_response(content, city, country)
-            print(f"Parsed {len(parsed_events)} events for {city}")
+            print(f"Gemini response for {country}: {len(content)} chars")
+            parsed_events = _parse_response(content, country)
+            print(f"Parsed {len(parsed_events)} events for {country}")
             events.extend(parsed_events)
 
         except Exception as e:
-            print(f"Error searching events for {city}: {type(e).__name__}: {e}")
+            print(f"Error searching events for {country}: {type(e).__name__}: {e}")
             continue
 
     return events
 
 
-def _parse_response(content: str, city: str, country: str) -> list[Event]:
+def _parse_response(content: str, country: str) -> list[Event]:
     """Parse Gemini's JSON response into Event objects."""
     events = []
 
@@ -121,7 +118,7 @@ def _parse_response(content: str, city: str, country: str) -> list[Event]:
 
                 event = Event(
                     name=item.get("name", ""),
-                    city=item.get("city", city),
+                    city=item.get("city", ""),
                     country=item.get("country", country),
                     start_date=start_date,
                     end_date=end_date,

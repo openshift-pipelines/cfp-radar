@@ -403,36 +403,32 @@
         </span>
       </div>
 
-      <!-- Country Filter -->
-      {% if countries %}
-      <div class="country-filter-container">
-        <div class="country-filter-pills">
-          <div
-            class="country-pill all-countries active"
-            onclick="toggleCountry('all')"
-          >
-            <span class="country-flag">🌍</span>
-            <span class="country-name">All Countries</span>
-            <span class="country-count">{{ events|length }}</span>
-          </div>
-          {% for country, count in countries %}
-          <div
-            class="country-pill"
-            onclick="toggleCountry('{{ country }}')"
-            data-country="{{ country }}"
-          >
-            <span class="country-flag">
-              {% if country == 'USA' %}🇺🇸 {% elif country == 'France' %}🇫🇷 {%
-              elif country == 'India' %}🇮🇳 {% elif country == 'Israel' %}🇮🇱 {%
-              elif country == 'Czech Republic' %}🇨🇿 {% endif %}
-            </span>
-            <span class="country-name">{{ country }}</span>
-            <span class="country-count">{{ count }}</span>
-          </div>
-          {% endfor %}
+        <!-- Country Filter -->
+        {% if countries %}
+        <div class="country-filter-container">
+            <div class="country-filter-pills">
+                <div class="country-pill all-countries active" onclick="toggleCountry('all')">
+                    <span class="country-flag">🌍</span>
+                    <span class="country-name">All Countries</span>
+                    <span class="country-count">{{ events|length }}</span>
+                </div>
+                {% for country, count in countries %}
+                <div class="country-pill" onclick="toggleCountry('{{ country }}')" data-country="{{ country }}">
+                    <span class="country-flag">
+                        {% if country == 'USA' %}🇺🇸
+                        {% elif country == 'France' %}🇫🇷
+                        {% elif country == 'India' %}🇮🇳
+                        {% elif country == 'Israel' %}🇮🇱
+                        {% elif country == 'Czech Republic' %}🇨🇿
+                        {% endif %}
+                    </span>
+                    <span class="country-name">{{ country }}</span>
+                    <span class="country-count">{{ count }}</span>
+                </div>
+                {% endfor %}
+            </div>
         </div>
-      </div>
-      {% endif %}
+        {% endif %}
 
       <!-- Event List -->
       <div id="event-list">{% include "partials/event_list.html" %}</div>
