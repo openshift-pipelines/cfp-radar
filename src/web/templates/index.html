@@ -415,11 +415,38 @@
                 {% for country, count in countries %}
                 <div class="country-pill" onclick="toggleCountry('{{ country }}')" data-country="{{ country }}">
                     <span class="country-flag">
-                        {% if country == 'USA' %}🇺🇸
+                        {% if country == 'USA' or country == 'U.S.A.' or country == 'U.S.A' %}🇺🇸
+                        {% elif country == 'Canada' %}🇨🇦
+                        {% elif country == 'Netherlands' %}🇳🇱
+                        {% elif country == 'Spain' %}🇪🇸
                         {% elif country == 'France' %}🇫🇷
-                        {% elif country == 'India' %}🇮🇳
-                        {% elif country == 'Israel' %}🇮🇱
+                        {% elif country == 'Germany' %}🇩🇪
+                        {% elif country == 'UK' %}🇬🇧
+                        {% elif country == 'Denmark' %}🇩🇰
+                        {% elif country == 'Belgium' %}🇧🇪
+                        {% elif country == 'Ireland' %}🇮🇪
+                        {% elif country == 'Sweden' %}🇸🇪
+                        {% elif country == 'Switzerland' %}🇨🇭
+                        {% elif country == 'Poland' %}🇵🇱
+                        {% elif country == 'Austria' %}🇦🇹
+                        {% elif country == 'Italy' %}🇮🇹
+                        {% elif country == 'Portugal' %}🇵🇹
                         {% elif country == 'Czech Republic' %}🇨🇿
+                        {% elif country == 'Finland' %}🇫🇮
+                        {% elif country == 'Norway' %}🇳🇴
+                        {% elif country == 'Greece' %}🇬🇷
+                        {% elif country == 'India' %}🇮🇳
+                        {% elif country == 'China' %}🇨🇳
+                        {% elif country == 'Japan' %}🇯🇵
+                        {% elif country == 'Singapore' %}🇸🇬
+                        {% elif country == 'Australia' %}🇦🇺
+                        {% elif country == 'South Korea' %}🇰🇷
+                        {% elif country == 'Taiwan' %}🇹🇼
+                        {% elif country == 'Israel' %}🇮🇱
+                        {% elif country == 'UAE' %}🇦🇪
+                        {% elif country == 'Brazil' %}🇧🇷
+                        {% elif country == 'Argentina' %}🇦🇷
+                        {% elif country == 'Mexico' %}🇲🇽
                         {% endif %}
                     </span>
                     <span class="country-name">{{ country }}</span>
