@@ -786,5 +786,239 @@
     "relevance_score": 0.7,
     "last_updated": "2026-02-03T17:37:56.488118",
     "id": "b7482aa1a980"
+  },
+  {
+    "name": "KubeCon + CloudNativeCon Europe",
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "start_date": "2026-03-23",
+    "website": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe-2026",
+    "event_type": "conference",
+    "end_date": "2026-03-26",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": null,
+    "cfp_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/program/cfp",
+    "description": "",
+    "relevance_score": 0.5499999999999999,
+    "last_updated": "2026-02-06T09:42:48.909504",
+    "id": "e3837a195c48"
+  },
+  {
+    "name": "DevOpsCon Amsterdam",
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "start_date": "2026-04-20",
+    "website": "https://devopscon.io/amsterdam",
+    "event_type": "conference",
+    "end_date": "2026-04-24",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": null,
+    "cfp_url": null,
+    "description": "",
+    "relevance_score": 0.6,
+    "last_updated": "2026-02-06T09:42:48.909557",
+    "id": "445ddee982ae"
+  },
+  {
+    "name": "Open Community Experience (OCX)",
+    "city": "Brussels",
+    "country": "Belgium",
+    "start_date": "2026-04-21",
+    "website": "https://www.ocxconf.org",
+    "event_type": "conference",
+    "end_date": "2026-04-23",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": "2025-11-13",
+    "cfp_url": "https://www.ocxconf.org/event/403bffe2-15d8-49ac-af52-e2781b7296b3/call-for-proposals",
+    "description": "",
+    "relevance_score": 0.6499999999999999,
+    "last_updated": "2026-02-06T09:42:48.909570",
+    "id": "db72c5675113"
+  },
+  {
+    "name": "KCD Toronto",
+    "city": "Toronto",
+    "country": "Canada",
+    "start_date": "2026-05-13",
+    "website": "https://kcdtoronto.ca",
+    "event_type": "conference",
+    "end_date": "2026-05-13",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": "2026-02-16",
+    "cfp_url": "https://sessionize.com/kcd-toronto-2026",
+    "description": "",
+    "relevance_score": 0.5499999999999999,
+    "last_updated": "2026-02-06T09:42:48.909581",
+    "id": "f80fa715b75b"
+  },
+  {
+    "name": "Test Coast",
+    "city": "Gothenburg",
+    "country": "Sweden",
+    "start_date": "2026-05-21",
+    "website": "https://www.testcoast.se",
+    "event_type": "conference",
+    "end_date": "2026-05-21",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": "2026-01-07",
+    "cfp_url": "https://www.testcoast.se/#cfp",
+    "description": "",
+    "relevance_score": 0.5499999999999999,
+    "last_updated": "2026-02-06T09:42:48.909588",
+    "id": "ee6d02c93eee"
+  },
+  {
+    "name": "UXDX EMEA",
+    "city": "Berlin",
+    "country": "Germany",
+    "start_date": "2026-05-27",
+    "website": "https://uxdx.com/berlin/2026",
+    "event_type": "conference",
+    "end_date": "2026-05-29",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": null,
+    "cfp_url": null,
+    "description": "",
+    "relevance_score": 0.44999999999999996,
+    "last_updated": "2026-02-06T09:42:48.909597",
+    "id": "389eff284230"
+  },
+  {
+    "name": "Rock and React > React Norway",
+    "city": "Oslo",
+    "country": "Norway",
+    "start_date": "2026-06-05",
+    "website": "https://reactnorway.com",
+    "event_type": "conference",
+    "end_date": "2026-06-05",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": "2026-01-15",
+    "cfp_url": "https://forms.gle/pzQpippVee82GLuQ9",
+    "description": "",
+    "relevance_score": 0.6499999999999999,
+    "last_updated": "2026-02-06T09:42:48.909605",
+    "id": "4abaecc82e38"
+  },
+  {
+    "name": "Berlin Buzzwords",
+    "city": "Berlin",
+    "country": "Germany",
+    "start_date": "2026-06-07",
+    "website": "https://2026.berlinbuzzwords.de",
+    "event_type": "conference",
+    "end_date": "2026-06-09",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": "2026-02-15",
+    "cfp_url": "https://2026.berlinbuzzwords.de/call-for-papers",
+    "description": "",
+    "relevance_score": 0.5499999999999999,
+    "last_updated": "2026-02-06T09:42:48.909612",
+    "id": "8050110c157a"
+  },
+  {
+    "name": "EuroSTAR Conference",
+    "city": "Oslo",
+    "country": "Norway",
+    "start_date": "2026-06-15",
+    "website": "https://conference.eurostarsoftwaretesting.com",
+    "event_type": "conference",
+    "end_date": "2026-06-18",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": "2025-10-13",
+    "cfp_url": "https://conference.eurostarsoftwaretesting.com/call-for-submissions",
+    "description": "",
+    "relevance_score": 0.5499999999999999,
+    "last_updated": "2026-02-06T09:42:48.909617",
+    "id": "053dff3d2dc0"
+  },
+  {
+    "name": "DevOpsCon Berlin",
+    "city": "Berlin",
+    "country": "Germany",
+    "start_date": "2026-06-15",
+    "website": "https://devopscon.io/berlin",
+    "event_type": "conference",
+    "end_date": "2026-06-19",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": null,
+    "cfp_url": null,
+    "description": "",
+    "relevance_score": 0.7,
+    "last_updated": "2026-02-06T09:42:48.909626",
+    "id": "1b4ef435a318"
+  },
+  {
+    "name": "DevOpsDays Graz",
+    "city": "Graz",
+    "country": "Austria",
+    "start_date": "2026-09-04",
+    "website": "https://www.devopsdays.at",
+    "event_type": "conference",
+    "end_date": "2026-09-05",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": "2026-04-30",
+    "cfp_url": "https://pretalx.com/devopsdays-graz-2026/cfp",
+    "description": "",
+    "relevance_score": 0.7,
+    "last_updated": "2026-02-06T09:42:48.909632",
+    "id": "64d5e83ed8c7"
+  },
+  {
+    "name": "Devopsdays Berlin",
+    "city": "Berlin",
+    "country": "Germany",
+    "start_date": "2026-09-29",
+    "website": "https://devopsdays.org/events/2026-berlin/welcome",
+    "event_type": "conference",
+    "end_date": "2026-09-30",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": null,
+    "cfp_url": null,
+    "description": "",
+    "relevance_score": 0.6,
+    "last_updated": "2026-02-06T09:42:48.909638",
+    "id": "69d8cffe0cf3"
+  },
+  {
+    "name": "KubeCon + CloudNativeCon North America",
+    "city": "Los Angeles, CA",
+    "country": "U.S.A.",
+    "start_date": "2026-10-26",
+    "website": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america-2026",
+    "event_type": "conference",
+    "end_date": "2026-10-29",
+    "topics": [
+      "devops"
+    ],
+    "cfp_deadline": null,
+    "cfp_url": null,
+    "description": "",
+    "relevance_score": 0.5499999999999999,
+    "last_updated": "2026-02-06T09:42:48.909644",
+    "id": "b0e005cf3f3b"
   }
 ]
