@@ -60,3 +60,21 @@ global_conferences:
 
   # Linux Foundation
   - open source summit
+  - linux plumbers
+  - embedded linux conference
+  - open networking
+  - linux security summit
+  - openssf
+  - supplychain security con
+
+topics:
+  - ci/cd
+  - continuous integration
+  - continuous delivery
+  - devops
+  - platform engineering
+  - cloud native
+  - kubernetes
+  - containers
+  - gitops
+  - tekton

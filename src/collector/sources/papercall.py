@@ -1,10 +1,17 @@
 """Collector for papercall.io - CFP aggregator."""
 
+from __future__ import annotations
+
+from datetime import date, datetime
+
 import httpx
 from bs4 import BeautifulSoup
-from datetime import date, datetime
+
+from ...config import GLOBAL_CONFERENCES, TARGET_COUNTRIES, TOPICS
+from ...logging_config import get_logger
 from ..models import Event
-from ...config import TARGET_COUNTRIES, GLOBAL_CONFERENCES, TOPICS
+
+logger = get_logger(__name__)
 
 
 PAPERCALL_URL = "https://www.papercall.io/events"
@@ -24,7 +31,8 @@ async def fetch_cfps() -> list[Event]:
                 )
                 if response.status_code == 200:
                     events.extend(_parse_papercall_page(response.text))
-            except Exception:
+            except httpx.HTTPError as e:
+                logger.warning("Error fetching papercall for topic %s: %s", topic, e)
                 continue
 
     # Deduplicate by name
@@ -72,9 +80,7 @@ def _parse_papercall_page(html: str) -> list[Event]:
             date_elem = card.select_one(".date, .event-date, time")
             cfp_date_elem = card.select_one(".cfp-date, .deadline")
 
-            start_date = _parse_date_text(
-                date_elem.get_text(strip=True) if date_elem else ""
-            )
+            start_date = _parse_date_text(date_elem.get_text(strip=True) if date_elem else "")
             if not start_date:
                 start_date = date.today()  # Default to today if no date found
 
@@ -84,7 +90,7 @@ def _parse_papercall_page(html: str) -> list[Event]:
 
             # Get link
             link_elem = card.select_one("a[href]")
-            website = link_elem["href"] if link_elem else ""
+            website = str(link_elem["href"]) if link_elem else ""
             if website and website.startswith("/"):
                 website = f"https://www.papercall.io{website}"
 
@@ -110,7 +116,8 @@ def _parse_papercall_page(html: str) -> list[Event]:
             )
             events.append(event)
 
-        except Exception:
+        except (AttributeError, KeyError, TypeError, ValueError) as e:
+            logger.debug("Error parsing event card: %s", e)
             continue
 
     return events
@@ -119,6 +126,7 @@ def _parse_papercall_page(html: str) -> list[Event]:
 def _parse_date_text(text: str) -> date | None:
     """Parse date from various text formats."""
     import re
+
     from dateutil import parser
 
     if not text:

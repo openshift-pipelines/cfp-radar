@@ -1,9 +1,16 @@
 """Slack notification system for CFP deadlines."""
 
-import httpx
+from __future__ import annotations
+
 from datetime import date
-from .collector.models import EventStore, Event
+
+import httpx
+
+from .collector.models import Event, EventStore
 from .config import EVENTS_FILE, SLACK_WEBHOOK_URL
+from .logging_config import get_logger
+
+logger = get_logger(__name__)
 
 
 async def check_upcoming_cfps(days: int = 14) -> list[Event]:
@@ -21,33 +28,39 @@ async def check_upcoming_cfps(days: int = 14) -> list[Event]:
         if 0 <= days_left <= days:
             upcoming.append(event)
 
-    # Sort by deadline
-    upcoming.sort(key=lambda e: e.cfp_deadline)
+    # Sort by deadline (cfp_deadline is guaranteed to exist at this point)
+    upcoming.sort(key=lambda e: e.cfp_deadline or date.max)
 
     if not upcoming:
-        print("No CFPs closing soon.")
+        logger.info("No CFPs closing soon.")
         return []
 
-    print(f"Found {len(upcoming)} CFPs closing within {days} days")
+    logger.info("Found %d CFPs closing within %d days", len(upcoming), days)
 
     if SLACK_WEBHOOK_URL:
         await send_slack_notifications(upcoming)
     else:
-        print("SLACK_WEBHOOK_URL not set, skipping Slack notifications")
-        print("\nUpcoming CFPs:")
+        logger.warning("SLACK_WEBHOOK_URL not set, skipping Slack notifications")
+        logger.info("Upcoming CFPs:")
         for event in upcoming:
-            days_left = (event.cfp_deadline - today).days
-            print(f"  - {event.name} ({event.city}): {days_left} days left")
+            if event.cfp_deadline:
+                days_left = (event.cfp_deadline - today).days
+                logger.info("  - %s (%s): %d days left", event.name, event.city, days_left)
 
     return upcoming
 
 
 async def send_slack_notifications(events: list[Event]) -> None:
-    """Send Slack notifications for upcoming CFP deadlines."""
+    """Send Slack notifications for upcoming CFP deadlines.
+
+    Events passed to this function are expected to have cfp_deadline set.
+    """
     today = date.today()
 
     async with httpx.AsyncClient(timeout=30.0) as client:
         for event in events:
+            if not event.cfp_deadline:
+                continue
             days_left = (event.cfp_deadline - today).days
 
             # Build message
@@ -57,7 +70,11 @@ async def send_slack_notifications(events: list[Event]) -> None:
             elif days_left <= 7:
                 urgency = ":warning: "
 
-            cfp_link = f"<{event.cfp_url}|Submit your talk>" if event.cfp_url else f"<{event.website}|Event website>"
+            cfp_link = (
+                f"<{event.cfp_url}|Submit your talk>"
+                if event.cfp_url
+                else f"<{event.website}|Event website>"
+            )
 
             message = {
                 "blocks": [
@@ -103,11 +120,11 @@ async def send_slack_notifications(events: list[Event]) -> None:
             try:
                 response = await client.post(SLACK_WEBHOOK_URL, json=message)
                 if response.status_code == 200:
-                    print(f"  Sent notification for {event.name}")
+                    logger.info("Sent notification for %s", event.name)
                 else:
-                    print(f"  Failed to notify for {event.name}: {response.status_code}")
-            except Exception as e:
-                print(f"  Error sending notification for {event.name}: {e}")
+                    logger.error("Failed to notify for %s: %d", event.name, response.status_code)
+            except httpx.HTTPError as e:
+                logger.error("Error sending notification for %s: %s", event.name, e)
 
 
 async def send_daily_digest(events: list[Event]) -> None:
@@ -119,7 +136,7 @@ async def send_daily_digest(events: list[Event]) -> None:
 
     # Group by urgency
     urgent = []  # <= 3 days
-    soon = []    # <= 7 days
+    soon = []  # <= 7 days
     upcoming = []  # <= 14 days
 
     for event in events:
@@ -155,7 +172,7 @@ async def send_daily_digest(events: list[Event]) -> None:
         },
     ]
 
-    def format_events(event_list: list, header: str, emoji: str) -> None:
+    def format_events(event_list: list[tuple[Event, int]], header: str, emoji: str) -> None:
         if not event_list:
             return
         text = f"{emoji} *{header}*\n"
@@ -168,17 +185,19 @@ async def send_daily_digest(events: list[Event]) -> None:
     format_events(upcoming, "Closing in 2 weeks", ":calendar:")
 
     if len(blocks) == 2:
-        blocks.append({
-            "type": "section",
-            "text": {"type": "mrkdwn", "text": "No CFPs closing in the next 2 weeks."},
-        })
+        blocks.append(
+            {
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": "No CFPs closing in the next 2 weeks."},
+            }
+        )
 
     async with httpx.AsyncClient(timeout=30.0) as client:
         try:
             response = await client.post(SLACK_WEBHOOK_URL, json={"blocks": blocks})
             if response.status_code == 200:
-                print("Daily digest sent to Slack")
+                logger.info("Daily digest sent to Slack")
             else:
-                print(f"Failed to send digest: {response.status_code}")
-        except Exception as e:
-            print(f"Error sending digest: {e}")
+                logger.error("Failed to send digest: %d", response.status_code)
+        except httpx.HTTPError as e:
+            logger.error("Error sending digest: %s", e)

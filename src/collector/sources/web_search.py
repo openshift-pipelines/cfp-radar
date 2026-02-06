@@ -1,24 +1,30 @@
 """AI-powered web search for event discovery using Gemini."""
 
+from __future__ import annotations
+
 import json
 import re
 from datetime import date, datetime
+from typing import Any
 
 import httpx
 from google import genai
 from google.genai import types
 
 from ...config import GEMINI_API_KEY, TARGET_COUNTRIES, TOPICS
+from ...logging_config import get_logger
 from ..models import Event
+
+logger = get_logger(__name__)
 
 
 async def search_events() -> list[Event]:
     """Use Gemini to search for and extract event information."""
     if not GEMINI_API_KEY:
-        print("Warning: GEMINI_API_KEY not set, skipping AI search")
+        logger.warning("GEMINI_API_KEY not set, skipping AI search")
         return []
 
-    print(f"Starting Gemini search with API key: {GEMINI_API_KEY[:3]}...")
+    logger.info("Starting Gemini AI search")
 
     client = genai.Client(api_key=GEMINI_API_KEY)
     events = []
@@ -60,7 +66,7 @@ Only include events that:
 Return ONLY the JSON, no other text."""
 
         try:
-            print(f"Querying Gemini for {country}...")
+            logger.debug("Querying Gemini for %s", country)
             response = client.models.generate_content(
                 model="gemini-3-flash-preview",
                 contents=prompt,
@@ -68,14 +74,14 @@ Return ONLY the JSON, no other text."""
                     tools=[types.Tool(google_search=types.GoogleSearch())],
                 ),
             )
-            content = response.text
-            print(f"Gemini response for {country}: {len(content)} chars")
+            content = response.text or ""
+            logger.debug("Gemini response for %s: %d chars", country, len(content))
             parsed_events = _parse_response(content, country)
-            print(f"Parsed {len(parsed_events)} events for {country}")
+            logger.info("Parsed %d events for %s", len(parsed_events), country)
             events.extend(parsed_events)
 
         except Exception as e:
-            print(f"Error searching events for {country}: {type(e).__name__}: {e}")
+            logger.error("Error searching events for %s: %s: %s", country, type(e).__name__, e)
             continue
 
     return events
@@ -83,7 +89,7 @@ Return ONLY the JSON, no other text."""
 
 def _parse_response(content: str, country: str) -> list[Event]:
     """Parse Gemini's JSON response into Event objects."""
-    events = []
+    events: list[Event] = []
 
     # Try to extract JSON from the response
     try:
@@ -134,11 +140,11 @@ def _parse_response(content: str, country: str) -> list[Event]:
                 events.append(event)
 
             except (KeyError, ValueError) as e:
-                print(f"Error parsing event: {e}")
+                logger.warning("Error parsing event: %s", e)
                 continue
 
     except json.JSONDecodeError as e:
-        print(f"Error parsing JSON response: {e}")
+        logger.warning("Error parsing JSON response: %s", e)
 
     return events
 
@@ -179,19 +185,20 @@ Return JSON with:
 Return ONLY the JSON, no other text."""
 
     try:
-        response = client.models.generate_content(
+        genai_response = client.models.generate_content(
             model="gemini-3-flash-preview",
             contents=prompt,
             config=types.GenerateContentConfig(
                 tools=[types.Tool(google_search=types.GoogleSearch())],
             ),
         )
-        content = response.text
+        content = genai_response.text or ""
         json_match = re.search(r"\{[\s\S]*\}", content)
         if json_match:
-            return json.loads(json_match.group())
+            result: dict[str, Any] = json.loads(json_match.group())
+            return result
 
     except Exception as e:
-        print(f"Error extracting CFP details: {e}")
+        logger.error("Error extracting CFP details: %s", e)
 
     return {}

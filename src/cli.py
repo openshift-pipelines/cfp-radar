@@ -1,11 +1,18 @@
 """CLI entry point for the event tracker."""
 
+from __future__ import annotations
+
 import argparse
 import asyncio
 import sys
 
+from .logging_config import get_logger, setup_logging
 
-def main():
+logger = get_logger(__name__)
+
+
+def main() -> None:
+    setup_logging()
     parser = argparse.ArgumentParser(
         description="Tech Events & CFP Tracker",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -31,7 +38,9 @@ def main():
     )
 
     # Notify command
-    notify_parser = subparsers.add_parser("notify", help="Send Slack notifications for upcoming CFPs")
+    notify_parser = subparsers.add_parser(
+        "notify", help="Send Slack notifications for upcoming CFPs"
+    )
     notify_parser.add_argument(
         "--days",
         type=int,
@@ -62,62 +71,61 @@ def main():
         sys.exit(1)
 
 
-async def cmd_collect(args):
+async def cmd_collect(args: argparse.Namespace) -> None:
     """Run event collection."""
     from datetime import date
 
-    from .config import set_config_file, EVENTS_FILE
+    from .collector.agent import collect_all_events
+    from .collector.models import EventStore
+    from .config import EVENTS_FILE, set_config_file
 
     if args.config:
         set_config_file(args.config)
 
-    from .collector.agent import collect_all_events
-    from .collector.models import EventStore
-
-    print("Collecting events from all sources...")
+    logger.info("Collecting events from all sources...")
     use_ai = not args.no_ai
 
     if not use_ai:
-        print("(AI search disabled)")
+        logger.info("AI search disabled")
 
     await collect_all_events(use_ai=use_ai)
 
     # Read all events from store (includes previously collected)
     store = EventStore(EVENTS_FILE)
     events = store.filter(start_after=date.today())
-    print(f"\nTotal events: {len(events)}")
+    logger.info("Total events: %d", len(events))
 
     # Show summary
     cfp_events = [e for e in events if e.cfp_deadline]
-    print(f"  - With CFP: {len(cfp_events)}")
+    logger.info("  - With CFP: %d", len(cfp_events))
 
-    upcoming_cfp = [e for e in cfp_events if e.cfp_deadline >= date.today()]
-    print(f"  - Open CFP: {len(upcoming_cfp)}")
+    upcoming_cfp = [e for e in cfp_events if e.cfp_deadline and e.cfp_deadline >= date.today()]
+    logger.info("  - Open CFP: %d", len(upcoming_cfp))
 
     # Generate static HTML
     from .generator import generate_html
+
     generate_html(events, args.output_file)
-    print(f"\nHTML output written to: {args.output_file}")
+    logger.info("HTML output written to: %s", args.output_file)
 
 
-async def cmd_notify(args):
+async def cmd_notify(args: argparse.Namespace) -> None:
     """Send Slack notifications."""
     from .notifier import check_upcoming_cfps
 
-    print(f"Checking for CFPs closing within {args.days} days...")
+    logger.info("Checking for CFPs closing within %d days...", args.days)
     await check_upcoming_cfps(days=args.days)
 
 
-def cmd_list(args):
+def cmd_list(args: argparse.Namespace) -> None:
     """List events."""
     from datetime import date
 
-    from .config import set_config_file, EVENTS_FILE
+    from .collector.models import EventStore
+    from .config import EVENTS_FILE, set_config_file
 
     if args.config:
         set_config_file(args.config)
-
-    from .collector.models import EventStore
 
     store = EventStore(EVENTS_FILE)
     events = store.filter(
@@ -128,11 +136,13 @@ def cmd_list(args):
     )
 
     if not events:
-        print("No events found matching the criteria.")
+        logger.info("No events found matching the criteria.")
         return
 
     # Sort by CFP deadline
-    def sort_key(e):
+    from .collector.models import Event as EventModel
+
+    def sort_key(e: EventModel) -> date:
         return e.cfp_deadline if e.cfp_deadline else date(2099, 12, 31)
 
     events.sort(key=sort_key)
@@ -143,7 +153,7 @@ def cmd_list(args):
             days_left = (event.cfp_deadline - date.today()).days
             cfp_info = f" [CFP: {event.cfp_deadline} ({days_left}d)]"
 
-        print(f"{event.start_date} | {event.name} | {event.city}{cfp_info}")
+        logger.info("%s | %s | %s%s", event.start_date, event.name, event.city, cfp_info)
 
 
 if __name__ == "__main__":

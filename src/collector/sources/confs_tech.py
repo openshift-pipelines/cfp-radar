@@ -1,12 +1,21 @@
 """Collector for confs.tech - open source conference list."""
 
-import httpx
+from __future__ import annotations
+
 from datetime import date, datetime
+
+import httpx
+
+from ...config import GLOBAL_CONFERENCES, TARGET_COUNTRIES, TOPICS
+from ...logging_config import get_logger
 from ..models import Event
-from ...config import TARGET_COUNTRIES, GLOBAL_CONFERENCES, TOPICS
+
+logger = get_logger(__name__)
 
 
-CONFS_TECH_BASE = "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences"
+CONFS_TECH_BASE = (
+    "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences"
+)
 
 # confs.tech category mappings for our topics
 CATEGORIES = ["devops", "cloud", "general"]
@@ -26,8 +35,9 @@ async def fetch_conferences(year: int | None = None) -> list[Event]:
                 if response.status_code == 200:
                     data = response.json()
                     events.extend(_parse_conferences(data, category))
-            except Exception:
+            except httpx.HTTPError as e:
                 # Category file may not exist for all years
+                logger.debug("Error fetching confs.tech for %s/%d: %s", category, year, e)
                 continue
 
     return events

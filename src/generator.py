@@ -1,15 +1,18 @@
 """Static HTML generator for events."""
 
+from __future__ import annotations
+
 import os
 import shutil
 from datetime import date
 
 from jinja2 import Environment, FileSystemLoader
 
+from .collector.models import Event
 from .config import TOPICS
 
 
-def generate_html(events: list, output_file: str) -> None:
+def generate_html(events: list[Event], output_file: str) -> None:
     """Generate static HTML file from events.
 
     Args:
@@ -18,14 +21,14 @@ def generate_html(events: list, output_file: str) -> None:
     """
 
     # Sort by CFP deadline (upcoming first), then by start date
-    def sort_key(e):
+    def sort_key(e: Event) -> tuple[date, date]:
         cfp_priority = e.cfp_deadline if e.cfp_deadline else date(2099, 12, 31)
         return (cfp_priority, e.start_date)
 
     events = sorted(events, key=sort_key)
 
     # Extract unique countries with counts
-    country_counts = {}
+    country_counts: dict[str, int] = {}
     for event in events:
         country = event.country
         country_counts[country] = country_counts.get(country, 0) + 1

@@ -1,10 +1,8 @@
 """Tests for data models."""
 
-import pytest
-from datetime import date, datetime
-import tempfile
 import os
-import json
+import tempfile
+from datetime import date
 
 from src.collector.models import Event, EventStore
 

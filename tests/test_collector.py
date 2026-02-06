@@ -1,10 +1,8 @@
 """Tests for event collectors."""
 
-import pytest
 from datetime import date
-from unittest.mock import patch, AsyncMock
 
-from src.collector.agent import deduplicate_events, _normalize_name, _event_completeness
+from src.collector.agent import _event_completeness, _normalize_name, deduplicate_events
 from src.collector.models import Event
 
 

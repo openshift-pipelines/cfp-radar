@@ -1,11 +1,14 @@
 """Data models for event tracking."""
 
-from dataclasses import dataclass, field, asdict
-from datetime import date, datetime
-from typing import Any
+from __future__ import annotations
+
+import hashlib
 import json
 import os
-import hashlib
+import tempfile
+from dataclasses import asdict, dataclass, field
+from datetime import date, datetime
+from typing import Any
 
 
 @dataclass
@@ -27,7 +30,7 @@ class Event:
     last_updated: datetime = field(default_factory=datetime.now)
     id: str = ""
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         if not self.id:
             self.id = self._generate_id()
 
@@ -41,14 +44,12 @@ class Event:
         data = asdict(self)
         data["start_date"] = self.start_date.isoformat()
         data["end_date"] = self.end_date.isoformat() if self.end_date else None
-        data["cfp_deadline"] = (
-            self.cfp_deadline.isoformat() if self.cfp_deadline else None
-        )
+        data["cfp_deadline"] = self.cfp_deadline.isoformat() if self.cfp_deadline else None
         data["last_updated"] = self.last_updated.isoformat()
         return data
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> "Event":
+    def from_dict(cls, data: dict[str, Any]) -> Event:
         """Create Event from dictionary."""
         data = data.copy()
         data["start_date"] = date.fromisoformat(data["start_date"])
@@ -72,15 +73,31 @@ class EventStore:
         """Load all events from storage."""
         if not os.path.exists(self.filepath):
             return []
-        with open(self.filepath, "r") as f:
+        with open(self.filepath) as f:
             data = json.load(f)
         return [Event.from_dict(e) for e in data]
 
     def save(self, events: list[Event]) -> None:
-        """Save events to storage."""
+        """Save events to storage using atomic write.
+
+        Writes to a temporary file first, then renames to prevent data loss
+        if the process is interrupted during write.
+        """
         data = [e.to_dict() for e in events]
-        with open(self.filepath, "w") as f:
-            json.dump(data, f, indent=2)
+        dir_path = os.path.dirname(self.filepath)
+
+        # Write to temp file in the same directory (for atomic rename)
+        fd, temp_path = tempfile.mkstemp(suffix=".json", dir=dir_path)
+        try:
+            with os.fdopen(fd, "w") as f:
+                json.dump(data, f, indent=2)
+            # Atomic rename
+            os.replace(temp_path, self.filepath)
+        except Exception:
+            # Clean up temp file on failure
+            if os.path.exists(temp_path):
+                os.unlink(temp_path)
+            raise
 
     def merge(self, new_events: list[Event]) -> list[Event]:
         """Merge new events with existing, updating duplicates."""
@@ -110,9 +127,7 @@ class EventStore:
             events = [e for e in events if e.city.lower() == city.lower()]
         if topic:
             topic_lower = topic.lower()
-            events = [
-                e for e in events if any(topic_lower in t.lower() for t in e.topics)
-            ]
+            events = [e for e in events if any(topic_lower in t.lower() for t in e.topics)]
         if has_cfp is not None:
             if has_cfp:
                 events = [e for e in events if e.cfp_deadline and e.cfp_deadline >= date.today()]

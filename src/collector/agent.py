@@ -1,16 +1,22 @@
 """Main collection agent that orchestrates all event sources."""
 
+from __future__ import annotations
+
 import asyncio
 from datetime import date, datetime
+
+from ..config import EVENTS_FILE, TOPICS
+from ..logging_config import get_logger
 from .models import Event, EventStore
 from .sources import confs_tech, papercall, web_search
-from ..config import EVENTS_FILE, TOPICS
+
+logger = get_logger(__name__)
 
 
 async def collect_all_events(use_ai: bool = True) -> list[Event]:
     """Collect events from all sources and merge them."""
-    print("Starting event collection...")
-    all_events = []
+    logger.info("Starting event collection...")
+    all_events: list[Event] = []
 
     # Collect from structured sources in parallel
     tasks = [
@@ -24,22 +30,23 @@ async def collect_all_events(use_ai: bool = True) -> list[Event]:
 
     results = await asyncio.gather(*tasks, return_exceptions=True)
 
+    source_names = ["confs.tech current", "confs.tech next", "papercall", "ai_search"]
     for i, result in enumerate(results):
-        if isinstance(result, Exception):
-            source_name = ["confs.tech current", "confs.tech next", "papercall", "ai_search"][i]
-            print(f"Error collecting from {source_name}: {result}")
+        if isinstance(result, BaseException):
+            logger.error("Error collecting from %s: %s", source_names[i], result)
         else:
-            all_events.extend(result)
-            print(f"Collected {len(result)} events from source {i+1}")
+            event_list: list[Event] = result
+            all_events.extend(event_list)
+            logger.info("Collected %d events from %s", len(event_list), source_names[i])
 
     # Deduplicate events
     unique_events = deduplicate_events(all_events)
-    print(f"Total unique events after deduplication: {len(unique_events)}")
+    logger.info("Total unique events after deduplication: %d", len(unique_events))
 
     # Filter out past events (more than 30 days ago)
     cutoff = date.today().replace(day=1)
     future_events = [e for e in unique_events if e.start_date >= cutoff]
-    print(f"Future events: {len(future_events)}")
+    logger.info("Future events: %d", len(future_events))
 
     # Sort by start date
     future_events.sort(key=lambda e: e.start_date)
@@ -47,7 +54,7 @@ async def collect_all_events(use_ai: bool = True) -> list[Event]:
     # Save to storage
     store = EventStore(EVENTS_FILE)
     store.merge(future_events)
-    print(f"Events saved to {EVENTS_FILE}")
+    logger.info("Events saved to %s", EVENTS_FILE)
 
     return future_events
 
@@ -82,6 +89,7 @@ def deduplicate_events(events: list[Event]) -> list[Event]:
 def _normalize_name(name: str) -> str:
     """Normalize event name for comparison."""
     import re
+
     # Lowercase and remove common suffixes
     name = name.lower()
     name = re.sub(r"\s*(20\d{2}|conference|conf|summit|meetup)\s*", " ", name)
