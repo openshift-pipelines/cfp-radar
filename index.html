@@ -365,6 +365,150 @@
         fill: currentColor;
       }
 
+      /* Distance Control Styles */
+      .distance-control-container {
+        background: rgba(30, 41, 59, 0.8);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(100, 116, 139, 0.3);
+      }
+
+      .distance-control-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .home-city-input {
+        flex: 1;
+        min-width: 200px;
+        padding: 10px 16px;
+        border-radius: 50px;
+        border: 2px solid rgba(71, 85, 105, 0.5);
+        background: rgba(51, 65, 85, 0.6);
+        color: #e2e8f0;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.3s ease;
+      }
+
+      .home-city-input::placeholder {
+        color: #64748b;
+      }
+
+      .home-city-input:focus {
+        border-color: #3b82f6;
+      }
+
+      .home-city-btn {
+        padding: 10px 24px;
+        border-radius: 50px;
+        border: 2px solid #2563eb;
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .home-city-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+      }
+
+      .home-city-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .home-city-clear {
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: 2px solid rgba(239, 68, 68, 0.5);
+        background: rgba(239, 68, 68, 0.2);
+        color: #fca5a5;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .home-city-clear:hover {
+        background: rgba(239, 68, 68, 0.4);
+        border-color: #ef4444;
+      }
+
+      .distance-status {
+        width: 100%;
+        margin-top: 8px;
+        font-size: 13px;
+        color: #94a3b8;
+      }
+
+      .distance-status.error {
+        color: #fca5a5;
+      }
+
+      .sort-toggle-pills {
+        display: flex;
+        gap: 0;
+        margin-top: 12px;
+        border-radius: 50px;
+        overflow: hidden;
+        border: 2px solid rgba(71, 85, 105, 0.5);
+        width: fit-content;
+      }
+
+      .sort-pill {
+        padding: 8px 20px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: #94a3b8;
+        background: rgba(51, 65, 85, 0.6);
+        user-select: none;
+      }
+
+      .sort-pill:hover {
+        color: #e2e8f0;
+      }
+
+      .sort-pill.active {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+      }
+
+      .distance-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 8px;
+        padding: 4px 12px;
+        border-radius: 20px;
+        background: rgba(59, 130, 246, 0.15);
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        font-size: 12px;
+        color: #93c5fd;
+      }
+
+      .co2 {
+        color: #86efac;
+      }
+
+      .co2-high {
+        color: #fcd34d;
+      }
+
+      .co2-very-high {
+        color: #fca5a5;
+      }
+
       @media (max-width: 640px) {
         .country-filter-pills {
           flex-direction: column;
@@ -372,6 +516,20 @@
         }
         .country-pill {
           justify-content: center;
+        }
+        .distance-control-row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .home-city-input {
+          min-width: unset;
+        }
+        .sort-toggle-pills {
+          width: 100%;
+        }
+        .sort-pill {
+          flex: 1;
+          text-align: center;
         }
       }
     </style>
@@ -403,136 +561,226 @@
         </span>
       </div>
 
-        <!-- Country Filter -->
-        
-        <div class="country-filter-container">
-            <div class="country-filter-pills">
-                <div class="country-pill all-countries active" onclick="toggleCountry('all')">
-                    <span class="country-flag">🌍</span>
-                    <span class="country-name">All Countries</span>
-                    <span class="country-count">44</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('India')" data-country="India">
-                    <span class="country-flag">
-                        🇮🇳
-                        
-                    </span>
-                    <span class="country-name">India</span>
-                    <span class="country-count">12</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('France')" data-country="France">
-                    <span class="country-flag">
-                        🇫🇷
-                        
-                    </span>
-                    <span class="country-name">France</span>
-                    <span class="country-count">9</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('Germany')" data-country="Germany">
-                    <span class="country-flag">
-                        🇩🇪
-                        
-                    </span>
-                    <span class="country-name">Germany</span>
-                    <span class="country-count">5</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('Israel')" data-country="Israel">
-                    <span class="country-flag">
-                        🇮🇱
-                        
-                    </span>
-                    <span class="country-name">Israel</span>
-                    <span class="country-count">4</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('USA')" data-country="USA">
-                    <span class="country-flag">
-                        🇺🇸
-                        
-                    </span>
-                    <span class="country-name">USA</span>
-                    <span class="country-count">3</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('Norway')" data-country="Norway">
-                    <span class="country-flag">
-                        🇳🇴
-                        
-                    </span>
-                    <span class="country-name">Norway</span>
-                    <span class="country-count">2</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('Czech Republic')" data-country="Czech Republic">
-                    <span class="country-flag">
-                        🇨🇿
-                        
-                    </span>
-                    <span class="country-name">Czech Republic</span>
-                    <span class="country-count">2</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('Netherlands')" data-country="Netherlands">
-                    <span class="country-flag">
-                        🇳🇱
-                        
-                    </span>
-                    <span class="country-name">Netherlands</span>
-                    <span class="country-count">2</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('Belgium')" data-country="Belgium">
-                    <span class="country-flag">
-                        🇧🇪
-                        
-                    </span>
-                    <span class="country-name">Belgium</span>
-                    <span class="country-count">1</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('Sweden')" data-country="Sweden">
-                    <span class="country-flag">
-                        🇸🇪
-                        
-                    </span>
-                    <span class="country-name">Sweden</span>
-                    <span class="country-count">1</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('Canada')" data-country="Canada">
-                    <span class="country-flag">
-                        🇨🇦
-                        
-                    </span>
-                    <span class="country-name">Canada</span>
-                    <span class="country-count">1</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('Austria')" data-country="Austria">
-                    <span class="country-flag">
-                        🇦🇹
-                        
-                    </span>
-                    <span class="country-name">Austria</span>
-                    <span class="country-count">1</span>
-                </div>
-                
-                <div class="country-pill" onclick="toggleCountry('U.S.A.')" data-country="U.S.A.">
-                    <span class="country-flag">
-                        🇺🇸
-                        
-                    </span>
-                    <span class="country-name">U.S.A.</span>
-                    <span class="country-count">1</span>
-                </div>
-                
-            </div>
+      <!-- Country Filter -->
+      
+      <div class="country-filter-container">
+        <div class="country-filter-pills">
+          <div
+            class="country-pill all-countries active"
+            onclick="toggleCountry('all')"
+          >
+            <span class="country-flag">🌍</span>
+            <span class="country-name">All Countries</span>
+            <span class="country-count">44</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('India')"
+            data-country="India"
+          >
+            <span class="country-flag">
+              🇮🇳 
+            </span>
+            <span class="country-name">India</span>
+            <span class="country-count">12</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('France')"
+            data-country="France"
+          >
+            <span class="country-flag">
+              🇫🇷 
+            </span>
+            <span class="country-name">France</span>
+            <span class="country-count">9</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('Germany')"
+            data-country="Germany"
+          >
+            <span class="country-flag">
+              🇩🇪 
+            </span>
+            <span class="country-name">Germany</span>
+            <span class="country-count">5</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('Israel')"
+            data-country="Israel"
+          >
+            <span class="country-flag">
+              🇮🇱 
+            </span>
+            <span class="country-name">Israel</span>
+            <span class="country-count">4</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('USA')"
+            data-country="USA"
+          >
+            <span class="country-flag">
+              🇺🇸 
+            </span>
+            <span class="country-name">USA</span>
+            <span class="country-count">3</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('Norway')"
+            data-country="Norway"
+          >
+            <span class="country-flag">
+              🇳🇴 
+            </span>
+            <span class="country-name">Norway</span>
+            <span class="country-count">2</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('Czech Republic')"
+            data-country="Czech Republic"
+          >
+            <span class="country-flag">
+              🇨🇿 
+            </span>
+            <span class="country-name">Czech Republic</span>
+            <span class="country-count">2</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('Netherlands')"
+            data-country="Netherlands"
+          >
+            <span class="country-flag">
+              🇳🇱 
+            </span>
+            <span class="country-name">Netherlands</span>
+            <span class="country-count">2</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('Belgium')"
+            data-country="Belgium"
+          >
+            <span class="country-flag">
+              🇧🇪 
+            </span>
+            <span class="country-name">Belgium</span>
+            <span class="country-count">1</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('Sweden')"
+            data-country="Sweden"
+          >
+            <span class="country-flag">
+              🇸🇪 
+            </span>
+            <span class="country-name">Sweden</span>
+            <span class="country-count">1</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('Canada')"
+            data-country="Canada"
+          >
+            <span class="country-flag">
+              🇨🇦 
+            </span>
+            <span class="country-name">Canada</span>
+            <span class="country-count">1</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('Austria')"
+            data-country="Austria"
+          >
+            <span class="country-flag">
+              🇦🇹 
+            </span>
+            <span class="country-name">Austria</span>
+            <span class="country-count">1</span>
+          </div>
+          
+          <div
+            class="country-pill"
+            onclick="toggleCountry('U.S.A.')"
+            data-country="U.S.A."
+          >
+            <span class="country-flag">
+              🇺🇸 
+            </span>
+            <span class="country-name">U.S.A.</span>
+            <span class="country-count">1</span>
+          </div>
+          
         </div>
-        
+      </div>
+      
+
+      <!-- Distance Control -->
+      <div class="distance-control-container">
+        <div class="distance-control-row">
+          <input
+            type="text"
+            id="home-city-input"
+            class="home-city-input"
+            placeholder="Your home city, e.g. Paris, France"
+          />
+          <button
+            id="home-city-btn"
+            class="home-city-btn"
+            onclick="calculateDistances()"
+          >
+            Calculate
+          </button>
+          <button
+            id="home-city-clear"
+            class="home-city-clear"
+            onclick="clearDistances()"
+            style="display: none"
+          >
+            Clear
+          </button>
+        </div>
+        <div
+          id="distance-status"
+          class="distance-status"
+          style="display: none"
+        ></div>
+        <div id="sort-toggle" class="sort-toggle-pills" style="display: none">
+          <div
+            class="sort-pill active"
+            data-sort="cfp"
+            onclick="switchSort('cfp')"
+          >
+            Sort by CFP Deadline
+          </div>
+          <div
+            class="sort-pill"
+            data-sort="distance"
+            onclick="switchSort('distance')"
+          >
+            Sort by Distance
+          </div>
+        </div>
+      </div>
 
       <!-- Event List -->
       <div id="event-list">
@@ -544,7 +792,7 @@
             cfp-urgent
             
         "
-        data-country="Norway">
+        data-country="Norway" data-city="Oslo">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -601,7 +849,7 @@
             cfp-urgent
             
         "
-        data-country="Belgium">
+        data-country="Belgium" data-city="Brussels">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -658,7 +906,7 @@
             cfp-urgent
             
         "
-        data-country="India">
+        data-country="India" data-city="Pune">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -727,7 +975,7 @@
             cfp-urgent
             
         "
-        data-country="Sweden">
+        data-country="Sweden" data-city="Gothenburg">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -782,7 +1030,7 @@
             cfp-urgent
             
         "
-        data-country="Norway">
+        data-country="Norway" data-city="Oslo">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -837,7 +1085,7 @@
             cfp-urgent
             
         "
-        data-country="France">
+        data-country="France" data-city="Paris">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -904,7 +1152,7 @@
             cfp-urgent
             
         "
-        data-country="Israel">
+        data-country="Israel" data-city="Tel Aviv">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -967,7 +1215,7 @@
             cfp-urgent
             
         "
-        data-country="Germany">
+        data-country="Germany" data-city="Berlin">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1024,7 +1272,7 @@
             cfp-urgent
             
         "
-        data-country="USA">
+        data-country="USA" data-city="Raleigh">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1087,7 +1335,7 @@
             cfp-urgent
             
         "
-        data-country="Canada">
+        data-country="Canada" data-city="Toronto">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1142,7 +1390,7 @@
             cfp-open
             
         "
-        data-country="Czech Republic">
+        data-country="Czech Republic" data-city="Brno">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1213,7 +1461,7 @@
             cfp-open
             
         "
-        data-country="Austria">
+        data-country="Austria" data-city="Graz">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1270,7 +1518,7 @@
             cfp-open
             
         "
-        data-country="Germany">
+        data-country="Germany" data-city="Frankfurt am Main">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1324,7 +1572,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="India">
+        data-country="India" data-city="Bangalore">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1365,7 +1613,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="France">
+        data-country="France" data-city="Paris">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1408,7 +1656,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="India">
+        data-country="India" data-city="Bangalore">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1447,7 +1695,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="India">
+        data-country="India" data-city="Pune">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1488,7 +1736,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="India">
+        data-country="India" data-city="Bangalore">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1529,7 +1777,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="India">
+        data-country="India" data-city="Pune">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1572,7 +1820,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="Netherlands">
+        data-country="Netherlands" data-city="Amsterdam">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1607,7 +1855,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="France">
+        data-country="France" data-city="Paris">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1650,7 +1898,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="India">
+        data-country="India" data-city="Bangalore">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1689,7 +1937,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="Netherlands">
+        data-country="Netherlands" data-city="Amsterdam">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1724,7 +1972,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="India">
+        data-country="India" data-city="Bangalore">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1767,7 +2015,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="India">
+        data-country="India" data-city="Bangalore">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1808,7 +2056,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="Czech Republic">
+        data-country="Czech Republic" data-city="Brno">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1851,7 +2099,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="USA">
+        data-country="USA" data-city="Raleigh">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1894,7 +2142,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="Israel">
+        data-country="Israel" data-city="Tel Aviv">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1933,7 +2181,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="France">
+        data-country="France" data-city="Paris">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -1976,7 +2224,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="Germany">
+        data-country="Germany" data-city="Berlin">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2011,7 +2259,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="India">
+        data-country="India" data-city="Pune">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2054,7 +2302,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="Germany">
+        data-country="Germany" data-city="Berlin">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2089,7 +2337,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="Germany">
+        data-country="Germany" data-city="Berlin">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2124,7 +2372,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="India">
+        data-country="India" data-city="Bangalore">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2167,7 +2415,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="Israel">
+        data-country="Israel" data-city="Tel Aviv">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2208,7 +2456,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="USA">
+        data-country="USA" data-city="Raleigh">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2253,7 +2501,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="U.S.A.">
+        data-country="U.S.A." data-city="Los Angeles, CA">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2288,7 +2536,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="France">
+        data-country="France" data-city="Paris">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2333,7 +2581,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="India">
+        data-country="India" data-city="Bangalore">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2376,7 +2624,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="France">
+        data-country="France" data-city="Paris">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2419,7 +2667,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="France">
+        data-country="France" data-city="Paris">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2464,7 +2712,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="France">
+        data-country="France" data-city="Paris">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2509,7 +2757,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="Israel">
+        data-country="Israel" data-city="Tel Aviv">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2550,7 +2798,7 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
-        data-country="France">
+        data-country="France" data-city="Paris">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
@@ -2616,28 +2864,29 @@
     <script>
       // Track active country filters
       let activeCountries = new Set();
+      let currentSort = "cfp";
+
+      // Assign original index to each card for restoring CFP deadline order
+      document.querySelectorAll(".event-card").forEach((card, i) => {
+        card.dataset.originalIndex = i;
+      });
 
       function toggleCountry(country) {
         const allPill = document.querySelector(".country-pill.all-countries");
 
         if (country === "all") {
-          // Clear all filters
           activeCountries.clear();
-
-          // Update pill states
           document.querySelectorAll(".country-pill").forEach((pill) => {
             pill.classList.remove("active");
           });
           allPill.classList.add("active");
         } else {
-          // Toggle country selection
           if (activeCountries.has(country)) {
             activeCountries.delete(country);
           } else {
             activeCountries.add(country);
           }
 
-          // Update pill states
           const pillToToggle = document.querySelector(
             `.country-pill[data-country="${country}"]`,
           );
@@ -2646,8 +2895,6 @@
             allPill.classList.remove("active");
           } else {
             pillToToggle.classList.remove("active");
-
-            // If no countries selected, activate "All"
             if (activeCountries.size === 0) {
               allPill.classList.add("active");
             }
@@ -2668,8 +2915,6 @@
           if (shouldShow) {
             card.style.display = "block";
             card.classList.add("filter-fade-in");
-
-            // Remove animation class after animation completes
             setTimeout(() => {
               card.classList.remove("filter-fade-in");
             }, 400);
@@ -2677,7 +2922,312 @@
             card.style.display = "none";
           }
         });
+
+        sortEvents();
       }
+
+      // --- Geocoding & Distance ---
+
+      const GEOCACHE_KEY = "cfp-radar-geocache";
+      const HOMECITY_KEY = "cfp-radar-home-city";
+      const DISTCACHE_KEY = "cfp-radar-distances";
+      const CACHE_TTL = 30 * 24 * 60 * 60 * 1000; // 30 days
+
+      function getGeoCache() {
+        try {
+          return JSON.parse(localStorage.getItem(GEOCACHE_KEY)) || {};
+        } catch {
+          return {};
+        }
+      }
+
+      function setGeoCache(cache) {
+        localStorage.setItem(GEOCACHE_KEY, JSON.stringify(cache));
+      }
+
+      function getDistCache() {
+        try {
+          return JSON.parse(localStorage.getItem(DISTCACHE_KEY));
+        } catch {
+          return null;
+        }
+      }
+
+      function setDistCache(homeCity, results) {
+        const cardCount = document.querySelectorAll(".event-card").length;
+        localStorage.setItem(
+          DISTCACHE_KEY,
+          JSON.stringify({
+            homeCity: homeCity.trim().toLowerCase(),
+            cardCount: cardCount,
+            results: results,
+          }),
+        );
+      }
+
+      function applyDistanceBadges(results) {
+        const cards = document.querySelectorAll(".event-card");
+        cards.forEach((card) => {
+          const city = card.dataset.city;
+          const country = card.dataset.country;
+          if (!city) return;
+          const fullCity = (city + ", " + country).trim().toLowerCase();
+          const entry = results[fullCity];
+          if (entry) {
+            card.dataset.distance = entry.dist;
+            const existing = card.querySelector(".distance-badge");
+            if (existing) existing.remove();
+
+            let co2Class = "co2";
+            if (entry.co2 > 2000) co2Class = "co2-very-high";
+            else if (entry.co2 > 500) co2Class = "co2-high";
+
+            const badge = document.createElement("div");
+            badge.className = "distance-badge";
+            badge.innerHTML = `✈ ${entry.dist.toLocaleString()} km <span class="${co2Class}">🌿 ${entry.co2.toLocaleString()} kg CO₂</span>`;
+            card.querySelector(".flex-1").appendChild(badge);
+          } else {
+            card.dataset.distance = "999999";
+          }
+        });
+        document.getElementById("home-city-clear").style.display =
+          "inline-block";
+        document.getElementById("sort-toggle").style.display = "flex";
+      }
+
+      function haversine(lat1, lon1, lat2, lon2) {
+        const R = 6371;
+        const toRad = (d) => (d * Math.PI) / 180;
+        const dLat = toRad(lat2 - lat1);
+        const dLon = toRad(lon2 - lon1);
+        const a =
+          Math.sin(dLat / 2) ** 2 +
+          Math.cos(toRad(lat1)) *
+            Math.cos(toRad(lat2)) *
+            Math.sin(dLon / 2) ** 2;
+        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      }
+
+      function estimateCO2(distKm) {
+        // DEFRA factors, round-trip, economy class
+        const oneWay = distKm;
+        let factor;
+        if (oneWay < 1500) factor = 0.156;
+        else if (oneWay < 4000) factor = 0.131;
+        else factor = 0.115;
+        return Math.round(oneWay * 2 * factor);
+      }
+
+      async function geocodeCity(city, cache) {
+        const key = city.trim().toLowerCase();
+        const now = Date.now();
+        if (cache[key] && now - cache[key].ts < CACHE_TTL) {
+          return cache[key];
+        }
+        const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(city)}&format=json&limit=1`;
+        const maxRetries = 3;
+        for (let attempt = 0; attempt < maxRetries; attempt++) {
+          const resp = await fetch(url);
+          if (resp.status === 429 || resp.status === 503) {
+            // Rate limited -- wait longer and retry
+            await sleep(2000 * (attempt + 1));
+            continue;
+          }
+          if (!resp.ok) return null;
+          const data = await resp.json();
+          if (data && data.length > 0) {
+            const result = {
+              lat: parseFloat(data[0].lat),
+              lon: parseFloat(data[0].lon),
+              ts: now,
+            };
+            cache[key] = result;
+            setGeoCache(cache);
+            return result;
+          }
+          return null;
+        }
+        return null;
+      }
+
+      function sleep(ms) {
+        return new Promise((r) => setTimeout(r, ms));
+      }
+
+      function setStatus(msg, isError) {
+        const el = document.getElementById("distance-status");
+        el.textContent = msg;
+        el.style.display = msg ? "block" : "none";
+        el.classList.toggle("error", !!isError);
+      }
+
+      async function calculateDistances() {
+        const input = document.getElementById("home-city-input");
+        const homeCity = input.value.trim();
+        if (!homeCity) return;
+
+        // Fast path: use cached distance results if available
+        const distCache = getDistCache();
+        const cardCount = document.querySelectorAll(".event-card").length;
+        if (
+          distCache &&
+          distCache.homeCity === homeCity.trim().toLowerCase() &&
+          distCache.cardCount === cardCount
+        ) {
+          localStorage.setItem(HOMECITY_KEY, homeCity);
+          applyDistanceBadges(distCache.results);
+          sortEvents();
+          return;
+        }
+
+        const btn = document.getElementById("home-city-btn");
+        btn.disabled = true;
+        setStatus("Geocoding your home city...");
+
+        const cache = getGeoCache();
+        let homeCoords;
+        try {
+          homeCoords = await geocodeCity(homeCity, cache);
+        } catch (e) {
+          setStatus("Network error geocoding home city.", true);
+          setTimeout(() => setStatus(""), 4000);
+          btn.disabled = false;
+          return;
+        }
+
+        if (!homeCoords) {
+          setStatus("City not found. Try a more specific name.", true);
+          setTimeout(() => setStatus(""), 4000);
+          btn.disabled = false;
+          return;
+        }
+
+        localStorage.setItem(HOMECITY_KEY, homeCity);
+
+        // Collect unique event cities
+        const cards = document.querySelectorAll(".event-card");
+        const cityMap = {};
+        cards.forEach((card) => {
+          const city = card.dataset.city;
+          const country = card.dataset.country;
+          if (city) {
+            const fullCity = city + ", " + country;
+            if (!cityMap[fullCity]) cityMap[fullCity] = [];
+            cityMap[fullCity].push(card);
+          }
+        });
+
+        const uniqueCities = Object.keys(cityMap);
+        let geocoded = 0;
+        const distResults = {};
+
+        for (const city of uniqueCities) {
+          geocoded++;
+          setStatus(`Geocoding ${geocoded}/${uniqueCities.length} cities...`);
+
+          const key = city.trim().toLowerCase();
+          const isCached = cache[key] && Date.now() - cache[key].ts < CACHE_TTL;
+
+          let coords;
+          try {
+            coords = await geocodeCity(city, cache);
+          } catch (e) {
+            coords = null;
+          }
+
+          if (coords) {
+            const dist = Math.round(
+              haversine(homeCoords.lat, homeCoords.lon, coords.lat, coords.lon),
+            );
+            const co2 = estimateCO2(dist);
+            distResults[key] = { dist, co2 };
+          }
+
+          // Rate limit: only sleep if we actually hit the API (not cached)
+          if (!isCached) {
+            await sleep(1500);
+          }
+        }
+
+        applyDistanceBadges(distResults);
+        setDistCache(homeCity, distResults);
+
+        setStatus("");
+        btn.disabled = false;
+
+        sortEvents();
+      }
+
+      function clearDistances() {
+        localStorage.removeItem(HOMECITY_KEY);
+        localStorage.removeItem(DISTCACHE_KEY);
+        document.getElementById("home-city-input").value = "";
+        document.getElementById("home-city-clear").style.display = "none";
+        document.getElementById("sort-toggle").style.display = "none";
+
+        document.querySelectorAll(".event-card").forEach((card) => {
+          delete card.dataset.distance;
+          const badge = card.querySelector(".distance-badge");
+          if (badge) badge.remove();
+        });
+
+        currentSort = "cfp";
+        document.querySelectorAll(".sort-pill").forEach((p) => {
+          p.classList.toggle("active", p.dataset.sort === "cfp");
+        });
+
+        sortEvents();
+      }
+
+      function switchSort(mode) {
+        currentSort = mode;
+        document.querySelectorAll(".sort-pill").forEach((p) => {
+          p.classList.toggle("active", p.dataset.sort === mode);
+        });
+        sortEvents();
+      }
+
+      function sortEvents() {
+        const grid = document.querySelector("#event-list .grid");
+        if (!grid) return;
+        const cards = Array.from(grid.querySelectorAll(".event-card"));
+
+        if (currentSort === "distance") {
+          cards.sort((a, b) => {
+            const da = parseInt(a.dataset.distance) || 999999;
+            const db = parseInt(b.dataset.distance) || 999999;
+            return da - db;
+          });
+        } else {
+          cards.sort((a, b) => {
+            return (
+              parseInt(a.dataset.originalIndex) -
+              parseInt(b.dataset.originalIndex)
+            );
+          });
+        }
+
+        cards.forEach((card) => grid.appendChild(card));
+      }
+
+      // Restore on page load
+      document.addEventListener("DOMContentLoaded", () => {
+        const saved = localStorage.getItem(HOMECITY_KEY);
+        if (saved) {
+          document.getElementById("home-city-input").value = saved;
+          calculateDistances();
+        }
+
+        // Enter key triggers calculation
+        document
+          .getElementById("home-city-input")
+          .addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              calculateDistances();
+            }
+          });
+      });
     </script>
   </body>
 </html>
