@@ -18,7 +18,7 @@ CONFS_TECH_BASE = (
 )
 
 # confs.tech category mappings for our topics
-CATEGORIES = ["devops", "cloud", "general"]
+CATEGORIES = ["devops", "general", "security", "opensource", "api", "networking", "testing"]
 
 
 async def fetch_conferences(year: int | None = None) -> list[Event]:
