@@ -122,79 +122,60 @@
         color: #e2e8f0;
       }
 
-      /* Country Filter Styles */
-      .country-filter-container {
-        background: rgba(30, 41, 59, 0.8);
-        border-radius: 12px;
-        padding: 20px;
-        margin-bottom: 24px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        border: 1px solid rgba(100, 116, 139, 0.3);
-      }
-
-      .country-filter-pills {
+      /* Country Filter Strip */
+      .country-strip {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
-        justify-content: center;
-      }
-
-      .country-pill {
-        display: flex;
-        align-items: center;
         gap: 8px;
-        padding: 10px 20px;
-        border-radius: 50px;
-        border: 2px solid rgba(71, 85, 105, 0.5);
-        background: rgba(51, 65, 85, 0.6);
+        padding: 12px 16px;
+        background: rgba(30, 41, 59, 0.8);
+        border-radius: 12px;
+        margin-bottom: 24px;
+        border: 1px solid rgba(100, 116, 139, 0.3);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .country-chip {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        border-radius: 8px;
+        border: 1px solid rgba(71, 85, 105, 0.5);
+        background: rgba(51, 65, 85, 0.5);
+        color: #94a3b8;
+        font-size: 13px;
+        font-weight: 600;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all 0.25s ease;
         user-select: none;
+        white-space: nowrap;
+      }
+
+      .country-chip:hover {
         color: #e2e8f0;
-      }
-
-      .country-pill:hover {
         border-color: #3b82f6;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        background: rgba(59, 130, 246, 0.15);
       }
 
-      .country-pill.active {
+      .country-chip.active {
         background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
         border-color: #2563eb;
         color: white;
-        box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+        box-shadow: 0 2px 12px rgba(59, 130, 246, 0.4);
       }
 
-      .country-pill.all-countries {
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-        border-color: #059669;
-        color: white;
+      .country-chip .chip-count {
+        font-size: 10px;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 1px 5px;
+        border-radius: 6px;
+        line-height: 1.4;
       }
 
-      .country-pill.all-countries:hover {
-        border-color: #047857;
-      }
-
-      .country-flag {
-        font-size: 24px;
-        line-height: 1;
-      }
-
-      .country-name {
-        font-weight: 600;
-        font-size: 14px;
-      }
-
-      .country-count {
-        background: rgba(255, 255, 255, 0.3);
-        padding: 1px 6px;
-        border-radius: 10px;
-        font-size: 11px;
-        font-weight: 600;
-      }
-
-      .country-pill.active .country-count {
+      .country-chip.active .chip-count {
         background: rgba(255, 255, 255, 0.25);
       }
 
@@ -512,20 +493,14 @@
       /* Month Filter Strip */
       .month-strip {
         display: flex;
+        flex-wrap: wrap;
         gap: 8px;
-        overflow-x: auto;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
         padding: 12px 16px;
         background: rgba(30, 41, 59, 0.8);
         border-radius: 12px;
         margin-bottom: 24px;
         border: 1px solid rgba(100, 116, 139, 0.3);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      }
-
-      .month-strip::-webkit-scrollbar {
-        display: none;
       }
 
       .month-chip {
@@ -573,13 +548,6 @@
       }
 
       @media (max-width: 640px) {
-        .country-filter-pills {
-          flex-direction: column;
-          align-items: stretch;
-        }
-        .country-pill {
-          justify-content: center;
-        }
         .distance-control-row {
           flex-direction: column;
           align-items: stretch;
@@ -626,47 +594,15 @@
 
       <!-- Country Filter -->
       {% if countries %}
-      <div class="country-filter-container" id="country-filter-container">
-        <div class="country-filter-pills">
-          <div
-            class="country-pill all-countries active"
-            onclick="toggleCountry('all')"
-            id="all-countries-pill"
-          >
-            <span class="country-flag">🌍</span>
-            <span class="country-name">All Countries</span>
-            <span class="country-count">{{ events|length }}</span>
-          </div>
-          {% for country, count in countries %}
-          <div
-            class="country-pill"
-            onclick="toggleCountry('{{ country }}')"
-            data-country="{{ country }}"
-          >
-            <span class="country-flag">
-              {% if country == 'USA' %}🇺🇸 {% elif country == 'Canada' %}🇨🇦 {% elif country ==
-              'Netherlands' %}🇳🇱 {% elif country == 'Spain' %}🇪🇸 {% elif country
-              == 'France' %}🇫🇷 {% elif country == 'Germany' %}🇩🇪 {% elif country
-              == 'UK' %}🇬🇧 {% elif country == 'Denmark' %}🇩🇰 {% elif country ==
-              'Belgium' %}🇧🇪 {% elif country == 'Ireland' %}🇮🇪 {% elif country
-              == 'Sweden' %}🇸🇪 {% elif country == 'Switzerland' %}🇨🇭 {% elif
-              country == 'Poland' %}🇵🇱 {% elif country == 'Austria' %}🇦🇹 {% elif
-              country == 'Italy' %}🇮🇹 {% elif country == 'Portugal' %}🇵🇹 {% elif
-              country == 'Czech Republic' %}🇨🇿 {% elif country == 'Finland' %}🇫🇮
-              {% elif country == 'Norway' %}🇳🇴 {% elif country == 'Greece' %}🇬🇷
-              {% elif country == 'India' %}🇮🇳 {% elif country == 'China' %}🇨🇳 {%
-              elif country == 'Japan' %}🇯🇵 {% elif country == 'Singapore' %}🇸🇬
-              {% elif country == 'Australia' %}🇦🇺 {% elif country == 'South
-              Korea' %}🇰🇷 {% elif country == 'Taiwan' %}🇹🇼 {% elif country ==
-              'Israel' %}🇮🇱 {% elif country == 'UAE' %}🇦🇪 {% elif country ==
-              'Brazil' %}🇧🇷 {% elif country == 'Argentina' %}🇦🇷 {% elif country
-              == 'Mexico' %}🇲🇽 {% else %}🌍 {% endif %}
-            </span>
-            <span class="country-name">{{ country }}</span>
-            <span class="country-count">{{ count }}</span>
-          </div>
-          {% endfor %}
+      <div class="country-strip" id="country-filter-container">
+        <div class="country-chip active" onclick="toggleCountry('all')" id="all-countries-pill">
+          All <span class="chip-count">{{ events|length }}</span>
         </div>
+        {% for country, count in countries %}
+        <div class="country-chip" onclick="toggleCountry('{{ country }}')" data-country="{{ country }}">
+          {% if country == 'USA' %}🇺🇸{% elif country == 'Canada' %}🇨🇦{% elif country == 'Netherlands' %}🇳🇱{% elif country == 'Spain' %}🇪🇸{% elif country == 'France' %}🇫🇷{% elif country == 'Germany' %}🇩🇪{% elif country == 'UK' %}🇬🇧{% elif country == 'Denmark' %}🇩🇰{% elif country == 'Belgium' %}🇧🇪{% elif country == 'Ireland' %}🇮🇪{% elif country == 'Sweden' %}🇸🇪{% elif country == 'Switzerland' %}🇨🇭{% elif country == 'Poland' %}🇵🇱{% elif country == 'Austria' %}🇦🇹{% elif country == 'Italy' %}🇮🇹{% elif country == 'Portugal' %}🇵🇹{% elif country == 'Czech Republic' %}🇨🇿{% elif country == 'Finland' %}🇫🇮{% elif country == 'Norway' %}🇳🇴{% elif country == 'Greece' %}🇬🇷{% elif country == 'India' %}🇮🇳{% elif country == 'China' %}🇨🇳{% elif country == 'Japan' %}🇯🇵{% elif country == 'Singapore' %}🇸🇬{% elif country == 'Australia' %}🇦🇺{% elif country == 'South Korea' %}🇰🇷{% elif country == 'Taiwan' %}🇹🇼{% elif country == 'Israel' %}🇮🇱{% elif country == 'UAE' %}🇦🇪{% elif country == 'Brazil' %}🇧🇷{% elif country == 'Argentina' %}🇦🇷{% elif country == 'Mexico' %}🇲🇽{% else %}🌍{% endif %} {{ country }} <span class="chip-count">{{ count }}</span>
+        </div>
+        {% endfor %}
       </div>
       {% endif %}
 
@@ -774,7 +710,7 @@
         if (country === "all") {
           activeCountries.clear();
           document
-            .querySelectorAll("#country-filter-container .country-pill")
+            .querySelectorAll("#country-filter-container .country-chip")
             .forEach((pill) => {
               pill.classList.remove("active");
             });
@@ -787,7 +723,7 @@
           }
 
           const pillToToggle = document.querySelector(
-            `.country-pill[data-country="${country}"]`,
+            `.country-chip[data-country="${country}"]`,
           );
           if (activeCountries.has(country)) {
             pillToToggle.classList.add("active");
