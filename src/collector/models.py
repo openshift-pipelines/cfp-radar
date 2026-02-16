@@ -10,6 +10,8 @@ from dataclasses import asdict, dataclass, field
 from datetime import date, datetime
 from typing import Any
 
+from ..config import normalize_country
+
 
 @dataclass
 class Event:
@@ -115,7 +117,7 @@ class EventStore:
 
     def filter(
         self,
-        city: str | None = None,
+        country: str | None = None,
         topic: str | None = None,
         has_cfp: bool | None = None,
         start_after: date | None = None,
@@ -123,8 +125,9 @@ class EventStore:
     ) -> list[Event]:
         """Filter events by criteria."""
         events = self.load()
-        if city:
-            events = [e for e in events if e.city.lower() == city.lower()]
+        if country:
+            normalized = normalize_country(country)
+            events = [e for e in events if e.country.lower() == normalized.lower()]
         if topic:
             topic_lower = topic.lower()
             events = [e for e in events if any(topic_lower in t.lower() for t in e.topics)]

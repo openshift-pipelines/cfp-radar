@@ -6,7 +6,7 @@ from datetime import date, datetime
 
 import httpx
 
-from ...config import GLOBAL_CONFERENCES, TARGET_COUNTRIES, TOPICS
+from ...config import GLOBAL_CONFERENCES, TARGET_COUNTRIES, TOPICS, normalize_country
 from ...logging_config import get_logger
 from ..models import Event
 
@@ -51,7 +51,7 @@ def _parse_conferences(data: list[dict], category: str) -> list[Event]:
 
     for conf in data:
         city = conf.get("city", "")
-        country = conf.get("country", "")
+        country = normalize_country(conf.get("country", ""))
         name_lower = conf.get("name", "").lower()
 
         # Check if event is in our target countries or is a global conference

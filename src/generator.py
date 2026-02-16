@@ -9,7 +9,7 @@ from datetime import date
 from jinja2 import Environment, FileSystemLoader
 
 from .collector.models import Event
-from .config import TOPICS
+from .config import TOPICS, normalize_country
 
 
 def generate_html(events: list[Event], output_file: str) -> None:
@@ -26,6 +26,10 @@ def generate_html(events: list[Event], output_file: str) -> None:
         return (cfp_priority, e.start_date)
 
     events = sorted(events, key=sort_key)
+
+    # Normalize country names for display
+    for event in events:
+        event.country = normalize_country(event.country)
 
     # Extract unique countries with counts
     country_counts: dict[str, int] = {}

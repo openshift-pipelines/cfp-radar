@@ -50,7 +50,7 @@ def main() -> None:
 
     # List command
     list_parser = subparsers.add_parser("list", help="List collected events")
-    list_parser.add_argument("--city", help="Filter by city")
+    list_parser.add_argument("--country", help="Filter by country")
     list_parser.add_argument("--topic", help="Filter by topic")
     list_parser.add_argument("--cfp", action="store_true", help="Show only events with open CFP")
     list_parser.add_argument(
@@ -129,7 +129,7 @@ def cmd_list(args: argparse.Namespace) -> None:
 
     store = EventStore(EVENTS_FILE)
     events = store.filter(
-        city=args.city,
+        country=args.country,
         topic=args.topic,
         has_cfp=True if args.cfp else None,
         start_after=date.today(),

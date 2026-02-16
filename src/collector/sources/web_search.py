@@ -11,7 +11,13 @@ import httpx
 from google import genai
 from google.genai import types
 
-from ...config import GEMINI_API_KEY, TARGET_COUNTRIES, TOPICS
+from ...config import (
+    GEMINI_API_KEY,
+    REGION_TO_COUNTRIES,
+    TARGET_REGIONS,
+    TOPICS,
+    normalize_country,
+)
 from ...logging_config import get_logger
 from ..models import Event
 
@@ -29,12 +35,15 @@ async def search_events() -> list[Event]:
     client = genai.Client(api_key=GEMINI_API_KEY)
     events = []
 
-    for country in TARGET_COUNTRIES:
-        # Build search query for Gemini
+    for region in TARGET_REGIONS:
+        countries = REGION_TO_COUNTRIES.get(region, [])
+        countries_str = ", ".join(countries)
         topics_str = ", ".join(TOPICS[:5])
         current_year = date.today().year
 
-        prompt = f"""Search for upcoming tech conferences and meetups in {country} for {current_year} and {current_year + 1}.
+        prompt = f"""Search for upcoming tech conferences and meetups in {region} for {current_year} and {current_year + 1}.
+
+Cover these countries: {countries_str}
 
 Focus on events related to: {topics_str}
 
@@ -44,7 +53,7 @@ For each event you find, provide the following information in JSON format:
     {{
       "name": "Event Name",
       "city": "City Name",
-      "country": "{country}",
+      "country": "Country Name",
       "start_date": "YYYY-MM-DD",
       "end_date": "YYYY-MM-DD or null",
       "event_type": "conference or meetup or workshop",
@@ -58,7 +67,7 @@ For each event you find, provide the following information in JSON format:
 }}
 
 Only include events that:
-1. Are actually in {country}
+1. Are in one of these countries: {countries_str}
 2. Are related to DevOps, CI/CD, Cloud Native, Kubernetes, or Platform Engineering
 3. Have dates in the future or within the last month
 4. You are reasonably confident about
@@ -66,7 +75,7 @@ Only include events that:
 Return ONLY the JSON, no other text."""
 
         try:
-            logger.debug("Querying Gemini for %s", country)
+            logger.debug("Querying Gemini for region %s", region)
             response = client.models.generate_content(
                 model="gemini-3-flash-preview",
                 contents=prompt,
@@ -75,13 +84,13 @@ Return ONLY the JSON, no other text."""
                 ),
             )
             content = response.text or ""
-            logger.debug("Gemini response for %s: %d chars", country, len(content))
-            parsed_events = _parse_response(content, country)
-            logger.info("Parsed %d events for %s", len(parsed_events), country)
+            logger.debug("Gemini response for %s: %d chars", region, len(content))
+            parsed_events = _parse_response(content, region)
+            logger.info("Parsed %d events for %s", len(parsed_events), region)
             events.extend(parsed_events)
 
         except Exception as e:
-            logger.error("Error searching events for %s: %s: %s", country, type(e).__name__, e)
+            logger.error("Error searching events for %s: %s: %s", region, type(e).__name__, e)
             continue
 
     return events
@@ -125,7 +134,7 @@ def _parse_response(content: str, country: str) -> list[Event]:
                 event = Event(
                     name=item.get("name", ""),
                     city=item.get("city", ""),
-                    country=item.get("country", country),
+                    country=normalize_country(item.get("country", country)),
                     start_date=start_date,
                     end_date=end_date,
                     event_type=item.get("event_type", "conference"),

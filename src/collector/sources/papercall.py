@@ -7,7 +7,7 @@ from datetime import date, datetime
 import httpx
 from bs4 import BeautifulSoup
 
-from ...config import GLOBAL_CONFERENCES, TARGET_COUNTRIES, TOPICS
+from ...config import COUNTRY_ALIASES, GLOBAL_CONFERENCES, TARGET_COUNTRIES, TOPICS, normalize_country
 from ...logging_config import get_logger
 from ..models import Event
 
@@ -52,6 +52,8 @@ def _parse_papercall_page(html: str) -> list[Event]:
     soup = BeautifulSoup(html, "html.parser")
 
     target_countries_lower = {c.lower() for c in TARGET_COUNTRIES}
+    # Include alias keys so variant names (e.g. "u.s.a.") also match in location text
+    location_filter_terms = target_countries_lower | set(COUNTRY_ALIASES.keys())
     global_confs_lower = [gc.lower() for gc in GLOBAL_CONFERENCES]
 
     # Find event cards
@@ -70,7 +72,7 @@ def _parse_papercall_page(html: str) -> list[Event]:
             location_lower = location.lower()
             name_lower = name.lower()
 
-            country_match = any(country in location_lower for country in target_countries_lower)
+            country_match = any(term in location_lower for term in location_filter_terms)
             global_conf_match = any(gc in name_lower for gc in global_confs_lower)
 
             if not (country_match or global_conf_match):
@@ -96,6 +98,7 @@ def _parse_papercall_page(html: str) -> list[Event]:
 
             # Determine city and country from location
             city, country = _parse_location(location)
+            country = normalize_country(country)
 
             # Check topic relevance
             topics_found = [t for t in TOPICS if t.lower() in name_lower]

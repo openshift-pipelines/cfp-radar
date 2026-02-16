@@ -148,7 +148,7 @@ class TestEventStore:
             merged = store.merge(new_events)
             assert len(merged) == 2
 
-    def test_filter_by_city(self):
+    def test_filter_by_country(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             filepath = os.path.join(tmpdir, "events.json")
             store = EventStore(filepath)
@@ -171,9 +171,9 @@ class TestEventStore:
             ]
             store.save(events)
 
-            paris_events = store.filter(city="Paris")
-            assert len(paris_events) == 1
-            assert paris_events[0].city == "Paris"
+            france_events = store.filter(country="France")
+            assert len(france_events) == 1
+            assert france_events[0].country == "France"
 
     def test_filter_by_cfp(self):
         with tempfile.TemporaryDirectory() as tmpdir:
