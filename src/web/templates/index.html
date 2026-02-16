@@ -509,6 +509,69 @@
         color: #fca5a5;
       }
 
+      /* Month Filter Strip */
+      .month-strip {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding: 12px 16px;
+        background: rgba(30, 41, 59, 0.8);
+        border-radius: 12px;
+        margin-bottom: 24px;
+        border: 1px solid rgba(100, 116, 139, 0.3);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .month-strip::-webkit-scrollbar {
+        display: none;
+      }
+
+      .month-chip {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        border-radius: 8px;
+        border: 1px solid rgba(71, 85, 105, 0.5);
+        background: rgba(51, 65, 85, 0.5);
+        color: #94a3b8;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        user-select: none;
+        white-space: nowrap;
+      }
+
+      .month-chip:hover {
+        color: #e2e8f0;
+        border-color: #8b5cf6;
+        background: rgba(139, 92, 246, 0.15);
+      }
+
+      .month-chip.active {
+        background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+        border-color: #7c3aed;
+        color: white;
+        box-shadow: 0 2px 12px rgba(139, 92, 246, 0.4);
+      }
+
+      .month-chip .chip-count {
+        font-size: 10px;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 1px 5px;
+        border-radius: 6px;
+        line-height: 1.4;
+      }
+
+      .month-chip.active .chip-count {
+        background: rgba(255, 255, 255, 0.25);
+      }
+
       @media (max-width: 640px) {
         .country-filter-pills {
           flex-direction: column;
@@ -563,11 +626,12 @@
 
       <!-- Country Filter -->
       {% if countries %}
-      <div class="country-filter-container">
+      <div class="country-filter-container" id="country-filter-container">
         <div class="country-filter-pills">
           <div
             class="country-pill all-countries active"
             onclick="toggleCountry('all')"
+            id="all-countries-pill"
           >
             <span class="country-flag">🌍</span>
             <span class="country-name">All Countries</span>
@@ -603,6 +667,20 @@
           </div>
           {% endfor %}
         </div>
+      </div>
+      {% endif %}
+
+      <!-- Month Filter -->
+      {% if months %}
+      <div class="month-strip" id="month-filter-container">
+        <div class="month-chip active" onclick="toggleMonth('all')" id="all-months-pill">
+          All <span class="chip-count">{{ events|length }}</span>
+        </div>
+        {% for month_key, month_label, count in months %}
+        <div class="month-chip" onclick="toggleMonth('{{ month_key }}')" data-month="{{ month_key }}">
+          {{ month_label }} <span class="chip-count">{{ count }}</span>
+        </div>
+        {% endfor %}
       </div>
       {% endif %}
 
@@ -682,6 +760,7 @@
     <script>
       // Track active country filters
       let activeCountries = new Set();
+      let activeMonth = null;
       let currentSort = "cfp";
 
       // Assign original index to each card for restoring CFP deadline order
@@ -690,13 +769,15 @@
       });
 
       function toggleCountry(country) {
-        const allPill = document.querySelector(".country-pill.all-countries");
+        const allPill = document.getElementById("all-countries-pill");
 
         if (country === "all") {
           activeCountries.clear();
-          document.querySelectorAll(".country-pill").forEach((pill) => {
-            pill.classList.remove("active");
-          });
+          document
+            .querySelectorAll("#country-filter-container .country-pill")
+            .forEach((pill) => {
+              pill.classList.remove("active");
+            });
           allPill.classList.add("active");
         } else {
           if (activeCountries.has(country)) {
@@ -722,13 +803,56 @@
         filterEvents();
       }
 
+      function toggleMonth(month) {
+        const allPill = document.getElementById("all-months-pill");
+
+        if (month === "all") {
+          activeMonth = null;
+          document
+            .querySelectorAll("#month-filter-container .month-chip")
+            .forEach((pill) => {
+              pill.classList.remove("active");
+            });
+          allPill.classList.add("active");
+        } else {
+          if (activeMonth === month) {
+            // Deselect — back to "All"
+            activeMonth = null;
+            document
+              .querySelector(
+                `#month-filter-container .month-chip[data-month="${month}"]`,
+              )
+              .classList.remove("active");
+            allPill.classList.add("active");
+          } else {
+            // Select new month
+            document
+              .querySelectorAll("#month-filter-container .month-chip")
+              .forEach((pill) => {
+                pill.classList.remove("active");
+              });
+            activeMonth = month;
+            document
+              .querySelector(
+                `#month-filter-container .month-chip[data-month="${month}"]`,
+              )
+              .classList.add("active");
+          }
+        }
+
+        filterEvents();
+      }
+
       function filterEvents() {
         const eventCards = document.querySelectorAll(".event-card");
-        const showAll = activeCountries.size === 0;
+        const showAllCountries = activeCountries.size === 0;
 
         eventCards.forEach((card) => {
           const country = card.dataset.country;
-          const shouldShow = showAll || activeCountries.has(country);
+          const countryMatch = showAllCountries || activeCountries.has(country);
+          const monthMatch =
+            !activeMonth || card.dataset.startMonth === activeMonth;
+          const shouldShow = countryMatch && monthMatch;
 
           if (shouldShow) {
             card.style.display = "block";

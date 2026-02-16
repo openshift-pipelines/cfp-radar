@@ -40,6 +40,17 @@ def generate_html(events: list[Event], output_file: str) -> None:
     # Sort countries by count (most events first)
     countries = sorted(country_counts.items(), key=lambda x: x[1], reverse=True)
 
+    # Extract unique months with counts
+    month_counts: dict[str, int] = {}
+    for event in events:
+        month_key = event.start_date.strftime("%Y-%m")
+        month_counts[month_key] = month_counts.get(month_key, 0) + 1
+
+    months = [
+        (key, date(int(key[:4]), int(key[5:7]), 1).strftime("%b %Y"), count)
+        for key, count in sorted(month_counts.items())
+    ]
+
     # Setup Jinja2 templates
     templates_dir = os.path.join(os.path.dirname(__file__), "web", "templates")
     env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
@@ -52,6 +63,7 @@ def generate_html(events: list[Event], output_file: str) -> None:
         has_cfp=None,
         today=date.today(),
         countries=countries,
+        months=months,
     )
 
     # Ensure output directory exists

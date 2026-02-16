@@ -9,7 +9,7 @@
             {% else %}cfp-open
             {% endif %}
         {% endif %}"
-        data-country="{{ event.country }}" data-city="{{ event.city }}">
+        data-country="{{ event.country }}" data-city="{{ event.city }}" data-start-month="{{ event.start_date.strftime('%Y-%m') }}">
         <div class="flex justify-between items-start">
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
