@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import os
 import sys
 
 from .logging_config import get_logger, setup_logging
@@ -107,6 +108,13 @@ async def cmd_collect(args: argparse.Namespace) -> None:
 
     generate_html(events, args.output_file)
     logger.info("HTML output written to: %s", args.output_file)
+
+    # Generate ICS calendar feed
+    from .calendar_feed import generate_ics
+
+    ics_output = os.path.join(os.path.dirname(args.output_file) or ".", "events.ics")
+    generate_ics(events, ics_output)
+    logger.info("ICS calendar written to: %s", ics_output)
 
 
 async def cmd_notify(args: argparse.Namespace) -> None:

@@ -13,6 +13,7 @@ dependencies = [
     "jinja2",
     "python-dateutil",
     "pyyaml",
+    "icalendar",
 ]
 
 [dependency-groups]
@@ -82,6 +83,7 @@ module = [
     "google.*",
     "bs4",
     "dateutil.*",
+    "icalendar",
 ]
 ignore_missing_imports = true
 

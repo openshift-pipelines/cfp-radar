@@ -579,8 +579,8 @@
         </div>
       </header>
 
-      <!-- Legend -->
-      <div class="flex gap-4 mb-4 text-sm">
+      <!-- Legend + Subscribe -->
+      <div class="flex flex-wrap items-center gap-4 mb-4 text-sm">
         <span class="flex items-center gap-1">
           <span class="w-3 h-3 bg-red-500 rounded"></span> CFP &lt; 7 days
         </span>
@@ -590,17 +590,45 @@
         <span class="flex items-center gap-1">
           <span class="w-3 h-3 bg-green-500 rounded"></span> CFP Open
         </span>
+        <a href="https://calendar.google.com/calendar/r?cid=webcal://openshift-pipelines.github.io/cfp-radar/events.ics" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-gray-600 text-gray-300 hover:border-blue-400 hover:text-blue-300 transition-colors ml-auto">
+          <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-calendar-logo-icon-svg-download-png-2476483.png?f=webp" alt="Google Calendar" class="w-4 h-4">
+          Subscribe to Google Calendar
+        </a>
       </div>
 
       <!-- Country Filter -->
       {% if countries %}
       <div class="country-strip" id="country-filter-container">
-        <div class="country-chip active" onclick="toggleCountry('all')" id="all-countries-pill">
+        <div
+          class="country-chip active"
+          onclick="toggleCountry('all')"
+          id="all-countries-pill"
+        >
           All <span class="chip-count">{{ events|length }}</span>
         </div>
         {% for country, count in countries %}
-        <div class="country-chip" onclick="toggleCountry('{{ country }}')" data-country="{{ country }}">
-          {% if country == 'USA' %}🇺🇸{% elif country == 'Canada' %}🇨🇦{% elif country == 'Netherlands' %}🇳🇱{% elif country == 'Spain' %}🇪🇸{% elif country == 'France' %}🇫🇷{% elif country == 'Germany' %}🇩🇪{% elif country == 'UK' %}🇬🇧{% elif country == 'Denmark' %}🇩🇰{% elif country == 'Belgium' %}🇧🇪{% elif country == 'Ireland' %}🇮🇪{% elif country == 'Sweden' %}🇸🇪{% elif country == 'Switzerland' %}🇨🇭{% elif country == 'Poland' %}🇵🇱{% elif country == 'Austria' %}🇦🇹{% elif country == 'Italy' %}🇮🇹{% elif country == 'Portugal' %}🇵🇹{% elif country == 'Czech Republic' %}🇨🇿{% elif country == 'Finland' %}🇫🇮{% elif country == 'Norway' %}🇳🇴{% elif country == 'Greece' %}🇬🇷{% elif country == 'India' %}🇮🇳{% elif country == 'China' %}🇨🇳{% elif country == 'Japan' %}🇯🇵{% elif country == 'Singapore' %}🇸🇬{% elif country == 'Australia' %}🇦🇺{% elif country == 'South Korea' %}🇰🇷{% elif country == 'Taiwan' %}🇹🇼{% elif country == 'Israel' %}🇮🇱{% elif country == 'UAE' %}🇦🇪{% elif country == 'Brazil' %}🇧🇷{% elif country == 'Argentina' %}🇦🇷{% elif country == 'Mexico' %}🇲🇽{% else %}🌍{% endif %} {{ country }} <span class="chip-count">{{ count }}</span>
+        <div
+          class="country-chip"
+          onclick="toggleCountry('{{ country }}')"
+          data-country="{{ country }}"
+        >
+          {% if country == 'USA' %}🇺🇸{% elif country == 'Canada' %}🇨🇦{% elif
+          country == 'Netherlands' %}🇳🇱{% elif country == 'Spain' %}🇪🇸{% elif
+          country == 'France' %}🇫🇷{% elif country == 'Germany' %}🇩🇪{% elif
+          country == 'UK' %}🇬🇧{% elif country == 'Denmark' %}🇩🇰{% elif country
+          == 'Belgium' %}🇧🇪{% elif country == 'Ireland' %}🇮🇪{% elif country ==
+          'Sweden' %}🇸🇪{% elif country == 'Switzerland' %}🇨🇭{% elif country ==
+          'Poland' %}🇵🇱{% elif country == 'Austria' %}🇦🇹{% elif country ==
+          'Italy' %}🇮🇹{% elif country == 'Portugal' %}🇵🇹{% elif country ==
+          'Czech Republic' %}🇨🇿{% elif country == 'Finland' %}🇫🇮{% elif country
+          == 'Norway' %}🇳🇴{% elif country == 'Greece' %}🇬🇷{% elif country ==
+          'India' %}🇮🇳{% elif country == 'China' %}🇨🇳{% elif country == 'Japan'
+          %}🇯🇵{% elif country == 'Singapore' %}🇸🇬{% elif country == 'Australia'
+          %}🇦🇺{% elif country == 'South Korea' %}🇰🇷{% elif country == 'Taiwan'
+          %}🇹🇼{% elif country == 'Israel' %}🇮🇱{% elif country == 'UAE' %}🇦🇪{%
+          elif country == 'Brazil' %}🇧🇷{% elif country == 'Argentina' %}🇦🇷{%
+          elif country == 'Mexico' %}🇲🇽{% else %}🌍{% endif %} {{ country }}
+          <span class="chip-count">{{ count }}</span>
         </div>
         {% endfor %}
       </div>
@@ -609,11 +637,19 @@
       <!-- Month Filter -->
       {% if months %}
       <div class="month-strip" id="month-filter-container">
-        <div class="month-chip active" onclick="toggleMonth('all')" id="all-months-pill">
+        <div
+          class="month-chip active"
+          onclick="toggleMonth('all')"
+          id="all-months-pill"
+        >
           All <span class="chip-count">{{ events|length }}</span>
         </div>
         {% for month_key, month_label, count in months %}
-        <div class="month-chip" onclick="toggleMonth('{{ month_key }}')" data-month="{{ month_key }}">
+        <div
+          class="month-chip"
+          onclick="toggleMonth('{{ month_key }}')"
+          data-month="{{ month_key }}"
+        >
           {{ month_label }} <span class="chip-count">{{ count }}</span>
         </div>
         {% endfor %}
