@@ -38,6 +38,21 @@ def main() -> None:
         help="Path to config YAML file (default: config.yaml)",
     )
 
+    # Generate HTML command (no collection)
+    generate_parser = subparsers.add_parser(
+        "generate", help="Generate HTML from existing event data (no collection)"
+    )
+    generate_parser.add_argument(
+        "output_file",
+        nargs="?",
+        default="data/index.html",
+        help="HTML output file (default: data/index.html)",
+    )
+    generate_parser.add_argument(
+        "--config",
+        help="Path to config YAML file (default: config.yaml)",
+    )
+
     # Notify command
     notify_parser = subparsers.add_parser(
         "notify", help="Send Slack notifications for upcoming CFPs"
@@ -63,6 +78,8 @@ def main() -> None:
 
     if args.command == "collect":
         asyncio.run(cmd_collect(args))
+    elif args.command == "generate":
+        cmd_generate(args)
     elif args.command == "notify":
         asyncio.run(cmd_notify(args))
     elif args.command == "list":
@@ -110,6 +127,31 @@ async def cmd_collect(args: argparse.Namespace) -> None:
     logger.info("HTML output written to: %s", args.output_file)
 
     # Generate ICS calendar feed
+    from .calendar_feed import generate_ics
+
+    ics_output = os.path.join(os.path.dirname(args.output_file) or ".", "events.ics")
+    generate_ics(events, ics_output)
+    logger.info("ICS calendar written to: %s", ics_output)
+
+
+def cmd_generate(args: argparse.Namespace) -> None:
+    """Generate HTML and ICS from existing event data without collecting."""
+    from datetime import date
+
+    from .collector.models import EventStore
+    from .config import EVENTS_FILE, set_config_file
+    from .generator import generate_html
+
+    if args.config:
+        set_config_file(args.config)
+
+    store = EventStore(EVENTS_FILE)
+    events = store.filter(start_after=date.today())
+    logger.info("Total events: %d", len(events))
+
+    generate_html(events, args.output_file)
+    logger.info("HTML output written to: %s", args.output_file)
+
     from .calendar_feed import generate_ics
 
     ics_output = os.path.join(os.path.dirname(args.output_file) or ".", "events.ics")
