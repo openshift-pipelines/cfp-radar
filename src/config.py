@@ -63,6 +63,7 @@ def normalize_country(country: str) -> str:
     """Normalize country name variants to canonical form."""
     return COUNTRY_ALIASES.get(country.lower().strip(), country)
 
+
 DEFAULT_CONFIG_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "config.yaml")
 _config_file: str | None = None
 

@@ -7,7 +7,13 @@ from datetime import date, datetime
 import httpx
 from bs4 import BeautifulSoup
 
-from ...config import COUNTRY_ALIASES, GLOBAL_CONFERENCES, TARGET_COUNTRIES, TOPICS, normalize_country
+from ...config import (
+    COUNTRY_ALIASES,
+    GLOBAL_CONFERENCES,
+    TARGET_COUNTRIES,
+    TOPICS,
+    normalize_country,
+)
 from ...logging_config import get_logger
 from ..models import Event
 
