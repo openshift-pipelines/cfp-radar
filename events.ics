@@ -3,32 +3,6 @@ VERSION:2.0
 PRODID:-//CFP Radar//cfp-radar//EN
 X-WR-CALNAME:CFP Radar
 BEGIN:VEVENT
-SUMMARY:ObservabilityCON on the Road - Paris
-DTSTART;VALUE=DATE:20260219
-DTEND;VALUE=DATE:20260220
-UID:44015bfef144-event@cfp-radar
-DESCRIPTION:A focused event exploring the future of open source observabil
- ity\, including hands-on sessions on Grafana\, Loki\, and Tempo for DevOps
-  and SRE teams.\nWebsite: https://grafana.com/about/events/\nTopics: Obser
- vability\, DevOps\, SRE\, Grafana\, Prometheus
-LOCATION:Paris\, France
-TRANSP:OPAQUE
-URL:https://grafana.com/about/events/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Test Automation Summit Bangalore 2026
-DTSTART;VALUE=DATE:20260219
-DTEND;VALUE=DATE:20260220
-UID:7fc66f022cb4-event@cfp-radar
-DESCRIPTION:Focused on the latest trends in test automation and its integr
- ation into continuous delivery pipelines.\nWebsite: https://10times.com/te
- st-automation-summit-bangalore\nTopics: Test Automation\, CI/CD\, Quality 
- Engineering
-LOCATION:Bangalore\, India
-TRANSP:OPAQUE
-URL:https://10times.com/test-automation-summit-bangalore
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Test Automation Summit Pune 2026
 DTSTART;VALUE=DATE:20260226
 DTEND;VALUE=DATE:20260227
