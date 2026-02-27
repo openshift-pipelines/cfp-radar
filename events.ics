@@ -3,19 +3,6 @@ VERSION:2.0
 PRODID:-//CFP Radar//cfp-radar//EN
 X-WR-CALNAME:CFP Radar
 BEGIN:VEVENT
-SUMMARY:Test Automation Summit Pune 2026
-DTSTART;VALUE=DATE:20260226
-DTEND;VALUE=DATE:20260227
-UID:c5c261d0d7d1-event@cfp-radar
-DESCRIPTION:A specialized conference focusing on the latest trends in soft
- ware testing automation\, including CI/CD integration and AI-driven qualit
- y assurance.\nWebsite: https://testautomationsummit.com/pune/\nTopics: con
- tinuous integration\, test automation\, devops\, quality engineering
-LOCATION:Pune\, India
-TRANSP:OPAQUE
-URL:https://testautomationsummit.com/pune/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:11th Edition DevOps Conclave & Awards 2026
 DTSTART;VALUE=DATE:20260313
 DTEND;VALUE=DATE:20260314
@@ -1307,5 +1294,115 @@ DESCRIPTION:Website: https://apiconf.io
 LOCATION:Clear Water\, FL\, USA
 TRANSP:OPAQUE
 URL:https://apiconf.io
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cyber Security & Cloud Congress
+DTSTART;VALUE=DATE:20260518
+DTEND;VALUE=DATE:20260520
+UID:4f70ea9305d9-event@cfp-radar
+DESCRIPTION:Website: https://www.cybersecuritycloudexpo.com/northamerica\n
+ Topics: devops
+LOCATION:San Francisco\, CA\, USA
+TRANSP:OPAQUE
+URL:https://www.cybersecuritycloudexpo.com/northamerica
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:World Conference on  Smart Systems : Big Data\, IoT\, Cybersecurit
+ y\, and IT in Action
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260920
+UID:c9a2f9db2ca9-event@cfp-radar
+DESCRIPTION:Website: https://www.smartsystems.thesciencequest.org
+LOCATION:Tokyo\, Japan
+TRANSP:OPAQUE
+URL:https://www.smartsystems.thesciencequest.org
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Open Tech Day: Software-defined Storage
+DTSTART;VALUE=DATE:20260531
+DTEND;VALUE=DATE:20260601
+UID:1cb97d5b9315-cfp@cfp-radar
+DESCRIPTION:Website: https://opentechday.de\nCFP: https://opentechday.de/p
+ ropose
+LOCATION:Nürnberg\, Germany
+TRANSP:TRANSPARENT
+URL:https://opentechday.de/propose
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Open Tech Day: Software-defined Storage
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+UID:1cb97d5b9315-event@cfp-radar
+DESCRIPTION:Website: https://opentechday.de\nCFP: https://opentechday.de/p
+ ropose
+LOCATION:Nürnberg\, Germany
+TRANSP:OPAQUE
+URL:https://opentechday.de
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] S2N: Storage Server Network
+DTSTART;VALUE=DATE:20260504
+DTEND;VALUE=DATE:20260505
+UID:635e99691c7c-cfp@cfp-radar
+DESCRIPTION:Website: https://s2n.heise.de\nCFP: https://s2n.heise.de/cfp.p
+ hp
+LOCATION:Berlin\, Germany
+TRANSP:TRANSPARENT
+URL:https://s2n.heise.de/cfp.php
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:S2N: Storage Server Network
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261105
+UID:635e99691c7c-event@cfp-radar
+DESCRIPTION:Website: https://s2n.heise.de\nCFP: https://s2n.heise.de/cfp.p
+ hp
+LOCATION:Berlin\, Germany
+TRANSP:OPAQUE
+URL:https://s2n.heise.de
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] CLC
+DTSTART;VALUE=DATE:20260421
+DTEND;VALUE=DATE:20260422
+UID:92d6261779ac-cfp@cfp-radar
+DESCRIPTION:Website: https://clc-conference.eu/index_en.php\nCFP: https://
+ clc-conference.eu/cfp_en.php\nTopics: devops
+LOCATION:Mannheim\, Germany
+TRANSP:TRANSPARENT
+URL:https://clc-conference.eu/cfp_en.php
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CLC
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261113
+UID:92d6261779ac-event@cfp-radar
+DESCRIPTION:Website: https://clc-conference.eu/index_en.php\nCFP: https://
+ clc-conference.eu/cfp_en.php\nTopics: devops
+LOCATION:Mannheim\, Germany
+TRANSP:OPAQUE
+URL:https://clc-conference.eu/index_en.php
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Agile Testing Days
+DTSTART;VALUE=DATE:20260329
+DTEND;VALUE=DATE:20260330
+UID:83f51827298b-cfp@cfp-radar
+DESCRIPTION:Website: https://agiletestingdays.com\nCFP: https://agiletesti
+ ngdays.com/call-for-papers
+LOCATION:Potsdam\, Germany
+TRANSP:TRANSPARENT
+URL:https://agiletestingdays.com/call-for-papers
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Agile Testing Days
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261120
+UID:83f51827298b-event@cfp-radar
+DESCRIPTION:Website: https://agiletestingdays.com\nCFP: https://agiletesti
+ ngdays.com/call-for-papers
+LOCATION:Potsdam\, Germany
+TRANSP:OPAQUE
+URL:https://agiletestingdays.com
 END:VEVENT
 END:VCALENDAR
