@@ -1318,6 +1318,28 @@ TRANSP:OPAQUE
 URL:https://www.smartsystems.thesciencequest.org
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[CFP Deadline] heise devSec
+DTSTART;VALUE=DATE:20260414
+DTEND;VALUE=DATE:20260415
+UID:e8c4a471196d-cfp@cfp-radar
+DESCRIPTION:Website: https://heise-devsec.de/cfp.php\nCFP: https://heise-d
+ evsec.de/code_of_conduct.php
+LOCATION:Marburg\, Germany
+TRANSP:TRANSPARENT
+URL:https://heise-devsec.de/code_of_conduct.php
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:heise devSec
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260924
+UID:e8c4a471196d-event@cfp-radar
+DESCRIPTION:Website: https://heise-devsec.de/cfp.php\nCFP: https://heise-d
+ evsec.de/code_of_conduct.php
+LOCATION:Marburg\, Germany
+TRANSP:OPAQUE
+URL:https://heise-devsec.de/cfp.php
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Open Tech Day: Software-defined Storage
 DTSTART;VALUE=DATE:20260531
 DTEND;VALUE=DATE:20260601
