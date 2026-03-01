@@ -672,28 +672,6 @@ TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Nullcon Goa
-DTSTART;VALUE=DATE:20251120
-DTEND;VALUE=DATE:20251121
-UID:ed9e9b504f53-cfp@cfp-radar
-DESCRIPTION:Website: https://nullcon.net/goa-2026\nCFP: https://nullcon.ne
- t/goa-2026/cfp
-LOCATION:Goa\, India
-TRANSP:TRANSPARENT
-URL:https://nullcon.net/goa-2026/cfp
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nullcon Goa
-DTSTART;VALUE=DATE:20260228
-DTEND;VALUE=DATE:20260302
-UID:ed9e9b504f53-event@cfp-radar
-DESCRIPTION:Website: https://nullcon.net/goa-2026\nCFP: https://nullcon.ne
- t/goa-2026/cfp
-LOCATION:Goa\, India
-TRANSP:OPAQUE
-URL:https://nullcon.net/goa-2026
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] [un]prompted | The AI Security Practitioner Confere
  nce
 DTSTART;VALUE=DATE:20260128
