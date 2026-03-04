@@ -672,29 +672,6 @@ TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] [un]prompted | The AI Security Practitioner Confere
- nce
-DTSTART;VALUE=DATE:20260128
-DTEND;VALUE=DATE:20260129
-UID:76a2ec732e40-cfp@cfp-radar
-DESCRIPTION:Website: https://unpromptedcon.org\nCFP: https://sessionize.co
- m/unprompted-the-ai-security-practitio
-LOCATION:San Francisco\, CA\, USA
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/unprompted-the-ai-security-practitio
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[un]prompted | The AI Security Practitioner Conference
-DTSTART;VALUE=DATE:20260303
-DTEND;VALUE=DATE:20260305
-UID:76a2ec732e40-event@cfp-radar
-DESCRIPTION:Website: https://unpromptedcon.org\nCFP: https://sessionize.co
- m/unprompted-the-ai-security-practitio
-LOCATION:San Francisco\, CA\, USA
-TRANSP:OPAQUE
-URL:https://unpromptedcon.org
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Devnexus
 DTSTART;VALUE=DATE:20250915
 DTEND;VALUE=DATE:20250916
