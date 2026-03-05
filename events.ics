@@ -672,28 +672,6 @@ TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Devnexus
-DTSTART;VALUE=DATE:20250915
-DTEND;VALUE=DATE:20250916
-UID:8d6092874ba7-cfp@cfp-radar
-DESCRIPTION:Website: https://devnexus.com\nCFP: https://sessionize.com/dev
- nexus-2026
-LOCATION:Atlanta\, GA\, USA
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/devnexus-2026
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Devnexus
-DTSTART;VALUE=DATE:20260304
-DTEND;VALUE=DATE:20260307
-UID:8d6092874ba7-event@cfp-radar
-DESCRIPTION:Website: https://devnexus.com\nCFP: https://sessionize.com/dev
- nexus-2026
-LOCATION:Atlanta\, GA\, USA
-TRANSP:OPAQUE
-URL:https://devnexus.com
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] SCaLE
 DTSTART;VALUE=DATE:20251201
 DTEND;VALUE=DATE:20251202
