@@ -672,28 +672,6 @@ TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] SCaLE
-DTSTART;VALUE=DATE:20251201
-DTEND;VALUE=DATE:20251202
-UID:c41b735de759-cfp@cfp-radar
-DESCRIPTION:Website: https://www.socallinuxexpo.org\nCFP: https://www.soca
- llinuxexpo.org/scale/23x/cfp
-LOCATION:Pasadena\, CA\, USA
-TRANSP:TRANSPARENT
-URL:https://www.socallinuxexpo.org/scale/23x/cfp
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:SCaLE
-DTSTART;VALUE=DATE:20260305
-DTEND;VALUE=DATE:20260309
-UID:c41b735de759-event@cfp-radar
-DESCRIPTION:Website: https://www.socallinuxexpo.org\nCFP: https://www.soca
- llinuxexpo.org/scale/23x/cfp
-LOCATION:Pasadena\, CA\, USA
-TRANSP:OPAQUE
-URL:https://www.socallinuxexpo.org
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] FOSS Backstage
 DTSTART;VALUE=DATE:20251027
 DTEND;VALUE=DATE:20251028
