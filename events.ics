@@ -659,28 +659,6 @@ TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] FOSS Backstage
-DTSTART;VALUE=DATE:20251027
-DTEND;VALUE=DATE:20251028
-UID:ca8faf28236d-cfp@cfp-radar
-DESCRIPTION:Website: https://26.foss-backstage.de\nCFP: https://26.foss-ba
- ckstage.de/call-for-participation
-LOCATION:Berlin\, Germany
-TRANSP:TRANSPARENT
-URL:https://26.foss-backstage.de/call-for-participation
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:FOSS Backstage
-DTSTART;VALUE=DATE:20260316
-DTEND;VALUE=DATE:20260318
-UID:ca8faf28236d-event@cfp-radar
-DESCRIPTION:Website: https://26.foss-backstage.de\nCFP: https://26.foss-ba
- ckstage.de/call-for-participation
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://26.foss-backstage.de
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Open Tech Day: OpenTofu Edition
 DTSTART;VALUE=DATE:20251130
 DTEND;VALUE=DATE:20251201
