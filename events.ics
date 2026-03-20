@@ -659,28 +659,6 @@ TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Open Tech Day: OpenTofu Edition
-DTSTART;VALUE=DATE:20251130
-DTEND;VALUE=DATE:20251201
-UID:9eb3dd7e10c1-cfp@cfp-radar
-DESCRIPTION:Website: https://opentechday.de/coming-up\nCFP: https://opente
- chday.de/propose
-LOCATION:Nürnberg\, Germany
-TRANSP:TRANSPARENT
-URL:https://opentechday.de/propose
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Open Tech Day: OpenTofu Edition
-DTSTART;VALUE=DATE:20260319
-DTEND;VALUE=DATE:20260320
-UID:9eb3dd7e10c1-event@cfp-radar
-DESCRIPTION:Website: https://opentechday.de/coming-up\nCFP: https://opente
- chday.de/propose
-LOCATION:Nürnberg\, Germany
-TRANSP:OPAQUE
-URL:https://opentechday.de/coming-up
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] BSidesSF
 DTSTART;VALUE=DATE:20251208
 DTEND;VALUE=DATE:20251209
