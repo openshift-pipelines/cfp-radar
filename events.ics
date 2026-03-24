@@ -368,18 +368,6 @@ TRANSP:OPAQUE
 URL:https://aws.amazon.com/summits/paris/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:KubeCon + CloudNativeCon Europe
-DTSTART;VALUE=DATE:20260323
-DTEND;VALUE=DATE:20260327
-UID:e3837a195c48-event@cfp-radar
-DESCRIPTION:Website: https://events.linuxfoundation.org/kubecon-cloudnativ
- econ-europe-2026\nCFP: https://events.linuxfoundation.org/kubecon-cloudnat
- ivecon-europe/program/cfp\nTopics: devops
-LOCATION:Amsterdam\, Netherlands
-TRANSP:OPAQUE
-URL:https://events.linuxfoundation.org/kubecon-cloudnativecon-europe-2026
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:DevOpsCon Amsterdam
 DTSTART;VALUE=DATE:20260420
 DTEND;VALUE=DATE:20260425
@@ -644,16 +632,6 @@ DESCRIPTION:Website: https://devopscon.io/san-diego\nTopics: devops
 LOCATION:San Diego\, CA\, USA
 TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:DrupalCon
-DTSTART;VALUE=DATE:20260323
-DTEND;VALUE=DATE:20260327
-UID:5414130acf21-event@cfp-radar
-DESCRIPTION:Website: https://events.drupal.org/chicago2026
-LOCATION:Chicago\, IL\, USA
-TRANSP:OPAQUE
-URL:https://events.drupal.org/chicago2026
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:REACT PARIS
@@ -1138,6 +1116,17 @@ TRANSP:OPAQUE
 URL:https://www.cybersecuritycloudexpo.com/northamerica
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Software Architecture Forum
+DTSTART;VALUE=DATE:20260616
+DTEND;VALUE=DATE:20260618
+UID:b37f03552435-event@cfp-radar
+DESCRIPTION:Website: https://conferences.isaqb.org/software-architecture-f
+ orum
+LOCATION:Munich\, Germany
+TRANSP:OPAQUE
+URL:https://conferences.isaqb.org/software-architecture-forum
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:World Conference on  Smart Systems : Big Data\, IoT\, Cybersecurit
  y\, and IT in Action
 DTSTART;VALUE=DATE:20260917
@@ -1191,6 +1180,16 @@ DESCRIPTION:Website: https://opentechday.de\nCFP: https://opentechday.de/p
 LOCATION:Nürnberg\, Germany
 TRANSP:OPAQUE
 URL:https://opentechday.de
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Joomla! World Conference
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261019
+UID:8c33bdba9ee5-event@cfp-radar
+DESCRIPTION:Website: https://conference.joomla.org
+LOCATION:Potsdam\, Germany
+TRANSP:OPAQUE
+URL:https://conference.joomla.org
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] S2N: Storage Server Network
