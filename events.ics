@@ -1093,18 +1093,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:OpenChain and Friends Stuttgart
-DTSTART;VALUE=DATE:20260324
-DTEND;VALUE=DATE:20260327
-UID:bd27addaa071-event@cfp-radar
-DESCRIPTION:Website: https://openchainproject.org/news/2026/03/03/openchai
- n-and-friends-stuttgart-2026
-LOCATION:Stuttgart\, Germany
-TRANSP:OPAQUE
-URL:https://openchainproject.org/news/2026/03/03/openchain-and-friends-stu
- ttgart-2026
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cyber Security & Cloud Congress
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20260520
