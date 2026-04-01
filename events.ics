@@ -606,28 +606,6 @@ TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] ParisTestConf
-DTSTART;VALUE=DATE:20251031
-DTEND;VALUE=DATE:20251101
-UID:596e06e1699c-cfp@cfp-radar
-DESCRIPTION:Website: https://paristestconf.com\nCFP: https://sessionize.co
- m/paristestconf-7
-LOCATION:Paris\, France
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/paristestconf-7
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ParisTestConf
-DTSTART;VALUE=DATE:20260331
-DTEND;VALUE=DATE:20260401
-UID:596e06e1699c-event@cfp-radar
-DESCRIPTION:Website: https://paristestconf.com\nCFP: https://sessionize.co
- m/paristestconf-7
-LOCATION:Paris\, France
-TRANSP:OPAQUE
-URL:https://paristestconf.com
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Spring I/O
 DTSTART;VALUE=DATE:20260109
 DTEND;VALUE=DATE:20260110
@@ -1055,6 +1033,38 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Replay: The Durable Execution Conference for Agentic AI
+DTSTART;VALUE=DATE:20260505
+DTEND;VALUE=DATE:20260508
+UID:444fd5f41dfe-event@cfp-radar
+DESCRIPTION:Website: https://replay.temporal.io\nTopics: devops
+LOCATION:San Francisco\, CA\, USA
+TRANSP:OPAQUE
+URL:https://replay.temporal.io
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Unlocked Seattle
+DTSTART;VALUE=DATE:20260417
+DTEND;VALUE=DATE:20260418
+UID:bb1c187b9e42-cfp@cfp-radar
+DESCRIPTION:Website: https://unlockedconf.io\nCFP: https://www.unlockedcon
+ f.io/call-for-speakers
+LOCATION:Seattle\, WA\, USA
+TRANSP:TRANSPARENT
+URL:https://www.unlockedconf.io/call-for-speakers
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Unlocked Seattle
+DTSTART;VALUE=DATE:20260507
+DTEND;VALUE=DATE:20260508
+UID:bb1c187b9e42-event@cfp-radar
+DESCRIPTION:Website: https://unlockedconf.io\nCFP: https://www.unlockedcon
+ f.io/call-for-speakers
+LOCATION:Seattle\, WA\, USA
+TRANSP:OPAQUE
+URL:https://unlockedconf.io
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cyber Security & Cloud Congress
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20260520
@@ -1066,6 +1076,28 @@ TRANSP:OPAQUE
 URL:https://www.cybersecuritycloudexpo.com/northamerica
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Web Engineering Summit
+DTSTART;VALUE=DATE:20260330
+DTEND;VALUE=DATE:20260331
+UID:e6a39b367b4c-cfp@cfp-radar
+DESCRIPTION:Website: https://webengineeringsummit.com\nCFP: https://gitnat
+ ion.com/events/web-engineering-summit-2026/cfp
+LOCATION:Amsterdam\, Netherlands
+TRANSP:TRANSPARENT
+URL:https://gitnation.com/events/web-engineering-summit-2026/cfp
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Web Engineering Summit
+DTSTART;VALUE=DATE:20260611
+DTEND;VALUE=DATE:20260616
+UID:e6a39b367b4c-event@cfp-radar
+DESCRIPTION:Website: https://webengineeringsummit.com\nCFP: https://gitnat
+ ion.com/events/web-engineering-summit-2026/cfp
+LOCATION:Amsterdam\, Netherlands
+TRANSP:OPAQUE
+URL:https://webengineeringsummit.com
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Software Architecture Forum
 DTSTART;VALUE=DATE:20260616
 DTEND;VALUE=DATE:20260618
@@ -1075,6 +1107,28 @@ DESCRIPTION:Website: https://conferences.isaqb.org/software-architecture-f
 LOCATION:Munich\, Germany
 TRANSP:OPAQUE
 URL:https://conferences.isaqb.org/software-architecture-forum
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Asynconf
+DTSTART;VALUE=DATE:20260430
+DTEND;VALUE=DATE:20260501
+UID:e9d2431c2bb8-cfp@cfp-radar
+DESCRIPTION:Website: https://asynconf.com\nCFP: https://cfp.asynconf.com\n
+ Topics: devops
+LOCATION:Paris\, France
+TRANSP:TRANSPARENT
+URL:https://cfp.asynconf.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Asynconf
+DTSTART;VALUE=DATE:20260627
+DTEND;VALUE=DATE:20260628
+UID:e9d2431c2bb8-event@cfp-radar
+DESCRIPTION:Website: https://asynconf.com\nCFP: https://cfp.asynconf.com\n
+ Topics: devops
+LOCATION:Paris\, France
+TRANSP:OPAQUE
+URL:https://asynconf.com
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Conference on  Smart Systems : Big Data\, IoT\, Cybersecurit
@@ -1108,6 +1162,28 @@ DESCRIPTION:Website: https://heise-devsec.de/cfp.php\nCFP: https://heise-d
 LOCATION:Marburg\, Germany
 TRANSP:OPAQUE
 URL:https://heise-devsec.de/cfp.php
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] TechSummit Amsterdam
+DTSTART;VALUE=DATE:20260515
+DTEND;VALUE=DATE:20260516
+UID:dd9b37eaf9b9-cfp@cfp-radar
+DESCRIPTION:Website: https://techsummit.io\nCFP: https://pretalx.com/techs
+ ummit-2026/cfp\nTopics: devops
+LOCATION:Amsterdam\, Netherlands
+TRANSP:TRANSPARENT
+URL:https://pretalx.com/techsummit-2026/cfp
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:TechSummit Amsterdam
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+UID:dd9b37eaf9b9-event@cfp-radar
+DESCRIPTION:Website: https://techsummit.io\nCFP: https://pretalx.com/techs
+ ummit-2026/cfp\nTopics: devops
+LOCATION:Amsterdam\, Netherlands
+TRANSP:OPAQUE
+URL:https://techsummit.io
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Open Tech Day: Software-defined Storage
