@@ -779,10 +779,10 @@ SUMMARY:VivaTech
 DTSTART;VALUE=DATE:20260617
 DTEND;VALUE=DATE:20260621
 UID:84aa2a2cdba1-event@cfp-radar
-DESCRIPTION:Website: https://vivatechnology.com
+DESCRIPTION:Website: https://vivatech.com
 LOCATION:Paris\, France
 TRANSP:OPAQUE
-URL:https://vivatechnology.com
+URL:https://vivatech.com
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:MAD Summit
