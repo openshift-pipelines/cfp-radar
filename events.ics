@@ -580,28 +580,6 @@ TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Spring I/O
-DTSTART;VALUE=DATE:20260109
-DTEND;VALUE=DATE:20260110
-UID:ecf61709c9f2-cfp@cfp-radar
-DESCRIPTION:Website: https://2026.springio.net\nCFP: https://sessionize.co
- m/springio26
-LOCATION:Barcelona\, Spain
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/springio26
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Spring I/O
-DTSTART;VALUE=DATE:20260413
-DTEND;VALUE=DATE:20260416
-UID:ecf61709c9f2-event@cfp-radar
-DESCRIPTION:Website: https://2026.springio.net\nCFP: https://sessionize.co
- m/springio26
-LOCATION:Barcelona\, Spain
-TRANSP:OPAQUE
-URL:https://2026.springio.net
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:UX Rotterdam
 DTSTART;VALUE=DATE:20260416
 DTEND;VALUE=DATE:20260418
