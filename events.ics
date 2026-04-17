@@ -580,16 +580,6 @@ TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:UX Rotterdam
-DTSTART;VALUE=DATE:20260416
-DTEND;VALUE=DATE:20260418
-UID:59b5f33be18e-event@cfp-radar
-DESCRIPTION:Website: https://uxrotterdam.com
-LOCATION:Rotterdam\, Netherlands
-TRANSP:OPAQUE
-URL:https://uxrotterdam.com
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:STAREAST
 DTSTART;VALUE=DATE:20260426
 DTEND;VALUE=DATE:20260502
@@ -1116,6 +1106,26 @@ TRANSP:OPAQUE
 URL:https://heise-devsec.de/cfp.php
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:API Conference NYC
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20261003
+UID:8a811fbd141d-event@cfp-radar
+DESCRIPTION:Website: https://apiconference.net/new-york\nTopics: devops
+LOCATION:New York\, NY\, USA
+TRANSP:OPAQUE
+URL:https://apiconference.net/new-york
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:DecOpsCon NYC
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20261003
+UID:1dcde6eff3ab-event@cfp-radar
+DESCRIPTION:Website: https://devopscon.io/new-york\nTopics: devops
+LOCATION:New York\, NY\, USA
+TRANSP:OPAQUE
+URL:https://devopscon.io/new-york
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] TechSummit Amsterdam
 DTSTART;VALUE=DATE:20260515
 DTEND;VALUE=DATE:20260516
@@ -1254,5 +1264,15 @@ DESCRIPTION:Website: https://india.droidcon.com
 LOCATION:Bengaluru\, India
 TRANSP:OPAQUE
 URL:https://india.droidcon.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:API Conference Berlin
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261128
+UID:77fe537e7aa0-event@cfp-radar
+DESCRIPTION:Website: https://apiconference.net/berlin\nTopics: devops
+LOCATION:Berlin\, Germany
+TRANSP:OPAQUE
+URL:https://apiconference.net/berlin
 END:VEVENT
 END:VCALENDAR
