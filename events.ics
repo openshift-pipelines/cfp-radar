@@ -1051,6 +1051,16 @@ TRANSP:OPAQUE
 URL:https://conferences.isaqb.org/software-architecture-forum
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Conversations Roadshow: Berlin by CTO Craft
+DTSTART;VALUE=DATE:20260623
+DTEND;VALUE=DATE:20260624
+UID:630d0cdf9012-event@cfp-radar
+DESCRIPTION:Website: https://conversations.ctocraft.com/berlin
+LOCATION:Berlin\, Germany
+TRANSP:OPAQUE
+URL:https://conversations.ctocraft.com/berlin
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Asynconf
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
@@ -1274,5 +1284,25 @@ DESCRIPTION:Website: https://apiconference.net/berlin\nTopics: devops
 LOCATION:Berlin\, Germany
 TRANSP:OPAQUE
 URL:https://apiconference.net/berlin
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:DevOpsCon Munich
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261205
+UID:f0af646d6a4a-event@cfp-radar
+DESCRIPTION:Website: https://devopscon.io/muenchen\nTopics: devops
+LOCATION:Munich\, Germany
+TRANSP:OPAQUE
+URL:https://devopscon.io/muenchen
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:IT Security Summit Munich
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261205
+UID:f9508d7a7d37-event@cfp-radar
+DESCRIPTION:Website: https://it-security-summit.com/munich\nTopics: devops
+LOCATION:Munich\, Germany
+TRANSP:OPAQUE
+URL:https://it-security-summit.com/munich
 END:VEVENT
 END:VCALENDAR
