@@ -314,16 +314,6 @@ TRANSP:OPAQUE
 URL:https://aws.amazon.com/summits/paris/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:DevOpsCon Amsterdam
-DTSTART;VALUE=DATE:20260420
-DTEND;VALUE=DATE:20260425
-UID:445ddee982ae-event@cfp-radar
-DESCRIPTION:Website: https://devopscon.io/amsterdam\nTopics: devops
-LOCATION:Amsterdam\, Netherlands
-TRANSP:OPAQUE
-URL:https://devopscon.io/amsterdam
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Open Community Experience (OCX)
 DTSTART;VALUE=DATE:20251113
 DTEND;VALUE=DATE:20251114
