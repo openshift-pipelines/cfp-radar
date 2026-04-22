@@ -3,20 +3,6 @@ VERSION:2.0
 PRODID:-//CFP Radar//cfp-radar//EN
 X-WR-CALNAME:CFP Radar
 BEGIN:VEVENT
-SUMMARY:Great International Developer Summit (GIDS) 2026
-DTSTART;VALUE=DATE:20260421
-DTEND;VALUE=DATE:20260425
-UID:23b0810961fa-event@cfp-radar
-DESCRIPTION:Asia's largest polyglot software conference covering the full 
- technology spectrum\, including extensive DevOps and architecture tracks.\
- nWebsite: https://developersummit.com/\nCFP: https://developersummit.com/\
- nTopics: Software Architecture\, DevOps\, Cloud Native\, Platform Engineer
- ing
-LOCATION:Bangalore\, India
-TRANSP:OPAQUE
-URL:https://developersummit.com/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Devoxx France 2026
 DTSTART;VALUE=DATE:20260131
 DTEND;VALUE=DATE:20260201
@@ -312,31 +298,6 @@ DESCRIPTION:Projected return of the AWS flagship event in Paris\, expected
 LOCATION:Paris\, France
 TRANSP:OPAQUE
 URL:https://aws.amazon.com/summits/paris/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Open Community Experience (OCX)
-DTSTART;VALUE=DATE:20251113
-DTEND;VALUE=DATE:20251114
-UID:db72c5675113-cfp@cfp-radar
-DESCRIPTION:Website: https://www.ocxconf.org\nCFP: https://www.ocxconf.org
- /event/403bffe2-15d8-49ac-af52-e2781b7296b3/call-for-proposals\nTopics: de
- vops
-LOCATION:Brussels\, Belgium
-TRANSP:TRANSPARENT
-URL:https://www.ocxconf.org/event/403bffe2-15d8-49ac-af52-e2781b7296b3/cal
- l-for-proposals
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Open Community Experience (OCX)
-DTSTART;VALUE=DATE:20260421
-DTEND;VALUE=DATE:20260424
-UID:db72c5675113-event@cfp-radar
-DESCRIPTION:Website: https://www.ocxconf.org\nCFP: https://www.ocxconf.org
- /event/403bffe2-15d8-49ac-af52-e2781b7296b3/call-for-proposals\nTopics: de
- vops
-LOCATION:Brussels\, Belgium
-TRANSP:OPAQUE
-URL:https://www.ocxconf.org
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] KCD Toronto
