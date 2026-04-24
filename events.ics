@@ -3,32 +3,6 @@ VERSION:2.0
 PRODID:-//CFP Radar//cfp-radar//EN
 X-WR-CALNAME:CFP Radar
 BEGIN:VEVENT
-SUMMARY:Agile DevOps Conference 2026
-DTSTART;VALUE=DATE:20260423
-DTEND;VALUE=DATE:20260424
-UID:4857eae7b003-event@cfp-radar
-DESCRIPTION:Focuses on building resilient CI/CD pipelines and scaling Agil
- e and DevOps practices across complex enterprise environments.\nWebsite: h
- ttps://navigoseminars.com/\nCFP: https://navigoseminars.com/\nTopics: Agil
- e\, DevOps\, CI/CD\, Continuous Delivery
-LOCATION:Bangalore\, India
-TRANSP:OPAQUE
-URL:https://navigoseminars.com/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Gophercamp.cz 2026
-DTSTART;VALUE=DATE:20260423
-DTEND;VALUE=DATE:20260425
-UID:26b0b0dfeac1-event@cfp-radar
-DESCRIPTION:A technical conference dedicated to the Go programming languag
- e\, focusing on its use in building robust cloud-native infrastructure\, t
- ools\, and scalable systems.\nWebsite: https://gophercamp.cz/\nTopics: gol
- ang\, cloud native\, kubernetes\, devops
-LOCATION:Brno\, Czech Republic
-TRANSP:OPAQUE
-URL:https://gophercamp.cz/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:DevOpsDays Raleigh 2026
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260502
