@@ -465,16 +465,6 @@ TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GISEC GLOBAL
-DTSTART;VALUE=DATE:20260505
-DTEND;VALUE=DATE:20260508
-UID:234c82e62653-event@cfp-radar
-DESCRIPTION:Website: https://gisec.ae
-LOCATION:Dubai\, UAE
-TRANSP:OPAQUE
-URL:https://gisec.ae
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] VueconfUS
 DTSTART;VALUE=DATE:20251126
 DTEND;VALUE=DATE:20251127
@@ -838,16 +828,6 @@ DESCRIPTION:Website: https://apiconf.io
 LOCATION:Clear Water\, FL\, USA
 TRANSP:OPAQUE
 URL:https://apiconf.io
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Replay: The Durable Execution Conference for Agentic AI
-DTSTART;VALUE=DATE:20260505
-DTEND;VALUE=DATE:20260508
-UID:444fd5f41dfe-event@cfp-radar
-DESCRIPTION:Website: https://replay.temporal.io\nTopics: devops
-LOCATION:San Francisco\, CA\, USA
-TRANSP:OPAQUE
-URL:https://replay.temporal.io
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Unlocked Seattle
