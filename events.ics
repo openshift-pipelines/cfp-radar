@@ -830,28 +830,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Unlocked Seattle
-DTSTART;VALUE=DATE:20260417
-DTEND;VALUE=DATE:20260418
-UID:bb1c187b9e42-cfp@cfp-radar
-DESCRIPTION:Website: https://unlockedconf.io\nCFP: https://www.unlockedcon
- f.io/call-for-speakers
-LOCATION:Seattle\, WA\, USA
-TRANSP:TRANSPARENT
-URL:https://www.unlockedconf.io/call-for-speakers
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Unlocked Seattle
-DTSTART;VALUE=DATE:20260507
-DTEND;VALUE=DATE:20260508
-UID:bb1c187b9e42-event@cfp-radar
-DESCRIPTION:Website: https://unlockedconf.io\nCFP: https://www.unlockedcon
- f.io/call-for-speakers
-LOCATION:Seattle\, WA\, USA
-TRANSP:OPAQUE
-URL:https://unlockedconf.io
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cyber Security & Cloud Congress
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20260520
@@ -937,6 +915,16 @@ DESCRIPTION:Website: https://www.smartsystems.thesciencequest.org
 LOCATION:Tokyo\, Japan
 TRANSP:OPAQUE
 URL:https://www.smartsystems.thesciencequest.org
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:entwickler Summit
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+UID:a285a70dcafc-event@cfp-radar
+DESCRIPTION:Website: https://entwickler.de/entwickler-summit
+LOCATION:Berlin\, Germany
+TRANSP:OPAQUE
+URL:https://entwickler.de/entwickler-summit
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] heise devSec
@@ -1043,6 +1031,70 @@ DESCRIPTION:Website: https://conference.joomla.org
 LOCATION:Potsdam\, Germany
 TRANSP:OPAQUE
 URL:https://conference.joomla.org
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] swampUP Europe
+DTSTART;VALUE=DATE:20260518
+DTEND;VALUE=DATE:20260519
+UID:eb60652d6413-cfp@cfp-radar
+DESCRIPTION:Website: https://swampup.jfrog.com/europe\nCFP: https://sessio
+ nize.com/swampup-europe-2026\nTopics: devops
+LOCATION:Barcelona\, Spain
+TRANSP:TRANSPARENT
+URL:https://sessionize.com/swampup-europe-2026
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:swampUP Europe
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261023
+UID:eb60652d6413-event@cfp-radar
+DESCRIPTION:Website: https://swampup.jfrog.com/europe\nCFP: https://sessio
+ nize.com/swampup-europe-2026\nTopics: devops
+LOCATION:Barcelona\, Spain
+TRANSP:OPAQUE
+URL:https://swampup.jfrog.com/europe
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Umbracokalaset
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
+UID:a4d3dc7e3c56-cfp@cfp-radar
+DESCRIPTION:Website: https://www.umbracokalaset.se\nCFP: https://sessioniz
+ e.com/umbracokalaset-2026
+LOCATION:Stockholm\, Sweden
+TRANSP:TRANSPARENT
+URL:https://sessionize.com/umbracokalaset-2026
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Umbracokalaset
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+UID:a4d3dc7e3c56-event@cfp-radar
+DESCRIPTION:Website: https://www.umbracokalaset.se\nCFP: https://sessioniz
+ e.com/umbracokalaset-2026
+LOCATION:Stockholm\, Sweden
+TRANSP:OPAQUE
+URL:https://www.umbracokalaset.se
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mozilla Festival
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261031
+UID:e5521965ff1d-event@cfp-radar
+DESCRIPTION:Website: https://www.mozillafestival.org
+LOCATION:Barcelona\, Spain
+TRANSP:OPAQUE
+URL:https://www.mozillafestival.org
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Open Source Analytics Conference
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+UID:51dfc1499e9e-event@cfp-radar
+DESCRIPTION:Website: https://osacon.io
+LOCATION:San Francisco\, CA\, USA
+TRANSP:OPAQUE
+URL:https://osacon.io
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] S2N: Storage Server Network
