@@ -107,6 +107,13 @@ Copy `abstracts/_template.md`, fill it in, open a PR.
 | Building Golden Paths with Tekton: CI/CD as a Platform Service | platform-engineering, multi-tenancy | talk, deep-dive, workshop | ready |
 | CI/CD for AI: When Your Artifact Is a Model, Not a Binary | ai, mlops, eu-ai-act | talk, deep-dive | ready |
 | AI-Assisted CI/CD: Using LLMs to Debug and Generate Pipelines | ai, llm, developer-experience | talk, lightning | draft |
+| Death by a Thousand Reconciles — Performance at Scale | performance, kubernetes-operators, observability | talk, deep-dive | ready |
+| 12 CVEs and Counting — CNCF Project Security Lifecycle | security, cve, vulnerability-management | talk, deep-dive | ready |
+| Your Pipeline Has the Keys — A Live Security Walkthrough | security, supply-chain, slsa, demo | talk | ready |
+| Eating Our Own Dogfood — A Workflow Engine's Automation Story | open-source, ci-cd, dogfooding | talk | ready |
+| The PVC Must Die — Rethinking Data Sharing with Trusted Artifacts | architecture, kubernetes, storage, supply-chain | talk | ready |
+| From One Cluster to Many — Tekton + Kueue Multi-Cluster Pipelines | multi-cluster, kueue, scheduling | talk, deep-dive | ready |
+| Beyond Pipeline Runs — A Supply Chain Ledger with ORAS | supply-chain, slsa, oras, oci | talk, deep-dive | ready |
 
 ## Copyright
 
