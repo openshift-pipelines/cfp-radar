@@ -433,28 +433,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Code Remix Summit
-DTSTART;VALUE=DATE:20251031
-DTEND;VALUE=DATE:20251101
-UID:9f2bcddb902d-cfp@cfp-radar
-DESCRIPTION:Website: https://coderemix.ai\nCFP: https://sessionize.com/cod
- e-remix-summit-2026\nTopics: devops
-LOCATION:Hollywood\, FL\, USA
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/code-remix-summit-2026
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Code Remix Summit
-DTSTART;VALUE=DATE:20260511
-DTEND;VALUE=DATE:20260514
-UID:9f2bcddb902d-event@cfp-radar
-DESCRIPTION:Website: https://coderemix.ai\nCFP: https://sessionize.com/cod
- e-remix-summit-2026\nTopics: devops
-LOCATION:Hollywood\, FL\, USA
-TRANSP:OPAQUE
-URL:https://coderemix.ai
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:DevOpsCon San Diego
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260606
