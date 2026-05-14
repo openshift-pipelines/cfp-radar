@@ -234,28 +234,6 @@ TRANSP:OPAQUE
 URL:https://aws.amazon.com/summits/paris/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] KCD Toronto
-DTSTART;VALUE=DATE:20260216
-DTEND;VALUE=DATE:20260217
-UID:f80fa715b75b-cfp@cfp-radar
-DESCRIPTION:Website: https://kcdtoronto.ca\nCFP: https://sessionize.com/kc
- d-toronto-2026\nTopics: devops
-LOCATION:Toronto\, Canada
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/kcd-toronto-2026
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:KCD Toronto
-DTSTART;VALUE=DATE:20260513
-DTEND;VALUE=DATE:20260514
-UID:f80fa715b75b-event@cfp-radar
-DESCRIPTION:Website: https://kcdtoronto.ca\nCFP: https://sessionize.com/kc
- d-toronto-2026\nTopics: devops
-LOCATION:Toronto\, Canada
-TRANSP:OPAQUE
-URL:https://kcdtoronto.ca
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Test Coast
 DTSTART;VALUE=DATE:20260107
 DTEND;VALUE=DATE:20260108
