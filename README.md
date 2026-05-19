@@ -82,6 +82,39 @@ uv run cfp-radar notify
 
 The `collect` command generates a static HTML file at `data/index.html` by default. Open this file in a browser to view events.
 
+## Abstract Bank
+
+The `abstracts/` directory contains a shared bank of speaker-neutral, reusable talk proposals. Anyone on the team can pick one up, adapt it to a specific event, and submit.
+
+Each abstract includes:
+
+- YAML frontmatter (tags, formats, difficulty, target audience)
+- A 200-300 word abstract text
+- Talk outline with timing for multiple formats (lightning, talk, deep-dive, workshop)
+- Key takeaways
+- Adaptation notes — hints on how to tailor per event type
+
+### Adding a new abstract
+
+Copy `abstracts/_template.md`, fill it in, open a PR.
+
+### Current abstracts
+
+| Title | Tags | Formats | Status |
+|-------|------|---------|--------|
+| From SLSA Level 2 to Level 3: The Hard Parts | supply-chain, slsa, tekton-chains | talk, deep-dive | ready |
+| Signing Everything: Making Supply Chain Security Invisible | supply-chain, DX, sigstore | talk, lightning | ready |
+| Building Golden Paths with Tekton: CI/CD as a Platform Service | platform-engineering, multi-tenancy | talk, deep-dive, workshop | ready |
+| CI/CD for AI: When Your Artifact Is a Model, Not a Binary | ai, mlops, eu-ai-act | talk, deep-dive | ready |
+| AI-Assisted CI/CD: Using LLMs to Debug and Generate Pipelines | ai, llm, developer-experience | talk, lightning | draft |
+| Death by a Thousand Reconciles — Performance at Scale | performance, kubernetes-operators, observability | talk, deep-dive | ready |
+| 12 CVEs and Counting — CNCF Project Security Lifecycle | security, cve, vulnerability-management | talk, deep-dive | ready |
+| Your Pipeline Has the Keys — A Live Security Walkthrough | security, supply-chain, slsa, demo | talk | ready |
+| Eating Our Own Dogfood — A Workflow Engine's Automation Story | open-source, ci-cd, dogfooding | talk | ready |
+| The PVC Must Die — Rethinking Data Sharing with Trusted Artifacts | architecture, kubernetes, storage, supply-chain | talk | ready |
+| From One Cluster to Many — Tekton + Kueue Multi-Cluster Pipelines | multi-cluster, kueue, scheduling | talk, deep-dive | ready |
+| Beyond Pipeline Runs — A Supply Chain Ledger with ORAS | supply-chain, slsa, oras, oci | talk, deep-dive | ready |
+
 ## Copyright
 
 [Apache-2.0](./LICENSE)
