@@ -408,50 +408,6 @@ TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] VueconfUS
-DTSTART;VALUE=DATE:20251126
-DTEND;VALUE=DATE:20251127
-UID:dee2ea86a23a-cfp@cfp-radar
-DESCRIPTION:Website: https://vueconf.us\nCFP: https://sessionize.com/vueco
- nf-us-2026
-LOCATION:Atlanta\, GA\, USA
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/vueconf-us-2026
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:VueconfUS
-DTSTART;VALUE=DATE:20260519
-DTEND;VALUE=DATE:20260522
-UID:dee2ea86a23a-event@cfp-radar
-DESCRIPTION:Website: https://vueconf.us\nCFP: https://sessionize.com/vueco
- nf-us-2026
-LOCATION:Atlanta\, GA\, USA
-TRANSP:OPAQUE
-URL:https://vueconf.us
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[CFP Deadline] PHP Tek
-DTSTART;VALUE=DATE:20251031
-DTEND;VALUE=DATE:20251101
-UID:5c3376b77303-cfp@cfp-radar
-DESCRIPTION:Website: https://phptek.io\nCFP: https://sessionize.com/php-te
- k-2026
-LOCATION:Chicago\, IL\, USA
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/php-tek-2026
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:PHP Tek
-DTSTART;VALUE=DATE:20260519
-DTEND;VALUE=DATE:20260522
-UID:5c3376b77303-event@cfp-radar
-DESCRIPTION:Website: https://phptek.io\nCFP: https://sessionize.com/php-te
- k-2026
-LOCATION:Chicago\, IL\, USA
-TRANSP:OPAQUE
-URL:https://phptek.io
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] CONFidence
 DTSTART;VALUE=DATE:20260315
 DTEND;VALUE=DATE:20260316
