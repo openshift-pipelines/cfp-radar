@@ -3,19 +3,6 @@ VERSION:2.0
 PRODID:-//CFP Radar//cfp-radar//EN
 X-WR-CALNAME:CFP Radar
 BEGIN:VEVENT
-SUMMARY:AFUP Day Paris 2026
-DTSTART;VALUE=DATE:20260522
-DTEND;VALUE=DATE:20260523
-UID:3ce755243d08-event@cfp-radar
-DESCRIPTION:A technical conference that\, while focused on the PHP ecosyst
- em\, consistently features strong tracks on DevOps\, cloud-native deployme
- nts\, and containerization.\nWebsite: https://afup.org/events/\nTopics: PH
- P\, Cloud\, DevOps\, CI/CD\, Containers
-LOCATION:Paris\, France
-TRANSP:OPAQUE
-URL:https://afup.org/events/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] PlatforMa 2026
 DTSTART;VALUE=DATE:20260131
 DTEND;VALUE=DATE:20260201
@@ -770,6 +757,28 @@ DESCRIPTION:Website: https://asynconf.com\nCFP: https://cfp.asynconf.com\n
 LOCATION:Paris\, France
 TRANSP:OPAQUE
 URL:https://asynconf.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] AlmaLinux Day
+DTSTART;VALUE=DATE:20260605
+DTEND;VALUE=DATE:20260606
+UID:04fd6ba1d1b1-cfp@cfp-radar
+DESCRIPTION:Website: https://almalinux.org/almalinux-day-los-angeles-2026\
+ nCFP: https://sessionize.com/almalinux-day-los-angeles
+LOCATION:Los Angeles\, CA\, USA
+TRANSP:TRANSPARENT
+URL:https://sessionize.com/almalinux-day-los-angeles
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:AlmaLinux Day
+DTSTART;VALUE=DATE:20260718
+DTEND;VALUE=DATE:20260719
+UID:04fd6ba1d1b1-event@cfp-radar
+DESCRIPTION:Website: https://almalinux.org/almalinux-day-los-angeles-2026\
+ nCFP: https://sessionize.com/almalinux-day-los-angeles
+LOCATION:Los Angeles\, CA\, USA
+TRANSP:OPAQUE
+URL:https://almalinux.org/almalinux-day-los-angeles-2026
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Conference on  Smart Systems : Big Data\, IoT\, Cybersecurit
