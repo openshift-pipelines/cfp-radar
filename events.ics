@@ -373,28 +373,6 @@ TRANSP:OPAQUE
 URL:https://devopscon.io/san-diego
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] CONFidence
-DTSTART;VALUE=DATE:20260315
-DTEND;VALUE=DATE:20260316
-UID:509b1b32556a-cfp@cfp-radar
-DESCRIPTION:Website: https://confidence-conference.org/#contact\nCFP: http
- s://confidence-conference.org/cfp-2026
-LOCATION:Kraków\, Poland
-TRANSP:TRANSPARENT
-URL:https://confidence-conference.org/cfp-2026
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:CONFidence
-DTSTART;VALUE=DATE:20260525
-DTEND;VALUE=DATE:20260527
-UID:509b1b32556a-event@cfp-radar
-DESCRIPTION:Website: https://confidence-conference.org/#contact\nCFP: http
- s://confidence-conference.org/cfp-2026
-LOCATION:Kraków\, Poland
-TRANSP:OPAQUE
-URL:https://confidence-conference.org/#contact
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Future Frontend
 DTSTART;VALUE=DATE:20260301
 DTEND;VALUE=DATE:20260302
