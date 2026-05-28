@@ -180,16 +180,6 @@ TRANSP:OPAQUE
 URL:https://aws.amazon.com/summits/paris/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:UXDX EMEA
-DTSTART;VALUE=DATE:20260527
-DTEND;VALUE=DATE:20260530
-UID:389eff284230-event@cfp-radar
-DESCRIPTION:Website: https://uxdx.com/berlin/2026\nTopics: devops
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://uxdx.com/berlin/2026
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Rock and React > React Norway
 DTSTART;VALUE=DATE:20260115
 DTEND;VALUE=DATE:20260116
