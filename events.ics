@@ -742,6 +742,16 @@ TRANSP:OPAQUE
 URL:https://entwickler.de/entwickler-summit
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Future Coding Day
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+UID:da830dbef92e-event@cfp-radar
+DESCRIPTION:Website: https://www.futurecodingday.com\nTopics: devops
+LOCATION:Copenhagen\, Denmark
+TRANSP:OPAQUE
+URL:https://www.futurecodingday.com
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] heise devSec
 DTSTART;VALUE=DATE:20260414
 DTEND;VALUE=DATE:20260415
