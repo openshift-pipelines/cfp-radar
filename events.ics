@@ -325,16 +325,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:DevOpsCon San Diego
-DTSTART;VALUE=DATE:20260601
-DTEND;VALUE=DATE:20260606
-UID:d6a2acfefa25-event@cfp-radar
-DESCRIPTION:Website: https://devopscon.io/san-diego\nTopics: devops
-LOCATION:San Diego\, CA\, USA
-TRANSP:OPAQUE
-URL:https://devopscon.io/san-diego
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Future Frontend
 DTSTART;VALUE=DATE:20260301
 DTEND;VALUE=DATE:20260302
