@@ -180,28 +180,6 @@ TRANSP:OPAQUE
 URL:https://aws.amazon.com/summits/paris/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Rock and React > React Norway
-DTSTART;VALUE=DATE:20260115
-DTEND;VALUE=DATE:20260116
-UID:4abaecc82e38-cfp@cfp-radar
-DESCRIPTION:Website: https://reactnorway.com\nCFP: https://forms.gle/pzQpi
- ppVee82GLuQ9\nTopics: devops
-LOCATION:Oslo\, Norway
-TRANSP:TRANSPARENT
-URL:https://forms.gle/pzQpippVee82GLuQ9
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Rock and React > React Norway
-DTSTART;VALUE=DATE:20260605
-DTEND;VALUE=DATE:20260606
-UID:4abaecc82e38-event@cfp-radar
-DESCRIPTION:Website: https://reactnorway.com\nCFP: https://forms.gle/pzQpi
- ppVee82GLuQ9\nTopics: devops
-LOCATION:Oslo\, Norway
-TRANSP:OPAQUE
-URL:https://reactnorway.com
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Berlin Buzzwords
 DTSTART;VALUE=DATE:20260215
 DTEND;VALUE=DATE:20260216
