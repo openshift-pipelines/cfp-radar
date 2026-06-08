@@ -180,28 +180,6 @@ TRANSP:OPAQUE
 URL:https://aws.amazon.com/summits/paris/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Berlin Buzzwords
-DTSTART;VALUE=DATE:20260215
-DTEND;VALUE=DATE:20260216
-UID:8050110c157a-cfp@cfp-radar
-DESCRIPTION:Website: https://2026.berlinbuzzwords.de\nCFP: https://2026.be
- rlinbuzzwords.de/call-for-papers\nTopics: devops
-LOCATION:Berlin\, Germany
-TRANSP:TRANSPARENT
-URL:https://2026.berlinbuzzwords.de/call-for-papers
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Berlin Buzzwords
-DTSTART;VALUE=DATE:20260607
-DTEND;VALUE=DATE:20260610
-UID:8050110c157a-event@cfp-radar
-DESCRIPTION:Website: https://2026.berlinbuzzwords.de\nCFP: https://2026.be
- rlinbuzzwords.de/call-for-papers\nTopics: devops
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://2026.berlinbuzzwords.de
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] EuroSTAR Conference
 DTSTART;VALUE=DATE:20251013
 DTEND;VALUE=DATE:20251014
