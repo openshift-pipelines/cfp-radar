@@ -281,50 +281,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Future Frontend
-DTSTART;VALUE=DATE:20260301
-DTEND;VALUE=DATE:20260302
-UID:9d465ed85e35-cfp@cfp-radar
-DESCRIPTION:Website: https://futurefrontend.com\nCFP: https://forms.gle/gW
- ReoDDjra4MCQMM8
-LOCATION:Espoo\, Finland
-TRANSP:TRANSPARENT
-URL:https://forms.gle/gWReoDDjra4MCQMM8
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Future Frontend
-DTSTART;VALUE=DATE:20260608
-DTEND;VALUE=DATE:20260610
-UID:9d465ed85e35-event@cfp-radar
-DESCRIPTION:Website: https://futurefrontend.com\nCFP: https://forms.gle/gW
- ReoDDjra4MCQMM8
-LOCATION:Espoo\, Finland
-TRANSP:OPAQUE
-URL:https://futurefrontend.com
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[CFP Deadline] ETHConf
-DTSTART;VALUE=DATE:20260401
-DTEND;VALUE=DATE:20260402
-UID:a52f9ec1279d-cfp@cfp-radar
-DESCRIPTION:Website: https://ethconf.com/r/CTECONF\nCFP: https://ethconf.c
- om/partner
-LOCATION:New York\, NY\, USA
-TRANSP:TRANSPARENT
-URL:https://ethconf.com/partner
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ETHConf
-DTSTART;VALUE=DATE:20260608
-DTEND;VALUE=DATE:20260611
-UID:a52f9ec1279d-event@cfp-radar
-DESCRIPTION:Website: https://ethconf.com/r/CTECONF\nCFP: https://ethconf.c
- om/partner
-LOCATION:New York\, NY\, USA
-TRANSP:OPAQUE
-URL:https://ethconf.com/r/CTECONF
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:IT Security Summit Berlin
 DTSTART;VALUE=DATE:20260615
 DTEND;VALUE=DATE:20260620
