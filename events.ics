@@ -536,28 +536,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Web Engineering Summit
-DTSTART;VALUE=DATE:20260330
-DTEND;VALUE=DATE:20260331
-UID:e6a39b367b4c-cfp@cfp-radar
-DESCRIPTION:Website: https://webengineeringsummit.com\nCFP: https://gitnat
- ion.com/events/web-engineering-summit-2026/cfp
-LOCATION:Amsterdam\, Netherlands
-TRANSP:TRANSPARENT
-URL:https://gitnation.com/events/web-engineering-summit-2026/cfp
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Web Engineering Summit
-DTSTART;VALUE=DATE:20260611
-DTEND;VALUE=DATE:20260616
-UID:e6a39b367b4c-event@cfp-radar
-DESCRIPTION:Website: https://webengineeringsummit.com\nCFP: https://gitnat
- ion.com/events/web-engineering-summit-2026/cfp
-LOCATION:Amsterdam\, Netherlands
-TRANSP:OPAQUE
-URL:https://webengineeringsummit.com
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Software Architecture Forum
 DTSTART;VALUE=DATE:20260616
 DTEND;VALUE=DATE:20260618
