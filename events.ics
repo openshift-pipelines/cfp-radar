@@ -3,20 +3,6 @@ VERSION:2.0
 PRODID:-//CFP Radar//cfp-radar//EN
 X-WR-CALNAME:CFP Radar
 BEGIN:VEVENT
-SUMMARY:Regional Scrum Gathering (RSG) Pune 2026
-DTSTART;VALUE=DATE:20260612
-DTEND;VALUE=DATE:20260614
-UID:5152a7a52f69-event@cfp-radar
-DESCRIPTION:Organized by the Indian Circle of Agile & AI\, this gathering 
- brings together industry leaders to discuss Agile transformations\, DevOps
-  culture\, and the impact of AI on software delivery.\nWebsite: https://ic
- aaionline.org/rsgpune2026\nTopics: agile\, scrum\, devops\, ai in engineer
- ing
-LOCATION:Pune\, India
-TRANSP:OPAQUE
-URL:https://icaaionline.org/rsgpune2026
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] DevConf.cz 2026
 DTSTART;VALUE=DATE:20260301
 DTEND;VALUE=DATE:20260302
