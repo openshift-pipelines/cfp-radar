@@ -166,40 +166,6 @@ TRANSP:OPAQUE
 URL:https://aws.amazon.com/summits/paris/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] EuroSTAR Conference
-DTSTART;VALUE=DATE:20251013
-DTEND;VALUE=DATE:20251014
-UID:053dff3d2dc0-cfp@cfp-radar
-DESCRIPTION:Website: https://conference.eurostarsoftwaretesting.com\nCFP: 
- https://conference.eurostarsoftwaretesting.com/call-for-submissions\nTopic
- s: devops
-LOCATION:Oslo\, Norway
-TRANSP:TRANSPARENT
-URL:https://conference.eurostarsoftwaretesting.com/call-for-submissions
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:EuroSTAR Conference
-DTSTART;VALUE=DATE:20260615
-DTEND;VALUE=DATE:20260619
-UID:053dff3d2dc0-event@cfp-radar
-DESCRIPTION:Website: https://conference.eurostarsoftwaretesting.com\nCFP: 
- https://conference.eurostarsoftwaretesting.com/call-for-submissions\nTopic
- s: devops
-LOCATION:Oslo\, Norway
-TRANSP:OPAQUE
-URL:https://conference.eurostarsoftwaretesting.com
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:DevOpsCon Berlin
-DTSTART;VALUE=DATE:20260615
-DTEND;VALUE=DATE:20260620
-UID:1b4ef435a318-event@cfp-radar
-DESCRIPTION:Website: https://devopscon.io/berlin\nTopics: devops
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://devopscon.io/berlin
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] DevOpsDays Graz
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
@@ -265,16 +231,6 @@ DESCRIPTION:Website: https://www.it-tage.org\nCFP: https://www.ittage.info
 LOCATION:Frankfurt am Main\, Germany
 TRANSP:OPAQUE
 URL:https://www.it-tage.org
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:IT Security Summit Berlin
-DTSTART;VALUE=DATE:20260615
-DTEND;VALUE=DATE:20260620
-UID:cd35aa211d64-event@cfp-radar
-DESCRIPTION:Website: https://it-security-summit.com/berlin
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://it-security-summit.com/berlin
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:VivaTech
