@@ -478,17 +478,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Software Architecture Forum
-DTSTART;VALUE=DATE:20260616
-DTEND;VALUE=DATE:20260618
-UID:b37f03552435-event@cfp-radar
-DESCRIPTION:Website: https://conferences.isaqb.org/software-architecture-f
- orum
-LOCATION:Munich\, Germany
-TRANSP:OPAQUE
-URL:https://conferences.isaqb.org/software-architecture-forum
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Conversations Roadshow: Berlin by CTO Craft
 DTSTART;VALUE=DATE:20260623
 DTEND;VALUE=DATE:20260624
