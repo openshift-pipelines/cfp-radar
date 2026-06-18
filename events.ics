@@ -233,16 +233,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:VivaTech
-DTSTART;VALUE=DATE:20260617
-DTEND;VALUE=DATE:20260621
-UID:84aa2a2cdba1-event@cfp-radar
-DESCRIPTION:Website: https://vivatech.com
-LOCATION:Paris\, France
-TRANSP:OPAQUE
-URL:https://vivatech.com
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:MAD Summit
 DTSTART;VALUE=DATE:20260622
 DTEND;VALUE=DATE:20260627
@@ -488,6 +478,28 @@ TRANSP:OPAQUE
 URL:https://conversations.ctocraft.com/berlin
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Swiss PGDay
+DTSTART;VALUE=DATE:20260407
+DTEND;VALUE=DATE:20260408
+UID:31c7d7d0ba5c-cfp@cfp-radar
+DESCRIPTION:Website: https://2026.pgday.ch\nCFP: https://2026.pgday.ch/cal
+ l-for-papers
+LOCATION:Rapperswil-Jona\, Switzerland
+TRANSP:TRANSPARENT
+URL:https://2026.pgday.ch/call-for-papers
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Swiss PGDay
+DTSTART;VALUE=DATE:20260625
+DTEND;VALUE=DATE:20260627
+UID:31c7d7d0ba5c-event@cfp-radar
+DESCRIPTION:Website: https://2026.pgday.ch\nCFP: https://2026.pgday.ch/cal
+ l-for-papers
+LOCATION:Rapperswil-Jona\, Switzerland
+TRANSP:OPAQUE
+URL:https://2026.pgday.ch
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Asynconf
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
@@ -551,6 +563,16 @@ DESCRIPTION:Website: https://entwickler.de/entwickler-summit
 LOCATION:Berlin\, Germany
 TRANSP:OPAQUE
 URL:https://entwickler.de/entwickler-summit
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:STARWEST
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260926
+UID:4e3cdde59a4d-event@cfp-radar
+DESCRIPTION:Website: https://starwest.techwell.com\nTopics: devops
+LOCATION:Anaheim\, CA\, USA
+TRANSP:OPAQUE
+URL:https://starwest.techwell.com
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Future Coding Day
@@ -797,6 +819,28 @@ DESCRIPTION:Website: https://agiletestingdays.com\nCFP: https://agiletesti
 LOCATION:Potsdam\, Germany
 TRANSP:OPAQUE
 URL:https://agiletestingdays.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] ASF Community Over Code / ChurConf
+DTSTART;VALUE=DATE:20260731
+DTEND;VALUE=DATE:20260801
+UID:945e8256171d-cfp@cfp-radar
+DESCRIPTION:Website: https://au.churconf.com\nCFP: https://tinyurl.com/asf
+ churconfcfp
+LOCATION:Sidney\, Australia
+TRANSP:TRANSPARENT
+URL:https://tinyurl.com/asfchurconfcfp
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ASF Community Over Code / ChurConf
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261120
+UID:945e8256171d-event@cfp-radar
+DESCRIPTION:Website: https://au.churconf.com\nCFP: https://tinyurl.com/asf
+ churconfcfp
+LOCATION:Sidney\, Australia
+TRANSP:OPAQUE
+URL:https://au.churconf.com
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:droidCon India
