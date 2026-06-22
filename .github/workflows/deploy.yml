@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Required for gh-pages deployment
+      id-token: write # Required for Workload Identity Federation
 
     steps:
       - uses: actions/checkout@v5
@@ -24,9 +25,17 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+          service_account: ${{ secrets.GCP_SA_EMAIL }}
+
       - name: Generate static HTML
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_CLOUD_PROJECT: ${{ secrets.GCP_PROJECT_ID }}
+          GOOGLE_CLOUD_LOCATION: global
+          AI_MODEL: claude-sonnet-4-6
         run: |
           mkdir -p data
           uv run cfp-radar collect --no-ai data/index.html

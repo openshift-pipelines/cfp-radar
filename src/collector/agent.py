@@ -27,6 +27,8 @@ async def collect_all_events(use_ai: bool = True) -> list[Event]:
 
     if use_ai:
         tasks.append(web_search.search_events())
+    else:
+        logger.info("AI search disabled")
 
     results = await asyncio.gather(*tasks, return_exceptions=True)
 

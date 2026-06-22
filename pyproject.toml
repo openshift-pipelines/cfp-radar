@@ -5,7 +5,7 @@ description = "AI-powered tech events and CFP tracker for CI/CD, DevOps, and Clo
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "google-genai",
+    "anthropic[vertex]",
     "httpx",
     "beautifulsoup4",
     "fastapi",
@@ -80,7 +80,7 @@ warn_unused_configs = true
 
 [[tool.mypy.overrides]]
 module = [
-    "google.*",
+    "anthropic",
     "bs4",
     "dateutil.*",
     "icalendar",

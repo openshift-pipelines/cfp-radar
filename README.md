@@ -18,9 +18,17 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 # Install dependencies
 uv sync
 
-# Set required environment variables
-export GEMINI_API_KEY="your-key"
+# Set required environment variables for Claude on Vertex AI
+export GOOGLE_CLOUD_PROJECT="your-project"
+# Or: export ANTHROPIC_VERTEX_PROJECT_ID="your-project"
+export GOOGLE_CLOUD_LOCATION="global"
+export AI_MODEL="claude-sonnet-4-6"
+gcloud auth application-default login
 ```
+
+You need the `roles/aiplatform.user` role on the GCP project. Claude web search also requires the `constraints/vertexai.allowedPartnerModelFeatures` org policy to allow web search. Collection works without GCP credentials when using `--no-ai`.
+
+See [Claude on Vertex AI](https://docs.anthropic.com/en/api/claude-on-vertex-ai) and [Vertex AI pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing) for details.
 
 Set `export SLACK_WEBHOOK_URL="your-webhook-url"` if you plan to use Slack notifications.
 

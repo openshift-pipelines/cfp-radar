@@ -1,18 +1,17 @@
-"""AI-powered web search for event discovery using Gemini."""
+"""AI-powered web search for event discovery using Claude on Vertex AI."""
 
 from __future__ import annotations
 
 import json
 import re
 from datetime import date, datetime
-from typing import Any
+from typing import Any, cast
 
 import httpx
-from google import genai
-from google.genai import types
 
+from ...claude_client import extract_text, get_claude_client
 from ...config import (
-    GEMINI_API_KEY,
+    AI_MODEL,
     REGION_TO_COUNTRIES,
     TARGET_REGIONS,
     TOPICS,
@@ -23,16 +22,23 @@ from ..models import Event
 
 logger = get_logger(__name__)
 
+WEB_SEARCH_TOOL = [
+    {
+        "type": "web_search_20250305",
+        "name": "web_search",
+        "max_uses": 5,
+    }
+]
+
 
 async def search_events() -> list[Event]:
-    """Use Gemini to search for and extract event information."""
-    if not GEMINI_API_KEY:
-        logger.warning("GEMINI_API_KEY not set, skipping AI search")
+    """Use AI to search for and extract event information."""
+    client = get_claude_client()
+    if client is None:
+        logger.info("Skipping AI web search")
         return []
 
-    logger.info("Starting Gemini AI search")
-
-    client = genai.Client(api_key=GEMINI_API_KEY)
+    logger.info(f"Starting web search with {AI_MODEL} model")
     events = []
 
     for region in TARGET_REGIONS:
@@ -41,11 +47,13 @@ async def search_events() -> list[Event]:
         topics_str = ", ".join(TOPICS[:5])
         current_year = date.today().year
 
-        prompt = f"""Search for upcoming tech conferences and meetups in {region} for {current_year} and {current_year + 1}.
+        prompt = f"""Search for upcoming tech conferences and meetups in {region} for {current_year} and {current_year + 1}."""
 
-Cover these countries: {countries_str}
-
-Focus on events related to: {topics_str}
+        if countries_str:
+            prompt+=f"\n\nCover these countries: {countries_str}"
+        if topics_str:
+            prompt+=f"\n\nFocus on events related to: {topics_str}"
+        prompt+="""
 
 For each event you find, provide the following information in JSON format:
 {{
@@ -66,25 +74,28 @@ For each event you find, provide the following information in JSON format:
   ]
 }}
 
-Only include events that:
-1. Are in one of these countries: {countries_str}
-2. Are related to DevOps, CI/CD, Cloud Native, Kubernetes, or Platform Engineering
-3. Have dates in the future or within the last month
-4. You are reasonably confident about
+Only include events that:"""
+        if {countries_str}:
+            prompt+=f"\n- Are in one of these countries: {countries_str}"
+        if topics_str:
+            prompt+=f"\n- Are related to {topics_str}"
+        prompt+="""
+- Have dates in the future or within the last month
+- You are reasonably confident about
+- Are not already in the events list
 
 Return ONLY the JSON, no other text."""
-
+        print(prompt)
         try:
-            logger.debug("Querying Gemini for region %s", region)
-            response = client.models.generate_content(
-                model="gemini-3-flash-preview",
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    tools=[types.Tool(google_search=types.GoogleSearch())],
-                ),
+            logger.debug("Querying Claude for region %s", region)
+            response = await client.messages.create(
+                model=AI_MODEL,
+                max_tokens=8192,
+                messages=[{"role": "user", "content": prompt}],
+                tools=cast(Any, WEB_SEARCH_TOOL),
             )
-            content = response.text or ""
-            logger.debug("Gemini response for %s: %d chars", region, len(content))
+            content = extract_text(response)
+            logger.debug("Claude response for %s: %d chars", region, len(content))
             parsed_events = _parse_response(content, region)
             logger.info("Parsed %d events for %s", len(parsed_events), region)
             events.extend(parsed_events)
@@ -97,7 +108,7 @@ Return ONLY the JSON, no other text."""
 
 
 def _parse_response(content: str, country: str) -> list[Event]:
-    """Parse Gemini's JSON response into Event objects."""
+    """Parse the model JSON response into Event objects."""
     events: list[Event] = []
 
     # Try to extract JSON from the response
@@ -159,8 +170,9 @@ def _parse_response(content: str, country: str) -> list[Event]:
 
 
 async def extract_cfp_details(event_url: str) -> dict:
-    """Use Gemini to extract CFP details from an event website."""
-    if not GEMINI_API_KEY:
+    """Use AI to extract CFP details from an event website."""
+    client = get_claude_client()
+    if client is None:
         return {}
 
     # Fetch the page content
@@ -175,8 +187,6 @@ async def extract_cfp_details(event_url: str) -> dict:
             html = response.text[:50000]  # Limit content size
         except Exception:
             return {}
-
-    client = genai.Client(api_key=GEMINI_API_KEY)
 
     prompt = f"""Analyze this event website HTML and extract CFP (Call for Papers/Proposals) information.
 
@@ -194,14 +204,13 @@ Return JSON with:
 Return ONLY the JSON, no other text."""
 
     try:
-        genai_response = client.models.generate_content(
-            model="gemini-3-flash-preview",
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                tools=[types.Tool(google_search=types.GoogleSearch())],
-            ),
+        genai_response = await client.messages.create(
+            model=AI_MODEL,
+            max_tokens=4096,
+            messages=[{"role": "user", "content": prompt}],
+            tools=cast(Any, WEB_SEARCH_TOOL),
         )
-        content = genai_response.text or ""
+        content = extract_text(genai_response)
         json_match = re.search(r"\{[\s\S]*\}", content)
         if json_match:
             result: dict[str, Any] = json.loads(json_match.group())
