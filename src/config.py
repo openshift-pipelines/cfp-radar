@@ -133,9 +133,19 @@ TARGET_COUNTRIES = load_countries()
 GLOBAL_CONFERENCES = load_global_conferences()
 TOPICS = load_topics()
 
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+GOOGLE_CLOUD_PROJECT = os.environ.get(
+    "GOOGLE_CLOUD_PROJECT",
+    os.environ.get("ANTHROPIC_VERTEX_PROJECT_ID", ""),
+)
+GOOGLE_CLOUD_LOCATION = os.environ.get("GOOGLE_CLOUD_LOCATION", "global")
+AI_MODEL = os.environ.get("AI_MODEL", "claude-sonnet-4-6")
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "")
 MEETUP_API_KEY = os.environ.get("MEETUP_API_KEY", "")
+
+
+def is_ai_configured() -> bool:
+    """Return True when Claude on Vertex AI project settings are present."""
+    return bool(GOOGLE_CLOUD_PROJECT)
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 EVENTS_FILE = os.path.join(DATA_DIR, "events.json")
