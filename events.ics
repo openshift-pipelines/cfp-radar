@@ -203,26 +203,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:MAD Summit
-DTSTART;VALUE=DATE:20260622
-DTEND;VALUE=DATE:20260627
-UID:f22c21c6c2af-event@cfp-radar
-DESCRIPTION:Website: https://mad-summit.de/muenchen
-LOCATION:Munich\, Germany
-TRANSP:OPAQUE
-URL:https://mad-summit.de/muenchen
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:PlatformCON Virtual
-DTSTART;VALUE=DATE:20260622
-DTEND;VALUE=DATE:20260627
-UID:4483055f70e7-event@cfp-radar
-DESCRIPTION:Website: https://platformcon.com/program
-LOCATION:\, 
-TRANSP:OPAQUE
-URL:https://platformcon.com/program
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:PlatformCON Live Day London
 DTSTART;VALUE=DATE:20260623
 DTEND;VALUE=DATE:20260624
