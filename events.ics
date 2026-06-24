@@ -203,16 +203,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:PlatformCON Live Day London
-DTSTART;VALUE=DATE:20260623
-DTEND;VALUE=DATE:20260624
-UID:cf57378cd9a5-event@cfp-radar
-DESCRIPTION:Website: https://platformcon.com/live-day-london
-LOCATION:London\, U.K.
-TRANSP:OPAQUE
-URL:https://platformcon.com/live-day-london
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] OWASP Global AppSec EU
 DTSTART;VALUE=DATE:20260203
 DTEND;VALUE=DATE:20260204
@@ -416,16 +406,6 @@ DESCRIPTION:Website: https://apiconf.io
 LOCATION:Clear Water\, FL\, USA
 TRANSP:OPAQUE
 URL:https://apiconf.io
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Conversations Roadshow: Berlin by CTO Craft
-DTSTART;VALUE=DATE:20260623
-DTEND;VALUE=DATE:20260624
-UID:630d0cdf9012-event@cfp-radar
-DESCRIPTION:Website: https://conversations.ctocraft.com/berlin
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://conversations.ctocraft.com/berlin
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Swiss PGDay
