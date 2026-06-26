@@ -203,41 +203,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] OWASP Global AppSec EU
-DTSTART;VALUE=DATE:20260203
-DTEND;VALUE=DATE:20260204
-UID:c05f76e3f89c-cfp@cfp-radar
-DESCRIPTION:Website: https://owasp.glueup.com/event/owasp-global-appsec-eu
- -2026-vienna-austria-162243\nCFP: https://sessionize.com/owasp-global-apps
- ec-eu-2026-cfp-wash
-LOCATION:Vienna\, Austria
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/owasp-global-appsec-eu-2026-cfp-wash
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:OWASP Global AppSec EU
-DTSTART;VALUE=DATE:20260625
-DTEND;VALUE=DATE:20260627
-UID:c05f76e3f89c-event@cfp-radar
-DESCRIPTION:Website: https://owasp.glueup.com/event/owasp-global-appsec-eu
- -2026-vienna-austria-162243\nCFP: https://sessionize.com/owasp-global-apps
- ec-eu-2026-cfp-wash
-LOCATION:Vienna\, Austria
-TRANSP:OPAQUE
-URL:https://owasp.glueup.com/event/owasp-global-appsec-eu-2026-vienna-aust
- ria-162243
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:PlatformCON Live day NYC
-DTSTART;VALUE=DATE:20260625
-DTEND;VALUE=DATE:20260626
-UID:97e6dd5ee3f2-event@cfp-radar
-DESCRIPTION:Website: https://platformcon.com/live-day-nyc
-LOCATION:New York\, NY\, USA
-TRANSP:OPAQUE
-URL:https://platformcon.com/live-day-nyc
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:The European Power Platform Conference
 DTSTART;VALUE=DATE:20260629
 DTEND;VALUE=DATE:20260703
@@ -406,28 +371,6 @@ DESCRIPTION:Website: https://apiconf.io
 LOCATION:Clear Water\, FL\, USA
 TRANSP:OPAQUE
 URL:https://apiconf.io
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Swiss PGDay
-DTSTART;VALUE=DATE:20260407
-DTEND;VALUE=DATE:20260408
-UID:31c7d7d0ba5c-cfp@cfp-radar
-DESCRIPTION:Website: https://2026.pgday.ch\nCFP: https://2026.pgday.ch/cal
- l-for-papers
-LOCATION:Rapperswil-Jona\, Switzerland
-TRANSP:TRANSPARENT
-URL:https://2026.pgday.ch/call-for-papers
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Swiss PGDay
-DTSTART;VALUE=DATE:20260625
-DTEND;VALUE=DATE:20260627
-UID:31c7d7d0ba5c-event@cfp-radar
-DESCRIPTION:Website: https://2026.pgday.ch\nCFP: https://2026.pgday.ch/cal
- l-for-papers
-LOCATION:Rapperswil-Jona\, Switzerland
-TRANSP:OPAQUE
-URL:https://2026.pgday.ch
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Asynconf
