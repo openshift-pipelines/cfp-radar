@@ -373,28 +373,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Asynconf
-DTSTART;VALUE=DATE:20260430
-DTEND;VALUE=DATE:20260501
-UID:e9d2431c2bb8-cfp@cfp-radar
-DESCRIPTION:Website: https://asynconf.com\nCFP: https://cfp.asynconf.com\n
- Topics: devops
-LOCATION:Paris\, France
-TRANSP:TRANSPARENT
-URL:https://cfp.asynconf.com
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Asynconf
-DTSTART;VALUE=DATE:20260627
-DTEND;VALUE=DATE:20260628
-UID:e9d2431c2bb8-event@cfp-radar
-DESCRIPTION:Website: https://asynconf.com\nCFP: https://cfp.asynconf.com\n
- Topics: devops
-LOCATION:Paris\, France
-TRANSP:OPAQUE
-URL:https://asynconf.com
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] AlmaLinux Day
 DTSTART;VALUE=DATE:20260605
 DTEND;VALUE=DATE:20260606
