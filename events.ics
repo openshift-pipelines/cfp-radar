@@ -203,17 +203,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The European Power Platform Conference
-DTSTART;VALUE=DATE:20260629
-DTEND;VALUE=DATE:20260703
-UID:b782f7b24b1a-event@cfp-radar
-DESCRIPTION:Website: https://www.sharepointeurope.com/european-power-platf
- orm-conference
-LOCATION:Copenhagen\, Denmark
-TRANSP:OPAQUE
-URL:https://www.sharepointeurope.com/european-power-platform-conference
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:UberConf
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260718
