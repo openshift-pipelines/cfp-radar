@@ -531,6 +531,16 @@ TRANSP:OPAQUE
 URL:https://conference.joomla.org
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:TechEx Europe
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261021
+UID:5eff1e33c637-event@cfp-radar
+DESCRIPTION:Website: https://techexevent.com/europe
+LOCATION:Amsterdam\, Netherlands
+TRANSP:OPAQUE
+URL:https://techexevent.com/europe
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] swampUP Europe
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20260519
@@ -615,6 +625,18 @@ DESCRIPTION:Website: https://s2n.heise.de\nCFP: https://s2n.heise.de/cfp.p
 LOCATION:Berlin\, Germany
 TRANSP:OPAQUE
 URL:https://s2n.heise.de
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Unhacked 360 Germany: FutureSec Summit
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261111
+UID:60363004371c-event@cfp-radar
+DESCRIPTION:Website: https://momentera.org/conference/unhacked-360-germany
+ -futuresec-world-summit
+LOCATION:Berlin\, Germany
+TRANSP:OPAQUE
+URL:https://momentera.org/conference/unhacked-360-germany-futuresec-world-
+ summit
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] CLC
