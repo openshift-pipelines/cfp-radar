@@ -352,28 +352,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] AlmaLinux Day
-DTSTART;VALUE=DATE:20260605
-DTEND;VALUE=DATE:20260606
-UID:04fd6ba1d1b1-cfp@cfp-radar
-DESCRIPTION:Website: https://almalinux.org/almalinux-day-los-angeles-2026\
- nCFP: https://sessionize.com/almalinux-day-los-angeles
-LOCATION:Los Angeles\, CA\, USA
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/almalinux-day-los-angeles
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:AlmaLinux Day
-DTSTART;VALUE=DATE:20260718
-DTEND;VALUE=DATE:20260719
-UID:04fd6ba1d1b1-event@cfp-radar
-DESCRIPTION:Website: https://almalinux.org/almalinux-day-los-angeles-2026\
- nCFP: https://sessionize.com/almalinux-day-los-angeles
-LOCATION:Los Angeles\, CA\, USA
-TRANSP:OPAQUE
-URL:https://almalinux.org/almalinux-day-los-angeles-2026
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:World Conference on  Smart Systems : Big Data\, IoT\, Cybersecurit
  y\, and IT in Action
 DTSTART;VALUE=DATE:20260917
