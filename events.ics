@@ -563,6 +563,28 @@ TRANSP:OPAQUE
 URL:https://www.mozillafestival.org
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Nullcon Berlin
+DTSTART;VALUE=DATE:20260710
+DTEND;VALUE=DATE:20260711
+UID:dc4eb3152157-cfp@cfp-radar
+DESCRIPTION:Website: https://nullcon.net/event/nullcon-berlin-2026\nCFP: h
+ ttps://nullcon.net/event/nullcon-berlin-2026/cfp\nTopics: devops
+LOCATION:Berlin\, Germany
+TRANSP:TRANSPARENT
+URL:https://nullcon.net/event/nullcon-berlin-2026/cfp
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nullcon Berlin
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261107
+UID:dc4eb3152157-event@cfp-radar
+DESCRIPTION:Website: https://nullcon.net/event/nullcon-berlin-2026\nCFP: h
+ ttps://nullcon.net/event/nullcon-berlin-2026/cfp\nTopics: devops
+LOCATION:Berlin\, Germany
+TRANSP:OPAQUE
+URL:https://nullcon.net/event/nullcon-berlin-2026
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Open Source Analytics Conference
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
