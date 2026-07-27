@@ -553,6 +553,16 @@ TRANSP:OPAQUE
 URL:https://www.umbracokalaset.se
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:webinale Munich
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261031
+UID:a80a8ad46367-event@cfp-radar
+DESCRIPTION:Website: https://webinale.com/munich\nTopics: devops
+LOCATION:Munich\, Germany
+TRANSP:OPAQUE
+URL:https://webinale.com/munich
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Mozilla Festival
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261031
@@ -715,6 +725,28 @@ TRANSP:OPAQUE
 URL:https://apiconference.net/berlin
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Workplace Ninjas India
+DTSTART;VALUE=DATE:20260731
+DTEND;VALUE=DATE:20260801
+UID:6c147d2b1aeb-cfp@cfp-radar
+DESCRIPTION:Website: https://www.wpninjas-india.com\nCFP: https://sessioni
+ ze.com/workplace-ninjas-india-2026
+LOCATION:Delhi\, India
+TRANSP:TRANSPARENT
+URL:https://sessionize.com/workplace-ninjas-india-2026
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Workplace Ninjas India
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261129
+UID:6c147d2b1aeb-event@cfp-radar
+DESCRIPTION:Website: https://www.wpninjas-india.com\nCFP: https://sessioni
+ ze.com/workplace-ninjas-india-2026
+LOCATION:Delhi\, India
+TRANSP:OPAQUE
+URL:https://www.wpninjas-india.com
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:DevOpsCon Munich
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261205
@@ -733,5 +765,27 @@ DESCRIPTION:Website: https://it-security-summit.com/munich\nTopics: devops
 LOCATION:Munich\, Germany
 TRANSP:OPAQUE
 URL:https://it-security-summit.com/munich
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] EuroSTAR Conference
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+UID:ffc7a43d7c96-cfp@cfp-radar
+DESCRIPTION:Website: https://conference.eurostarsoftwaretesting.com\nCFP: 
+ https://conference.eurostarsoftwaretesting.com/call-for-submissions
+LOCATION:Copenhagen\, Denmark
+TRANSP:TRANSPARENT
+URL:https://conference.eurostarsoftwaretesting.com/call-for-submissions
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:EuroSTAR Conference
+DTSTART;VALUE=DATE:20270511
+DTEND;VALUE=DATE:20270515
+UID:ffc7a43d7c96-event@cfp-radar
+DESCRIPTION:Website: https://conference.eurostarsoftwaretesting.com\nCFP: 
+ https://conference.eurostarsoftwaretesting.com/call-for-submissions
+LOCATION:Copenhagen\, Denmark
+TRANSP:OPAQUE
+URL:https://conference.eurostarsoftwaretesting.com
 END:VEVENT
 END:VCALENDAR
