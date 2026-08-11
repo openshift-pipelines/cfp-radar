@@ -457,28 +457,6 @@ TRANSP:OPAQUE
 URL:https://techsummit.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Open Tech Day: Software-defined Storage
-DTSTART;VALUE=DATE:20260531
-DTEND;VALUE=DATE:20260601
-UID:1cb97d5b9315-cfp@cfp-radar
-DESCRIPTION:Website: https://opentechday.de\nCFP: https://opentechday.de/p
- ropose
-LOCATION:Nürnberg\, Germany
-TRANSP:TRANSPARENT
-URL:https://opentechday.de/propose
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Open Tech Day: Software-defined Storage
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-UID:1cb97d5b9315-event@cfp-radar
-DESCRIPTION:Website: https://opentechday.de\nCFP: https://opentechday.de/p
- ropose
-LOCATION:Nürnberg\, Germany
-TRANSP:OPAQUE
-URL:https://opentechday.de
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] bitcoin++ payments edition
 DTSTART;VALUE=DATE:20260817
 DTEND;VALUE=DATE:20260818
