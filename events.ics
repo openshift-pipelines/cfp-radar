@@ -715,6 +715,16 @@ TRANSP:OPAQUE
 URL:https://clc-conference.eu/index_en.php
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:API Conference Berlin
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261121
+UID:96e659a20475-event@cfp-radar
+DESCRIPTION:Website: https://apiconference.net/berlin\nTopics: devops
+LOCATION:Berlin\, Germany
+TRANSP:OPAQUE
+URL:https://apiconference.net/berlin
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Agile Testing Days
 DTSTART;VALUE=DATE:20260329
 DTEND;VALUE=DATE:20260330
@@ -789,16 +799,6 @@ DESCRIPTION:Website: https://india.droidcon.com
 LOCATION:Bengaluru\, India
 TRANSP:OPAQUE
 URL:https://india.droidcon.com
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:API Conference Berlin
-DTSTART;VALUE=DATE:20261123
-DTEND;VALUE=DATE:20261128
-UID:77fe537e7aa0-event@cfp-radar
-DESCRIPTION:Website: https://apiconference.net/berlin\nTopics: devops
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://apiconference.net/berlin
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Workplace Ninjas India
