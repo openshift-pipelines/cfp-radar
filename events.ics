@@ -853,6 +853,38 @@ TRANSP:OPAQUE
 URL:https://it-security-summit.com/munich
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:SciPy India
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261221
+UID:9271fd3568bc-event@cfp-radar
+DESCRIPTION:Website: https://scipy.in/2026/
+LOCATION:Chennai\, India
+TRANSP:OPAQUE
+URL:https://scipy.in/2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] SCaLE
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+UID:06f684f171df-cfp@cfp-radar
+DESCRIPTION:Website: https://www.socallinuxexpo.org/scale/24x\nCFP: https:
+ //www.socallinuxexpo.org/scale/24x/cfp
+LOCATION:Pasadena\, CA\, USA
+TRANSP:TRANSPARENT
+URL:https://www.socallinuxexpo.org/scale/24x/cfp
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:SCaLE
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270405
+UID:06f684f171df-event@cfp-radar
+DESCRIPTION:Website: https://www.socallinuxexpo.org/scale/24x\nCFP: https:
+ //www.socallinuxexpo.org/scale/24x/cfp
+LOCATION:Pasadena\, CA\, USA
+TRANSP:OPAQUE
+URL:https://www.socallinuxexpo.org/scale/24x
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] STAREAST
 DTSTART;VALUE=DATE:20260906
 DTEND;VALUE=DATE:20260907

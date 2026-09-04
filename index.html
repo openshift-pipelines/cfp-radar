@@ -604,7 +604,7 @@
           onclick="toggleCountry('all')"
           id="all-countries-pill"
         >
-          All <span class="chip-count">60</span>
+          All <span class="chip-count">62</span>
         </div>
         
         <div
@@ -622,7 +622,16 @@
           data-country="USA"
         >
           🇺🇸 USA
-          <span class="chip-count">9</span>
+          <span class="chip-count">10</span>
+        </div>
+        
+        <div
+          class="country-chip"
+          onclick="toggleCountry('India')"
+          data-country="India"
+        >
+          🇮🇳 India
+          <span class="chip-count">5</span>
         </div>
         
         <div
@@ -632,15 +641,6 @@
         >
           🇫🇷 France
           <span class="chip-count">5</span>
-        </div>
-        
-        <div
-          class="country-chip"
-          onclick="toggleCountry('India')"
-          data-country="India"
-        >
-          🇮🇳 India
-          <span class="chip-count">4</span>
         </div>
         
         <div
@@ -762,7 +762,7 @@
           onclick="toggleMonth('all')"
           id="all-months-pill"
         >
-          All <span class="chip-count">60</span>
+          All <span class="chip-count">62</span>
         </div>
         
         <div
@@ -794,7 +794,7 @@
           onclick="toggleMonth('2026-12')"
           data-month="2026-12"
         >
-          Dec 2026 <span class="chip-count">3</span>
+          Dec 2026 <span class="chip-count">4</span>
         </div>
         
         <div
@@ -810,7 +810,7 @@
           onclick="toggleMonth('2027-04')"
           data-month="2027-04"
         >
-          Apr 2027 <span class="chip-count">2</span>
+          Apr 2027 <span class="chip-count">3</span>
         </div>
         
         <div
@@ -1980,7 +1980,7 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        3 days left
+                        2 days left
                         
                     </span>
                     
@@ -2035,7 +2035,7 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        19 days left
+                        18 days left
                         
                     </span>
                     
@@ -2090,13 +2090,68 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        27 days left
+                        26 days left
                         
                     </span>
                     
                 </div>
                 
                 <a href="https://conference.eurostarsoftwaretesting.com/call-for-submissions" target="_blank"
+                   class="relative z-10 inline-block mt-2 px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700">
+                    Submit CFP
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        
+            cfp-open
+            
+        "
+        data-country="USA" data-city="Pasadena, CA" data-start-month="2027-04">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://www.socallinuxexpo.org/scale/24x" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        SCaLE
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    Pasadena, CA, USA
+                    <span class="mx-2">|</span>
+                    Apr 01, 2027
+                    
+                    - Apr 04, 2027
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <div class="text-sm">
+                    <span class="font-medium
+                        text-green-600
+                        ">
+                        CFP: Nov 01
+                    </span>
+                    
+                    <br>
+                    <span class="text-gray-500">
+                        58 days left
+                        
+                    </span>
+                    
+                </div>
+                
+                <a href="https://www.socallinuxexpo.org/scale/24x/cfp" target="_blank"
                    class="relative z-10 inline-block mt-2 px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700">
                     Submit CFP
                 </a>
@@ -2145,7 +2200,7 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        240 days left
+                        239 days left
                         
                     </span>
                     
@@ -3398,6 +3453,39 @@
                     <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Cybersecurity</span>
                     
                     <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">DevOps</span>
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <span class="text-gray-400 text-sm">No CFP info</span>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        "
+        data-country="India" data-city="Chennai" data-start-month="2026-12">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://scipy.in/2026/" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        SciPy India
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    Chennai, India
+                    <span class="mx-2">|</span>
+                    Dec 19, 2026
+                    
+                    - Dec 20, 2026
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
                     
                     <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
                 </div>
