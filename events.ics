@@ -136,28 +136,6 @@ TRANSP:OPAQUE
 URL:https://aws.amazon.com/summits/paris/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] DevOpsDays Graz
-DTSTART;VALUE=DATE:20260430
-DTEND;VALUE=DATE:20260501
-UID:64d5e83ed8c7-cfp@cfp-radar
-DESCRIPTION:Website: https://www.devopsdays.at\nCFP: https://pretalx.com/d
- evopsdays-graz-2026/cfp\nTopics: devops
-LOCATION:Graz\, Austria
-TRANSP:TRANSPARENT
-URL:https://pretalx.com/devopsdays-graz-2026/cfp
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:DevOpsDays Graz
-DTSTART;VALUE=DATE:20260904
-DTEND;VALUE=DATE:20260906
-UID:64d5e83ed8c7-event@cfp-radar
-DESCRIPTION:Website: https://www.devopsdays.at\nCFP: https://pretalx.com/d
- evopsdays-graz-2026/cfp\nTopics: devops
-LOCATION:Graz\, Austria
-TRANSP:OPAQUE
-URL:https://www.devopsdays.at
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Devopsdays Berlin
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20261001
