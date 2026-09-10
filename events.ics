@@ -671,6 +671,28 @@ URL:https://momentera.org/conference/unhacked-360-germany-futuresec-world-
  summit
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Gerrit User Summit
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260919
+UID:7250aa8ba911-cfp@cfp-radar
+DESCRIPTION:Website: https://gus26.gerritforge.com\nCFP: https://sessioniz
+ e.com/gerrit-user-summit-2026
+LOCATION:San Francisco\, CA\, USA
+TRANSP:TRANSPARENT
+URL:https://sessionize.com/gerrit-user-summit-2026
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Gerrit User Summit
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261111
+UID:7250aa8ba911-event@cfp-radar
+DESCRIPTION:Website: https://gus26.gerritforge.com\nCFP: https://sessioniz
+ e.com/gerrit-user-summit-2026
+LOCATION:San Francisco\, CA\, USA
+TRANSP:OPAQUE
+URL:https://gus26.gerritforge.com
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] CLC
 DTSTART;VALUE=DATE:20260421
 DTEND;VALUE=DATE:20260422
@@ -839,6 +861,28 @@ DESCRIPTION:Website: https://scipy.in/2026/
 LOCATION:Chennai\, India
 TRANSP:OPAQUE
 URL:https://scipy.in/2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Mountain Camp
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+UID:9d01e2ce8447-cfp@cfp-radar
+DESCRIPTION:Website: https://drupalmountaincamp.ch\nCFP: https://event.dru
+ palmountaincamp.ch/mountain-camp-2027
+LOCATION:Davos\, Switzerland
+TRANSP:TRANSPARENT
+URL:https://event.drupalmountaincamp.ch/mountain-camp-2027
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mountain Camp
+DTSTART;VALUE=DATE:20270302
+DTEND;VALUE=DATE:20270305
+UID:9d01e2ce8447-event@cfp-radar
+DESCRIPTION:Website: https://drupalmountaincamp.ch\nCFP: https://event.dru
+ palmountaincamp.ch/mountain-camp-2027
+LOCATION:Davos\, Switzerland
+TRANSP:OPAQUE
+URL:https://drupalmountaincamp.ch
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] SCaLE
