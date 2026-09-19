@@ -604,7 +604,7 @@
           onclick="toggleCountry('all')"
           id="all-countries-pill"
         >
-          All <span class="chip-count">60</span>
+          All <span class="chip-count">66</span>
         </div>
         
         <div
@@ -622,7 +622,16 @@
           data-country="USA"
         >
           🇺🇸 USA
-          <span class="chip-count">10</span>
+          <span class="chip-count">11</span>
+        </div>
+        
+        <div
+          class="country-chip"
+          onclick="toggleCountry('France')"
+          data-country="France"
+        >
+          🇫🇷 France
+          <span class="chip-count">7</span>
         </div>
         
         <div
@@ -636,11 +645,11 @@
         
         <div
           class="country-chip"
-          onclick="toggleCountry('France')"
-          data-country="France"
+          onclick="toggleCountry('Spain')"
+          data-country="Spain"
         >
-          🇫🇷 France
-          <span class="chip-count">5</span>
+          🇪🇸 Spain
+          <span class="chip-count">4</span>
         </div>
         
         <div
@@ -649,15 +658,6 @@
           data-country="Netherlands"
         >
           🇳🇱 Netherlands
-          <span class="chip-count">3</span>
-        </div>
-        
-        <div
-          class="country-chip"
-          onclick="toggleCountry('Spain')"
-          data-country="Spain"
-        >
-          🇪🇸 Spain
           <span class="chip-count">3</span>
         </div>
         
@@ -676,6 +676,15 @@
           data-country="Belgium"
         >
           🇧🇪 Belgium
+          <span class="chip-count">2</span>
+        </div>
+        
+        <div
+          class="country-chip"
+          onclick="toggleCountry('Australia')"
+          data-country="Australia"
+        >
+          🇦🇺 Australia
           <span class="chip-count">2</span>
         </div>
         
@@ -717,15 +726,6 @@
         
         <div
           class="country-chip"
-          onclick="toggleCountry('Australia')"
-          data-country="Australia"
-        >
-          🇦🇺 Australia
-          <span class="chip-count">1</span>
-        </div>
-        
-        <div
-          class="country-chip"
           onclick="toggleCountry('UAE')"
           data-country="UAE"
         >
@@ -751,6 +751,15 @@
           <span class="chip-count">1</span>
         </div>
         
+        <div
+          class="country-chip"
+          onclick="toggleCountry('Singapore')"
+          data-country="Singapore"
+        >
+          🇸🇬 Singapore
+          <span class="chip-count">1</span>
+        </div>
+        
       </div>
       
 
@@ -762,7 +771,7 @@
           onclick="toggleMonth('all')"
           id="all-months-pill"
         >
-          All <span class="chip-count">60</span>
+          All <span class="chip-count">66</span>
         </div>
         
         <div
@@ -778,7 +787,7 @@
           onclick="toggleMonth('2026-10')"
           data-month="2026-10"
         >
-          Oct 2026 <span class="chip-count">17</span>
+          Oct 2026 <span class="chip-count">18</span>
         </div>
         
         <div
@@ -786,7 +795,7 @@
           onclick="toggleMonth('2026-11')"
           data-month="2026-11"
         >
-          Nov 2026 <span class="chip-count">25</span>
+          Nov 2026 <span class="chip-count">27</span>
         </div>
         
         <div
@@ -794,7 +803,7 @@
           onclick="toggleMonth('2026-12')"
           data-month="2026-12"
         >
-          Dec 2026 <span class="chip-count">4</span>
+          Dec 2026 <span class="chip-count">5</span>
         </div>
         
         <div
@@ -810,7 +819,7 @@
           onclick="toggleMonth('2027-03')"
           data-month="2027-03"
         >
-          Mar 2027 <span class="chip-count">1</span>
+          Mar 2027 <span class="chip-count">2</span>
         </div>
         
         <div
@@ -834,7 +843,7 @@
           onclick="toggleMonth('2027-06')"
           data-month="2027-06"
         >
-          Jun 2027 <span class="chip-count">1</span>
+          Jun 2027 <span class="chip-count">2</span>
         </div>
         
       </div>
@@ -1986,7 +1995,7 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        Today!
+                        Closed
                         
                     </span>
                     
@@ -2041,7 +2050,7 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        4 days left
+                        3 days left
                         
                     </span>
                     
@@ -2096,13 +2105,68 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        12 days left
+                        11 days left
                         
                     </span>
                     
                 </div>
                 
                 <a href="https://conference.eurostarsoftwaretesting.com/call-for-submissions" target="_blank"
+                   class="relative z-10 inline-block mt-2 px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700">
+                    Submit CFP
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        
+            cfp-soon
+            
+        "
+        data-country="USA" data-city="Brooklyn, NY" data-start-month="2026-11">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://tessl.io/devcon" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        AI DevCon NYC
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    Brooklyn, NY, USA
+                    <span class="mx-2">|</span>
+                    Nov 02, 2026
+                    
+                    - Nov 04, 2026
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <div class="text-sm">
+                    <span class="font-medium
+                        text-yellow-600
+                        ">
+                        CFP: Oct 01
+                    </span>
+                    
+                    <br>
+                    <span class="text-gray-500">
+                        12 days left
+                        
+                    </span>
+                    
+                </div>
+                
+                <a href="https://sessionize.com/ai-native-devcon-nyc-2026" target="_blank"
                    class="relative z-10 inline-block mt-2 px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700">
                     Submit CFP
                 </a>
@@ -2151,13 +2215,123 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        23 days left
+                        22 days left
                         
                     </span>
                     
                 </div>
                 
                 <a href="https://event.drupalmountaincamp.ch/mountain-camp-2027" target="_blank"
+                   class="relative z-10 inline-block mt-2 px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700">
+                    Submit CFP
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        
+            cfp-open
+            
+        "
+        data-country="France" data-city="Paris" data-start-month="2026-12">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://builditsummit.com" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        Build It Summit
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    Paris, France
+                    <span class="mx-2">|</span>
+                    Dec 01, 2026
+                    
+                    - Dec 03, 2026
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
+                    
+                    <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">devops</span>
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <div class="text-sm">
+                    <span class="font-medium
+                        text-green-600
+                        ">
+                        CFP: Oct 31
+                    </span>
+                    
+                    <br>
+                    <span class="text-gray-500">
+                        42 days left
+                        
+                    </span>
+                    
+                </div>
+                
+                <a href="https://builditsummit.com/call-for-speakers" target="_blank"
+                   class="relative z-10 inline-block mt-2 px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700">
+                    Submit CFP
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        
+            cfp-open
+            
+        "
+        data-country="France" data-city="Paris" data-start-month="2027-03">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://paristestconf.com" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        ParisTestConf
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    Paris, France
+                    <span class="mx-2">|</span>
+                    Mar 23, 2027
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <div class="text-sm">
+                    <span class="font-medium
+                        text-green-600
+                        ">
+                        CFP: Oct 31
+                    </span>
+                    
+                    <br>
+                    <span class="text-gray-500">
+                        42 days left
+                        
+                    </span>
+                    
+                </div>
+                
+                <a href="https://sessionize.com/paristestconf-2027" target="_blank"
                    class="relative z-10 inline-block mt-2 px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700">
                     Submit CFP
                 </a>
@@ -2206,7 +2380,7 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        44 days left
+                        43 days left
                         
                     </span>
                     
@@ -2261,7 +2435,7 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        225 days left
+                        224 days left
                         
                     </span>
                     
@@ -2745,6 +2919,39 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
+        data-country="Spain" data-city="Valencia" data-start-month="2026-10">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://2026.pgconf.eu" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        PGconf.EU
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    Valencia, Spain
+                    <span class="mx-2">|</span>
+                    Oct 20, 2026
+                    
+                    - Oct 23, 2026
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <span class="text-gray-400 text-sm">No CFP info</span>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        "
         data-country="Poland" data-city="Kraków" data-start-month="2026-10">
         <div class="flex justify-between items-start">
             <div class="flex-1">
@@ -3086,6 +3293,39 @@
                     <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">DevOps</span>
                     
                     <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Enterprise Tech</span>
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <span class="text-gray-400 text-sm">No CFP info</span>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        "
+        data-country="Australia" data-city="Sydney" data-start-month="2026-11">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://communityovercode.apache.org/events/sydney-2026" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        Community Over Code Sydney
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    Sydney, Australia
+                    <span class="mx-2">|</span>
+                    Nov 18, 2026
+                    
+                    - Nov 19, 2026
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
                     
                     <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
                 </div>
@@ -3532,6 +3772,39 @@
                     <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Platform Engineering</span>
                     
                     <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">AWS</span>
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <span class="text-gray-400 text-sm">No CFP info</span>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        "
+        data-country="Singapore" data-city="Singapore" data-start-month="2027-06">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://cyberfuture2027.com" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        International Conference on Cybersecurity, AI &amp; Future Digital Infrastructure
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    Singapore, Singapore
+                    <span class="mx-2">|</span>
+                    Jun 09, 2027
+                    
+                    - Jun 11, 2027
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
                     
                     <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
                 </div>

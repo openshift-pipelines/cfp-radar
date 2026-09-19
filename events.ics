@@ -522,6 +522,16 @@ TRANSP:OPAQUE
 URL:https://www.umbracokalaset.se
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:PGconf.EU
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261024
+UID:1dd6cdddf602-event@cfp-radar
+DESCRIPTION:Website: https://2026.pgconf.eu
+LOCATION:Valencia\, Spain
+TRANSP:OPAQUE
+URL:https://2026.pgconf.eu
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:JDD
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261022
@@ -572,6 +582,28 @@ DESCRIPTION:Website: https://nullcon.net/event/nullcon-berlin-2026\nCFP: h
 LOCATION:Berlin\, Germany
 TRANSP:OPAQUE
 URL:https://nullcon.net/event/nullcon-berlin-2026
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] AI DevCon NYC
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+UID:bd59e8adea5a-cfp@cfp-radar
+DESCRIPTION:Website: https://tessl.io/devcon\nCFP: https://sessionize.com/
+ ai-native-devcon-nyc-2026
+LOCATION:Brooklyn\, NY\, USA
+TRANSP:TRANSPARENT
+URL:https://sessionize.com/ai-native-devcon-nyc-2026
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:AI DevCon NYC
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261105
+UID:bd59e8adea5a-event@cfp-radar
+DESCRIPTION:Website: https://tessl.io/devcon\nCFP: https://sessionize.com/
+ ai-native-devcon-nyc-2026
+LOCATION:Brooklyn\, NY\, USA
+TRANSP:OPAQUE
+URL:https://tessl.io/devcon
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Open Source Analytics Conference
@@ -738,6 +770,17 @@ TRANSP:OPAQUE
 URL:https://au.churconf.com
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Community Over Code Sydney
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261120
+UID:1ce4137f2b39-event@cfp-radar
+DESCRIPTION:Website: https://communityovercode.apache.org/events/sydney-20
+ 26
+LOCATION:Sydney\, Australia
+TRANSP:OPAQUE
+URL:https://communityovercode.apache.org/events/sydney-2026
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] X-Ops Conference Madrid
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260901
@@ -822,6 +865,28 @@ TRANSP:OPAQUE
 URL:https://it-security-summit.com/munich
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Build It Summit
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+UID:b1ed3d055793-cfp@cfp-radar
+DESCRIPTION:Website: https://builditsummit.com\nCFP: https://builditsummit
+ .com/call-for-speakers\nTopics: devops
+LOCATION:Paris\, France
+TRANSP:TRANSPARENT
+URL:https://builditsummit.com/call-for-speakers
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Build It Summit
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261204
+UID:b1ed3d055793-event@cfp-radar
+DESCRIPTION:Website: https://builditsummit.com\nCFP: https://builditsummit
+ .com/call-for-speakers\nTopics: devops
+LOCATION:Paris\, France
+TRANSP:OPAQUE
+URL:https://builditsummit.com
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:SciPy India
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261221
@@ -852,6 +917,28 @@ DESCRIPTION:Website: https://drupalmountaincamp.ch\nCFP: https://event.dru
 LOCATION:Davos\, Switzerland
 TRANSP:OPAQUE
 URL:https://drupalmountaincamp.ch
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] ParisTestConf
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+UID:1b0d388b8cd9-cfp@cfp-radar
+DESCRIPTION:Website: https://paristestconf.com\nCFP: https://sessionize.co
+ m/paristestconf-2027
+LOCATION:Paris\, France
+TRANSP:TRANSPARENT
+URL:https://sessionize.com/paristestconf-2027
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ParisTestConf
+DTSTART;VALUE=DATE:20270323
+DTEND;VALUE=DATE:20270324
+UID:1b0d388b8cd9-event@cfp-radar
+DESCRIPTION:Website: https://paristestconf.com\nCFP: https://sessionize.co
+ m/paristestconf-2027
+LOCATION:Paris\, France
+TRANSP:OPAQUE
+URL:https://paristestconf.com
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] SCaLE
@@ -918,6 +1005,17 @@ DESCRIPTION:Website: https://conference.eurostarsoftwaretesting.com\nCFP:
 LOCATION:Copenhagen\, Denmark
 TRANSP:OPAQUE
 URL:https://conference.eurostarsoftwaretesting.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:International Conference on Cybersecurity\, AI & Future Digital In
+ frastructure
+DTSTART;VALUE=DATE:20270609
+DTEND;VALUE=DATE:20270612
+UID:5b75f4dbb0f8-event@cfp-radar
+DESCRIPTION:Website: https://cyberfuture2027.com
+LOCATION:Singapore\, Singapore
+TRANSP:OPAQUE
+URL:https://cyberfuture2027.com
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Accelerate Tomorrow AI Summit
