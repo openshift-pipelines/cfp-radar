@@ -320,26 +320,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:API Conference NYC
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20261003
-UID:8a811fbd141d-event@cfp-radar
-DESCRIPTION:Website: https://apiconference.net/new-york\nTopics: devops
-LOCATION:New York\, NY\, USA
-TRANSP:OPAQUE
-URL:https://apiconference.net/new-york
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:DecOpsCon NYC
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20261003
-UID:1dcde6eff3ab-event@cfp-radar
-DESCRIPTION:Website: https://devopscon.io/new-york\nTopics: devops
-LOCATION:New York\, NY\, USA
-TRANSP:OPAQUE
-URL:https://devopscon.io/new-york
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] TechSummit Amsterdam
 DTSTART;VALUE=DATE:20260515
 DTEND;VALUE=DATE:20260516
