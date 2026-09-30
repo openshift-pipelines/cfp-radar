@@ -136,17 +136,6 @@ TRANSP:OPAQUE
 URL:https://aws.amazon.com/summits/paris/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Devopsdays Berlin
-DTSTART;VALUE=DATE:20260929
-DTEND;VALUE=DATE:20261001
-UID:69d8cffe0cf3-event@cfp-radar
-DESCRIPTION:Website: https://devopsdays.org/events/2026-berlin/welcome\nTo
- pics: devops
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://devopsdays.org/events/2026-berlin/welcome
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:KubeCon + CloudNativeCon North America
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261030
