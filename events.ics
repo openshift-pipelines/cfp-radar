@@ -309,28 +309,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] TechSummit Amsterdam
-DTSTART;VALUE=DATE:20260515
-DTEND;VALUE=DATE:20260516
-UID:dd9b37eaf9b9-cfp@cfp-radar
-DESCRIPTION:Website: https://techsummit.io\nCFP: https://pretalx.com/techs
- ummit-2026/cfp\nTopics: devops
-LOCATION:Amsterdam\, Netherlands
-TRANSP:TRANSPARENT
-URL:https://pretalx.com/techsummit-2026/cfp
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:TechSummit Amsterdam
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
-UID:dd9b37eaf9b9-event@cfp-radar
-DESCRIPTION:Website: https://techsummit.io\nCFP: https://pretalx.com/techs
- ummit-2026/cfp\nTopics: devops
-LOCATION:Amsterdam\, Netherlands
-TRANSP:OPAQUE
-URL:https://techsummit.io
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] bitcoin++ payments edition
 DTSTART;VALUE=DATE:20260817
 DTEND;VALUE=DATE:20260818
