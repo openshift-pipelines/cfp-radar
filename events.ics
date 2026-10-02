@@ -309,28 +309,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] bitcoin++ payments edition
-DTSTART;VALUE=DATE:20260817
-DTEND;VALUE=DATE:20260818
-UID:9aa0c14b4e6f-cfp@cfp-radar
-DESCRIPTION:Website: https://btcpp.dev/berlin26\nCFP: https://btcpp.dev/ta
- lk/berlin26
-LOCATION:Berlin\, Germany
-TRANSP:TRANSPARENT
-URL:https://btcpp.dev/talk/berlin26
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:bitcoin++ payments edition
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261004
-UID:9aa0c14b4e6f-event@cfp-radar
-DESCRIPTION:Website: https://btcpp.dev/berlin26\nCFP: https://btcpp.dev/ta
- lk/berlin26
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://btcpp.dev/berlin26
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Software Architecture Summit
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261017
