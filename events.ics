@@ -3,19 +3,6 @@ VERSION:2.0
 PRODID:-//CFP Radar//cfp-radar//EN
 X-WR-CALNAME:CFP Radar
 BEGIN:VEVENT
-SUMMARY:Open Source India 2026
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261009
-UID:33285bbfafee-event@cfp-radar
-DESCRIPTION:India's premier open-source event featuring workshops and sess
- ions on cloud native infrastructure and platform services.\nWebsite: https
- ://opensourceindia.in/\nCFP: https://opensourceindia.in/\nTopics: Open Sou
- rce\, Platform Engineering\, Cloud Native\, Infrastructure as Code
-LOCATION:Bangalore\, India
-TRANSP:OPAQUE
-URL:https://opensourceindia.in/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:GopherCon Israel 2026
 DTSTART;VALUE=DATE:20261018
 DTEND;VALUE=DATE:20261019
