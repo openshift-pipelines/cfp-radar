@@ -586,6 +586,28 @@ TRANSP:OPAQUE
 URL:https://clc-conference.eu/index_en.php
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[CFP Deadline] VIC AI Boom
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+UID:2caf97bf507f-cfp@cfp-radar
+DESCRIPTION:Website: https://vicaiboom.com\nCFP: https://forms.gle/gRGNcMA
+ qbwxPaYpC6
+LOCATION:Melbourne\, Australia
+TRANSP:TRANSPARENT
+URL:https://forms.gle/gRGNcMAqbwxPaYpC6
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:VIC AI Boom
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+UID:2caf97bf507f-event@cfp-radar
+DESCRIPTION:Website: https://vicaiboom.com\nCFP: https://forms.gle/gRGNcMA
+ qbwxPaYpC6
+LOCATION:Melbourne\, Australia
+TRANSP:OPAQUE
+URL:https://vicaiboom.com
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:API Conference Berlin
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261121
