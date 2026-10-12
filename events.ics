@@ -402,6 +402,28 @@ TRANSP:OPAQUE
 URL:https://2026.pgconf.eu
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[CFP Deadline] The Matrix Conference
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+UID:78caecedcdd1-cfp@cfp-radar
+DESCRIPTION:Website: https://conference.matrix.org\nCFP: https://cfp.2026.
+ matrix.org/matrix-conference-2026/schedule
+LOCATION:Malmö\, Sweden
+TRANSP:TRANSPARENT
+URL:https://cfp.2026.matrix.org/matrix-conference-2026/schedule
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Matrix Conference
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261024
+UID:78caecedcdd1-event@cfp-radar
+DESCRIPTION:Website: https://conference.matrix.org\nCFP: https://cfp.2026.
+ matrix.org/matrix-conference-2026/schedule
+LOCATION:Malmö\, Sweden
+TRANSP:OPAQUE
+URL:https://conference.matrix.org
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:JDD
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261022
@@ -789,6 +811,48 @@ TRANSP:OPAQUE
 URL:https://scipy.in/2026/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[CFP Deadline] FUN OCaml
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+UID:21e4cbe55832-cfp@cfp-radar
+DESCRIPTION:Website: https://fun-ocaml.com\nCFP: https://cfp.fun-ocaml.com
+ /fun-ocaml-2027-bengaluru/cfp
+LOCATION:Bangalore\, India
+TRANSP:TRANSPARENT
+URL:https://cfp.fun-ocaml.com/fun-ocaml-2027-bengaluru/cfp
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:FUN OCaml
+DTSTART;VALUE=DATE:20270125
+DTEND;VALUE=DATE:20270127
+UID:21e4cbe55832-event@cfp-radar
+DESCRIPTION:Website: https://fun-ocaml.com\nCFP: https://cfp.fun-ocaml.com
+ /fun-ocaml-2027-bengaluru/cfp
+LOCATION:Bangalore\, India
+TRANSP:OPAQUE
+URL:https://fun-ocaml.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Daytona Compute
+DTSTART;VALUE=DATE:20270203
+DTEND;VALUE=DATE:20270205
+UID:ff3d77a97583-event@cfp-radar
+DESCRIPTION:Website: https://compute.daytona.io
+LOCATION:San Francisco\, CA\, USA
+TRANSP:OPAQUE
+URL:https://compute.daytona.io
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:BASTA! Spring
+DTSTART;VALUE=DATE:20270301
+DTEND;VALUE=DATE:20270306
+UID:d1ca8bc41599-event@cfp-radar
+DESCRIPTION:Website: https://basta.net/frankfurt\nTopics: devops
+LOCATION:Frankfurt am Main\, Germany
+TRANSP:OPAQUE
+URL:https://basta.net/frankfurt
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Mountain Camp
 DTSTART;VALUE=DATE:20261011
 DTEND;VALUE=DATE:20261012
@@ -855,6 +919,28 @@ TRANSP:OPAQUE
 URL:https://www.socallinuxexpo.org/scale/24x
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[CFP Deadline] BSides Prague
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+UID:71865c40ff1a-cfp@cfp-radar
+DESCRIPTION:Website: https://bsidesprg.cz\nCFP: https://cfp.bsidesprg.cz/2
+ 027/cfp
+LOCATION:Prague\, Czech Republic
+TRANSP:TRANSPARENT
+URL:https://cfp.bsidesprg.cz/2027/cfp
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:BSides Prague
+DTSTART;VALUE=DATE:20270407
+DTEND;VALUE=DATE:20270409
+UID:71865c40ff1a-event@cfp-radar
+DESCRIPTION:Website: https://bsidesprg.cz\nCFP: https://cfp.bsidesprg.cz/2
+ 027/cfp
+LOCATION:Prague\, Czech Republic
+TRANSP:OPAQUE
+URL:https://bsidesprg.cz
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] STAREAST
 DTSTART;VALUE=DATE:20260906
 DTEND;VALUE=DATE:20260907
@@ -899,6 +985,16 @@ TRANSP:OPAQUE
 URL:https://conference.eurostarsoftwaretesting.com
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:DevOpsCon San Diego
+DTSTART;VALUE=DATE:20270524
+DTEND;VALUE=DATE:20270529
+UID:8b353539ed8f-event@cfp-radar
+DESCRIPTION:Website: https://devopscon.io/san-diego\nTopics: devops
+LOCATION:San Diego\, CA\, USA
+TRANSP:OPAQUE
+URL:https://devopscon.io/san-diego
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:International Conference on Cybersecurity\, AI & Future Digital In
  frastructure
 DTSTART;VALUE=DATE:20270609
@@ -908,6 +1004,26 @@ DESCRIPTION:Website: https://cyberfuture2027.com
 LOCATION:Singapore\, Singapore
 TRANSP:OPAQUE
 URL:https://cyberfuture2027.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:DevOpsCon Berlin
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270619
+UID:e382c306d5b5-event@cfp-radar
+DESCRIPTION:Website: https://devopscon.io/berlin\nTopics: devops
+LOCATION:Berlin\, Germany
+TRANSP:OPAQUE
+URL:https://devopscon.io/berlin
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:IT Security Summit Berlin
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270619
+UID:74535e8436aa-event@cfp-radar
+DESCRIPTION:Website: https://it-security-summit.com/berlin
+LOCATION:Berlin\, Germany
+TRANSP:OPAQUE
+URL:https://it-security-summit.com/berlin
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Accelerate Tomorrow AI Summit
@@ -930,5 +1046,25 @@ DESCRIPTION:Website: https://www.acceleratetomorrow.com\nCFP: https://www.
 LOCATION:Berlin\, Germany
 TRANSP:OPAQUE
 URL:https://www.acceleratetomorrow.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:BASTA! Fall
+DTSTART;VALUE=DATE:20270927
+DTEND;VALUE=DATE:20271002
+UID:588f2c55d3e4-event@cfp-radar
+DESCRIPTION:Website: https://basta.net/mainz\nTopics: devops
+LOCATION:Mainz\, Germany
+TRANSP:OPAQUE
+URL:https://basta.net/mainz
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:IT Security Summit Munich
+DTSTART;VALUE=DATE:20271206
+DTEND;VALUE=DATE:20271211
+UID:04bd66a02b65-event@cfp-radar
+DESCRIPTION:Website: https://it-security-summit.com/munich
+LOCATION:Munich\, Germany
+TRANSP:OPAQUE
+URL:https://it-security-summit.com/munich
 END:VEVENT
 END:VCALENDAR
