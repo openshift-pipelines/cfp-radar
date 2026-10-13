@@ -157,16 +157,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Nordic APIs UnConference
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
-UID:a7cde28af082-event@cfp-radar
-DESCRIPTION:Website: https://nordicapis.com/events/napis-unconference-2026
-LOCATION:Stockholm\, Sweden
-TRANSP:OPAQUE
-URL:https://nordicapis.com/events/napis-unconference-2026
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Platform Summit
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261015
@@ -294,16 +284,6 @@ DESCRIPTION:Website: https://apiconf.io
 LOCATION:Clear Water\, FL\, USA
 TRANSP:OPAQUE
 URL:https://apiconf.io
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Software Architecture Summit
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261017
-UID:0dd2456f37d6-event@cfp-radar
-DESCRIPTION:Website: https://software-architecture-summit.de/berlin
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://software-architecture-summit.de/berlin
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] X-Ops Conference Dubai
@@ -1004,6 +984,16 @@ DESCRIPTION:Website: https://cyberfuture2027.com
 LOCATION:Singapore\, Singapore
 TRANSP:OPAQUE
 URL:https://cyberfuture2027.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:GopherCon Europe
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270618
+UID:0c23d200670b-event@cfp-radar
+DESCRIPTION:Website: https://www.gophercon.eu\nTopics: devops
+LOCATION:Berlin\, Germany
+TRANSP:OPAQUE
+URL:https://www.gophercon.eu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:DevOpsCon Berlin
