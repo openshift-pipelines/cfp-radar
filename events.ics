@@ -157,16 +157,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Platform Summit
-DTSTART;VALUE=DATE:20261013
-DTEND;VALUE=DATE:20261015
-UID:46e177edafc1-event@cfp-radar
-DESCRIPTION:Website: https://nordicapis.com/events/platform-summit-2026
-LOCATION:Stockholm\, Sweden
-TRANSP:OPAQUE
-URL:https://nordicapis.com/events/platform-summit-2026
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] AMTSO Cyber Research Conference
 DTSTART;VALUE=DATE:20260331
 DTEND;VALUE=DATE:20260401
