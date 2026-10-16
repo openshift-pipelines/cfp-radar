@@ -276,28 +276,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] X-Ops Conference Dubai
-DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260901
-UID:9cace13b027a-cfp@cfp-radar
-DESCRIPTION:Website: https://xopsconference.com\nCFP: https://sessionize.c
- om/x-ops-conference-2026\nTopics: devops
-LOCATION:Dubai\, UAE
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/x-ops-conference-2026
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:X-Ops Conference Dubai
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261018
-UID:9cace13b027a-event@cfp-radar
-DESCRIPTION:Website: https://xopsconference.com\nCFP: https://sessionize.c
- om/x-ops-conference-2026\nTopics: devops
-LOCATION:Dubai\, UAE
-TRANSP:OPAQUE
-URL:https://xopsconference.com
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Joomla! World Conference
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261019
