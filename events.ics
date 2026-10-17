@@ -276,16 +276,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Joomla! World Conference
-DTSTART;VALUE=DATE:20261016
-DTEND;VALUE=DATE:20261019
-UID:8c33bdba9ee5-event@cfp-radar
-DESCRIPTION:Website: https://conference.joomla.org
-LOCATION:Potsdam\, Germany
-TRANSP:OPAQUE
-URL:https://conference.joomla.org
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:TechEx Europe
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261021
@@ -821,6 +811,28 @@ DESCRIPTION:Website: https://drupalmountaincamp.ch\nCFP: https://event.dru
 LOCATION:Davos\, Switzerland
 TRANSP:OPAQUE
 URL:https://drupalmountaincamp.ch
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Test Automation Days
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+UID:078aa2a6764d-cfp@cfp-radar
+DESCRIPTION:Website: https://www.testautomationdays.com\nCFP: https://www.
+ testautomationdays.com/call-for-cases
+LOCATION:Hilversum\, Netherlands
+TRANSP:TRANSPARENT
+URL:https://www.testautomationdays.com/call-for-cases
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Test Automation Days
+DTSTART;VALUE=DATE:20270303
+DTEND;VALUE=DATE:20270305
+UID:078aa2a6764d-event@cfp-radar
+DESCRIPTION:Website: https://www.testautomationdays.com\nCFP: https://www.
+ testautomationdays.com/call-for-cases
+LOCATION:Hilversum\, Netherlands
+TRANSP:OPAQUE
+URL:https://www.testautomationdays.com
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] ParisTestConf
