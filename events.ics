@@ -3,33 +3,6 @@ VERSION:2.0
 PRODID:-//CFP Radar//cfp-radar//EN
 X-WR-CALNAME:CFP Radar
 BEGIN:VEVENT
-SUMMARY:GopherCon Israel 2026
-DTSTART;VALUE=DATE:20261018
-DTEND;VALUE=DATE:20261019
-UID:b4b70eafd588-event@cfp-radar
-DESCRIPTION:The local edition of the global Golang conference\, highly rel
- evant to developers building cloud-native systems and Kubernetes operators
-  with Go.\nWebsite: https://dev.events/conferences/gophercon-israel-2026-t
- el-aviv\nTopics: golang\, cloud native\, kubernetes\, backend engineering
-LOCATION:Tel Aviv\, Israel
-TRANSP:OPAQUE
-URL:https://dev.events/conferences/gophercon-israel-2026-tel-aviv
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:All Things Open 2026
-DTSTART;VALUE=DATE:20261018
-DTEND;VALUE=DATE:20261021
-UID:45161a79b785-event@cfp-radar
-DESCRIPTION:One of the largest open source and open tech conferences on th
- e U.S. East Coast\, featuring dedicated tracks for DevOps and Cloud Native
-  technologies.\nWebsite: https://allthingsopen.org/\nCFP: https://allthing
- sopen.org/call-for-papers/\nTopics: open source\, devops\, cloud native\, 
- ci/cd\, ai
-LOCATION:Raleigh\, USA
-TRANSP:OPAQUE
-URL:https://allthingsopen.org/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cloud & AI Infrastructure Paris 2026
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261120
