@@ -249,16 +249,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:TechEx Europe
-DTSTART;VALUE=DATE:20261019
-DTEND;VALUE=DATE:20261021
-UID:5eff1e33c637-event@cfp-radar
-DESCRIPTION:Website: https://techexevent.com/europe
-LOCATION:Amsterdam\, Netherlands
-TRANSP:OPAQUE
-URL:https://techexevent.com/europe
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] swampUP Europe
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20260519
