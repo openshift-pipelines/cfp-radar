@@ -96,18 +96,6 @@ TRANSP:OPAQUE
 URL:https://aws.amazon.com/summits/paris/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:KubeCon + CloudNativeCon North America
-DTSTART;VALUE=DATE:20261026
-DTEND;VALUE=DATE:20261030
-UID:b0e005cf3f3b-event@cfp-radar
-DESCRIPTION:Website: https://events.linuxfoundation.org/kubecon-cloudnativ
- econ-north-america-2026\nTopics: devops
-LOCATION:Los Angeles\, CA\, USA
-TRANSP:OPAQUE
-URL:https://events.linuxfoundation.org/kubecon-cloudnativecon-north-americ
- a-2026
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] IT-Tage
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
@@ -222,16 +210,6 @@ DESCRIPTION:Website: https://apiconf.io
 LOCATION:Clear Water\, FL\, USA
 TRANSP:OPAQUE
 URL:https://apiconf.io
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:webinale Munich
-DTSTART;VALUE=DATE:20261026
-DTEND;VALUE=DATE:20261031
-UID:a80a8ad46367-event@cfp-radar
-DESCRIPTION:Website: https://webinale.com/munich\nTopics: devops
-LOCATION:Munich\, Germany
-TRANSP:OPAQUE
-URL:https://webinale.com/munich
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Mozilla Festival
