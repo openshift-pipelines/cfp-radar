@@ -212,60 +212,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Nullcon Berlin
-DTSTART;VALUE=DATE:20260710
-DTEND;VALUE=DATE:20260711
-UID:dc4eb3152157-cfp@cfp-radar
-DESCRIPTION:Website: https://nullcon.net/event/nullcon-berlin-2026\nCFP: h
- ttps://nullcon.net/event/nullcon-berlin-2026/cfp\nTopics: devops
-LOCATION:Berlin\, Germany
-TRANSP:TRANSPARENT
-URL:https://nullcon.net/event/nullcon-berlin-2026/cfp
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nullcon Berlin
-DTSTART;VALUE=DATE:20261102
-DTEND;VALUE=DATE:20261107
-UID:dc4eb3152157-event@cfp-radar
-DESCRIPTION:Website: https://nullcon.net/event/nullcon-berlin-2026\nCFP: h
- ttps://nullcon.net/event/nullcon-berlin-2026/cfp\nTopics: devops
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://nullcon.net/event/nullcon-berlin-2026
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[CFP Deadline] AI DevCon NYC
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-UID:bd59e8adea5a-cfp@cfp-radar
-DESCRIPTION:Website: https://tessl.io/devcon\nCFP: https://sessionize.com/
- ai-native-devcon-nyc-2026
-LOCATION:Brooklyn\, NY\, USA
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/ai-native-devcon-nyc-2026
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:AI DevCon NYC
-DTSTART;VALUE=DATE:20261102
-DTEND;VALUE=DATE:20261105
-UID:bd59e8adea5a-event@cfp-radar
-DESCRIPTION:Website: https://tessl.io/devcon\nCFP: https://sessionize.com/
- ai-native-devcon-nyc-2026
-LOCATION:Brooklyn\, NY\, USA
-TRANSP:OPAQUE
-URL:https://tessl.io/devcon
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Open Source Analytics Conference
-DTSTART;VALUE=DATE:20261102
-DTEND;VALUE=DATE:20261103
-UID:51dfc1499e9e-event@cfp-radar
-DESCRIPTION:Website: https://osacon.io
-LOCATION:San Francisco\, CA\, USA
-TRANSP:OPAQUE
-URL:https://osacon.io
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] S2N: Storage Server Network
 DTSTART;VALUE=DATE:20260504
 DTEND;VALUE=DATE:20260505
