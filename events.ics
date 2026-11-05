@@ -118,28 +118,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] AutomationSTAR Conference
-DTSTART;VALUE=DATE:20260206
-DTEND;VALUE=DATE:20260207
-UID:630f067c61dc-cfp@cfp-radar
-DESCRIPTION:Website: https://automation.eurostarsoftwaretesting.com/ticket
- s\nCFP: https://automation.eurostarsoftwaretesting.com/call-for-speakers
-LOCATION:Antwerp\, Belgium
-TRANSP:TRANSPARENT
-URL:https://automation.eurostarsoftwaretesting.com/call-for-speakers
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:AutomationSTAR Conference
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261106
-UID:630f067c61dc-event@cfp-radar
-DESCRIPTION:Website: https://automation.eurostarsoftwaretesting.com/ticket
- s\nCFP: https://automation.eurostarsoftwaretesting.com/call-for-speakers
-LOCATION:Antwerp\, Belgium
-TRANSP:OPAQUE
-URL:https://automation.eurostarsoftwaretesting.com/tickets
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:LeadDev Berlin
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261111
