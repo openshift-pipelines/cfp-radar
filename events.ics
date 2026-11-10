@@ -118,16 +118,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:LeadDev Berlin
-DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261111
-UID:c9df3419a2ac-event@cfp-radar
-DESCRIPTION:Website: https://leaddev.com/leaddev-berlin
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://leaddev.com/leaddev-berlin
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Tokyo Test Fest
 DTSTART;VALUE=DATE:20260410
 DTEND;VALUE=DATE:20260411
@@ -188,40 +178,6 @@ DESCRIPTION:Website: https://apiconf.io
 LOCATION:Clear Water\, FL\, USA
 TRANSP:OPAQUE
 URL:https://apiconf.io
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Unhacked 360 Germany: FutureSec Summit
-DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261111
-UID:60363004371c-event@cfp-radar
-DESCRIPTION:Website: https://momentera.org/conference/unhacked-360-germany
- -futuresec-world-summit
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://momentera.org/conference/unhacked-360-germany-futuresec-world-
- summit
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Gerrit User Summit
-DTSTART;VALUE=DATE:20260918
-DTEND;VALUE=DATE:20260919
-UID:7250aa8ba911-cfp@cfp-radar
-DESCRIPTION:Website: https://gus26.gerritforge.com\nCFP: https://sessioniz
- e.com/gerrit-user-summit-2026
-LOCATION:San Francisco\, CA\, USA
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/gerrit-user-summit-2026
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Gerrit User Summit
-DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261111
-UID:7250aa8ba911-event@cfp-radar
-DESCRIPTION:Website: https://gus26.gerritforge.com\nCFP: https://sessioniz
- e.com/gerrit-user-summit-2026
-LOCATION:San Francisco\, CA\, USA
-TRANSP:OPAQUE
-URL:https://gus26.gerritforge.com
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] CLC
