@@ -180,28 +180,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] CLC
-DTSTART;VALUE=DATE:20260421
-DTEND;VALUE=DATE:20260422
-UID:92d6261779ac-cfp@cfp-radar
-DESCRIPTION:Website: https://clc-conference.eu/index_en.php\nCFP: https://
- clc-conference.eu/cfp_en.php\nTopics: devops
-LOCATION:Mannheim\, Germany
-TRANSP:TRANSPARENT
-URL:https://clc-conference.eu/cfp_en.php
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:CLC
-DTSTART;VALUE=DATE:20261111
-DTEND;VALUE=DATE:20261113
-UID:92d6261779ac-event@cfp-radar
-DESCRIPTION:Website: https://clc-conference.eu/index_en.php\nCFP: https://
- clc-conference.eu/cfp_en.php\nTopics: devops
-LOCATION:Mannheim\, Germany
-TRANSP:OPAQUE
-URL:https://clc-conference.eu/index_en.php
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] VIC AI Boom
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
