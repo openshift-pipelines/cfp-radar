@@ -118,28 +118,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Tokyo Test Fest
-DTSTART;VALUE=DATE:20260410
-DTEND;VALUE=DATE:20260411
-UID:1511cedbd0a2-cfp@cfp-radar
-DESCRIPTION:Website: https://tokyotestfest.com\nCFP: https://tokyotestfest
- .com/en/cfp_2026/
-LOCATION:Tokyo\, Japan
-TRANSP:TRANSPARENT
-URL:https://tokyotestfest.com/en/cfp_2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tokyo Test Fest
-DTSTART;VALUE=DATE:20261112
-DTEND;VALUE=DATE:20261114
-UID:1511cedbd0a2-event@cfp-radar
-DESCRIPTION:Website: https://tokyotestfest.com\nCFP: https://tokyotestfest
- .com/en/cfp_2026/
-LOCATION:Tokyo\, Japan
-TRANSP:OPAQUE
-URL:https://tokyotestfest.com
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] Open Source Monitoring conference
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
