@@ -158,38 +158,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:API Conference Berlin
-DTSTART;VALUE=DATE:20261116
-DTEND;VALUE=DATE:20261121
-UID:96e659a20475-event@cfp-radar
-DESCRIPTION:Website: https://apiconference.net/berlin\nTopics: devops
-LOCATION:Berlin\, Germany
-TRANSP:OPAQUE
-URL:https://apiconference.net/berlin
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Agile Testing Days
-DTSTART;VALUE=DATE:20260329
-DTEND;VALUE=DATE:20260330
-UID:83f51827298b-cfp@cfp-radar
-DESCRIPTION:Website: https://agiletestingdays.com\nCFP: https://agiletesti
- ngdays.com/call-for-papers
-LOCATION:Potsdam\, Germany
-TRANSP:TRANSPARENT
-URL:https://agiletestingdays.com/call-for-papers
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Agile Testing Days
-DTSTART;VALUE=DATE:20261116
-DTEND;VALUE=DATE:20261120
-UID:83f51827298b-event@cfp-radar
-DESCRIPTION:Website: https://agiletestingdays.com\nCFP: https://agiletesti
- ngdays.com/call-for-papers
-LOCATION:Potsdam\, Germany
-TRANSP:OPAQUE
-URL:https://agiletestingdays.com
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CFP Deadline] ASF Community Over Code / ChurConf
 DTSTART;VALUE=DATE:20260731
 DTEND;VALUE=DATE:20260801
@@ -329,6 +297,16 @@ TRANSP:OPAQUE
 URL:https://builditsummit.com
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Oh My Hack
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+UID:74f39140e7c7-event@cfp-radar
+DESCRIPTION:Website: https://omhconf.pl
+LOCATION:Warsaw\, Poland
+TRANSP:OPAQUE
+URL:https://omhconf.pl
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:SciPy India
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261221
@@ -337,6 +315,28 @@ DESCRIPTION:Website: https://scipy.in/2026/
 LOCATION:Chennai\, India
 TRANSP:OPAQUE
 URL:https://scipy.in/2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Upstream
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+UID:0f9f94494966-cfp@cfp-radar
+DESCRIPTION:Website: https://upstream.snowxa.com\nCFP: https://upstream.sn
+ owxa.com/submissions
+LOCATION:San Francisco\, CA\, USA
+TRANSP:TRANSPARENT
+URL:https://upstream.snowxa.com/submissions
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Upstream
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270117
+UID:0f9f94494966-event@cfp-radar
+DESCRIPTION:Website: https://upstream.snowxa.com\nCFP: https://upstream.sn
+ owxa.com/submissions
+LOCATION:San Francisco\, CA\, USA
+TRANSP:OPAQUE
+URL:https://upstream.snowxa.com
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] FUN OCaml
@@ -425,6 +425,16 @@ TRANSP:OPAQUE
 URL:https://www.testautomationdays.com
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Enterprise Private AI UAE
+DTSTART;VALUE=DATE:20270317
+DTEND;VALUE=DATE:20270319
+UID:16b7947860f1-event@cfp-radar
+DESCRIPTION:Website: https://airswipe-global.com
+LOCATION:Dubai\, UAE
+TRANSP:OPAQUE
+URL:https://airswipe-global.com
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] ParisTestConf
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
@@ -491,6 +501,28 @@ TRANSP:OPAQUE
 URL:https://www.socallinuxexpo.org/scale/24x
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[CFP Deadline] DevOpsDay LA
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+UID:99c6a05cc82c-cfp@cfp-radar
+DESCRIPTION:Website: https://devopsdays.org/events/2027-los-angeles\nCFP: 
+ http://devopsdays.org/events/2027-los-angeles/propose\nTopics: devops
+LOCATION:Pasadena\, CA\, USA
+TRANSP:TRANSPARENT
+URL:http://devopsdays.org/events/2027-los-angeles/propose
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:DevOpsDay LA
+DTSTART;VALUE=DATE:20270402
+DTEND;VALUE=DATE:20270403
+UID:99c6a05cc82c-event@cfp-radar
+DESCRIPTION:Website: https://devopsdays.org/events/2027-los-angeles\nCFP: 
+ http://devopsdays.org/events/2027-los-angeles/propose\nTopics: devops
+LOCATION:Pasadena\, CA\, USA
+TRANSP:OPAQUE
+URL:https://devopsdays.org/events/2027-los-angeles
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[CFP Deadline] BSides Prague
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
@@ -511,6 +543,28 @@ DESCRIPTION:Website: https://bsidesprg.cz\nCFP: https://cfp.bsidesprg.cz/2
 LOCATION:Prague\, Czech Republic
 TRANSP:OPAQUE
 URL:https://bsidesprg.cz
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CFP Deadline] Open Community Experience
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+UID:4d1790c7a809-cfp@cfp-radar
+DESCRIPTION:Website: https://ocxconf.org\nCFP: https://ocxconf.org/call-fo
+ r-proposals
+LOCATION:Brussels\, Belgium
+TRANSP:TRANSPARENT
+URL:https://ocxconf.org/call-for-proposals
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Open Community Experience
+DTSTART;VALUE=DATE:20270413
+DTEND;VALUE=DATE:20270416
+UID:4d1790c7a809-event@cfp-radar
+DESCRIPTION:Website: https://ocxconf.org\nCFP: https://ocxconf.org/call-fo
+ r-proposals
+LOCATION:Brussels\, Belgium
+TRANSP:OPAQUE
+URL:https://ocxconf.org
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] STAREAST
@@ -578,10 +632,10 @@ TRANSP:OPAQUE
 URL:https://cyberfuture2027.com
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GopherCon Europe
+SUMMARY:GopherCon Europe + HeyAI
 DTSTART;VALUE=DATE:20270614
 DTEND;VALUE=DATE:20270618
-UID:0c23d200670b-event@cfp-radar
+UID:723c0388f6a8-event@cfp-radar
 DESCRIPTION:Website: https://www.gophercon.eu\nTopics: devops
 LOCATION:Berlin\, Germany
 TRANSP:OPAQUE

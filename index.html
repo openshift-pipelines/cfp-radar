@@ -604,7 +604,7 @@
           onclick="toggleCountry('all')"
           id="all-countries-pill"
         >
-          All <span class="chip-count">42</span>
+          All <span class="chip-count">45</span>
         </div>
         
         <div
@@ -613,7 +613,16 @@
           data-country="Germany"
         >
           🇩🇪 Germany
-          <span class="chip-count">13</span>
+          <span class="chip-count">11</span>
+        </div>
+        
+        <div
+          class="country-chip"
+          onclick="toggleCountry('USA')"
+          data-country="USA"
+        >
+          🇺🇸 USA
+          <span class="chip-count">8</span>
         </div>
         
         <div
@@ -623,15 +632,6 @@
         >
           🇫🇷 France
           <span class="chip-count">7</span>
-        </div>
-        
-        <div
-          class="country-chip"
-          onclick="toggleCountry('USA')"
-          data-country="USA"
-        >
-          🇺🇸 USA
-          <span class="chip-count">6</span>
         </div>
         
         <div
@@ -690,6 +690,15 @@
         
         <div
           class="country-chip"
+          onclick="toggleCountry('Belgium')"
+          data-country="Belgium"
+        >
+          🇧🇪 Belgium
+          <span class="chip-count">1</span>
+        </div>
+        
+        <div
+          class="country-chip"
           onclick="toggleCountry('Czech Republic')"
           data-country="Czech Republic"
         >
@@ -708,10 +717,28 @@
         
         <div
           class="country-chip"
+          onclick="toggleCountry('Poland')"
+          data-country="Poland"
+        >
+          🇵🇱 Poland
+          <span class="chip-count">1</span>
+        </div>
+        
+        <div
+          class="country-chip"
           onclick="toggleCountry('Israel')"
           data-country="Israel"
         >
           🇮🇱 Israel
+          <span class="chip-count">1</span>
+        </div>
+        
+        <div
+          class="country-chip"
+          onclick="toggleCountry('UAE')"
+          data-country="UAE"
+        >
+          🇦🇪 UAE
           <span class="chip-count">1</span>
         </div>
         
@@ -735,7 +762,7 @@
           onclick="toggleMonth('all')"
           id="all-months-pill"
         >
-          All <span class="chip-count">42</span>
+          All <span class="chip-count">45</span>
         </div>
         
         <div
@@ -743,7 +770,7 @@
           onclick="toggleMonth('2026-11')"
           data-month="2026-11"
         >
-          Nov 2026 <span class="chip-count">16</span>
+          Nov 2026 <span class="chip-count">14</span>
         </div>
         
         <div
@@ -751,7 +778,7 @@
           onclick="toggleMonth('2026-12')"
           data-month="2026-12"
         >
-          Dec 2026 <span class="chip-count">5</span>
+          Dec 2026 <span class="chip-count">6</span>
         </div>
         
         <div
@@ -759,7 +786,7 @@
           onclick="toggleMonth('2027-01')"
           data-month="2027-01"
         >
-          Jan 2027 <span class="chip-count">2</span>
+          Jan 2027 <span class="chip-count">3</span>
         </div>
         
         <div
@@ -775,7 +802,7 @@
           onclick="toggleMonth('2027-03')"
           data-month="2027-03"
         >
-          Mar 2027 <span class="chip-count">4</span>
+          Mar 2027 <span class="chip-count">5</span>
         </div>
         
         <div
@@ -783,7 +810,7 @@
           onclick="toggleMonth('2027-04')"
           data-month="2027-04"
         >
-          Apr 2027 <span class="chip-count">5</span>
+          Apr 2027 <span class="chip-count">7</span>
         </div>
         
         <div
@@ -872,61 +899,6 @@
       <!-- Event List -->
       <div id="event-list">
 <div class="grid gap-4">
-    
-    
-    <div class="event-card relative bg-white rounded-lg shadow p-4
-        
-            cfp-urgent
-            
-        "
-        data-country="Germany" data-city="Potsdam" data-start-month="2026-11">
-        <div class="flex justify-between items-start">
-            <div class="flex-1">
-                <h3 class="text-lg font-semibold text-gray-800">
-                    <a href="https://agiletestingdays.com" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
-                        Agile Testing Days
-                    </a>
-                </h3>
-                <p class="text-gray-600">
-                    Potsdam, Germany
-                    <span class="mx-2">|</span>
-                    Nov 16, 2026
-                    
-                    - Nov 19, 2026
-                    
-                </p>
-                
-                <div class="flex flex-wrap gap-2 mt-2">
-                    
-                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
-                </div>
-            </div>
-            <div class="text-right ml-4">
-                
-                <div class="text-sm">
-                    <span class="font-medium
-                        text-red-600
-                        ">
-                        CFP: Mar 29
-                    </span>
-                    
-                    <br>
-                    <span class="text-gray-500">
-                        Closed
-                        
-                    </span>
-                    
-                </div>
-                
-                <a href="https://agiletestingdays.com/call-for-papers" target="_blank"
-                   class="relative z-10 inline-block mt-2 px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700">
-                    Submit CFP
-                </a>
-                
-                
-            </div>
-        </div>
-    </div>
     
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
@@ -1650,6 +1622,171 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         
+            cfp-urgent
+            
+        "
+        data-country="USA" data-city="San Francisco, CA" data-start-month="2027-01">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://upstream.snowxa.com" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        Upstream
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    San Francisco, CA, USA
+                    <span class="mx-2">|</span>
+                    Jan 14, 2027
+                    
+                    - Jan 16, 2027
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <div class="text-sm">
+                    <span class="font-medium
+                        text-red-600
+                        ">
+                        CFP: Nov 19
+                    </span>
+                    
+                    <br>
+                    <span class="text-gray-500">
+                        2 days left
+                        
+                    </span>
+                    
+                </div>
+                
+                <a href="https://upstream.snowxa.com/submissions" target="_blank"
+                   class="relative z-10 inline-block mt-2 px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700">
+                    Submit CFP
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        
+            cfp-soon
+            
+        "
+        data-country="USA" data-city="Pasadena, CA" data-start-month="2027-04">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://devopsdays.org/events/2027-los-angeles" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        DevOpsDay LA
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    Pasadena, CA, USA
+                    <span class="mx-2">|</span>
+                    Apr 02, 2027
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
+                    
+                    <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">devops</span>
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <div class="text-sm">
+                    <span class="font-medium
+                        text-yellow-600
+                        ">
+                        CFP: Dec 01
+                    </span>
+                    
+                    <br>
+                    <span class="text-gray-500">
+                        14 days left
+                        
+                    </span>
+                    
+                </div>
+                
+                <a href="http://devopsdays.org/events/2027-los-angeles/propose" target="_blank"
+                   class="relative z-10 inline-block mt-2 px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700">
+                    Submit CFP
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        
+            cfp-open
+            
+        "
+        data-country="Belgium" data-city="Brussels" data-start-month="2027-04">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://ocxconf.org" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        Open Community Experience
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    Brussels, Belgium
+                    <span class="mx-2">|</span>
+                    Apr 13, 2027
+                    
+                    - Apr 15, 2027
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <div class="text-sm">
+                    <span class="font-medium
+                        text-green-600
+                        ">
+                        CFP: Dec 06
+                    </span>
+                    
+                    <br>
+                    <span class="text-gray-500">
+                        19 days left
+                        
+                    </span>
+                    
+                </div>
+                
+                <a href="https://ocxconf.org/call-for-proposals" target="_blank"
+                   class="relative z-10 inline-block mt-2 px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700">
+                    Submit CFP
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        
             cfp-open
             
         "
@@ -1686,7 +1823,7 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        29 days left
+                        28 days left
                         
                     </span>
                     
@@ -1741,7 +1878,7 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        45 days left
+                        44 days left
                         
                     </span>
                     
@@ -1796,7 +1933,7 @@
                     
                     <br>
                     <span class="text-gray-500">
-                        166 days left
+                        165 days left
                         
                     </span>
                     
@@ -1807,41 +1944,6 @@
                     Submit CFP
                 </a>
                 
-                
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="event-card relative bg-white rounded-lg shadow p-4
-        "
-        data-country="Germany" data-city="Berlin" data-start-month="2026-11">
-        <div class="flex justify-between items-start">
-            <div class="flex-1">
-                <h3 class="text-lg font-semibold text-gray-800">
-                    <a href="https://apiconference.net/berlin" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
-                        API Conference Berlin
-                    </a>
-                </h3>
-                <p class="text-gray-600">
-                    Berlin, Germany
-                    <span class="mx-2">|</span>
-                    Nov 16, 2026
-                    
-                    - Nov 20, 2026
-                    
-                </p>
-                
-                <div class="flex flex-wrap gap-2 mt-2">
-                    
-                    <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">devops</span>
-                    
-                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
-                </div>
-            </div>
-            <div class="text-right ml-4">
-                
-                <span class="text-gray-400 text-sm">No CFP info</span>
                 
             </div>
         </div>
@@ -2212,6 +2314,37 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
+        data-country="Poland" data-city="Warsaw" data-start-month="2026-12">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://omhconf.pl" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        Oh My Hack
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    Warsaw, Poland
+                    <span class="mx-2">|</span>
+                    Dec 02, 2026
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <span class="text-gray-400 text-sm">No CFP info</span>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        "
         data-country="France" data-city="Paris" data-start-month="2026-12">
         <div class="flex justify-between items-start">
             <div class="flex-1">
@@ -2444,6 +2577,39 @@
     
     <div class="event-card relative bg-white rounded-lg shadow p-4
         "
+        data-country="UAE" data-city="Dubai" data-start-month="2027-03">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-800">
+                    <a href="https://airswipe-global.com" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
+                        Enterprise Private AI UAE
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    Dubai, UAE
+                    <span class="mx-2">|</span>
+                    Mar 17, 2027
+                    
+                    - Mar 18, 2027
+                    
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mt-2">
+                    
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">conference</span>
+                </div>
+            </div>
+            <div class="text-right ml-4">
+                
+                <span class="text-gray-400 text-sm">No CFP info</span>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="event-card relative bg-white rounded-lg shadow p-4
+        "
         data-country="France" data-city="Paris" data-start-month="2027-04">
         <div class="flex justify-between items-start">
             <div class="flex-1">
@@ -2558,7 +2724,7 @@
             <div class="flex-1">
                 <h3 class="text-lg font-semibold text-gray-800">
                     <a href="https://www.gophercon.eu" target="_blank" class="hover:text-blue-600 after:absolute after:inset-0">
-                        GopherCon Europe
+                        GopherCon Europe + HeyAI
                     </a>
                 </h3>
                 <p class="text-gray-600">
