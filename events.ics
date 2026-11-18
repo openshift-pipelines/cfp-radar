@@ -118,26 +118,6 @@ TRANSP:OPAQUE
 URL:https://www.it-tage.org
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Open Source Monitoring conference
-DTSTART;VALUE=DATE:20260630
-DTEND;VALUE=DATE:20260701
-UID:15917e2001ff-cfp@cfp-radar
-DESCRIPTION:Website: https://osmc.de\nCFP: https://osmc.de/call-for-papers
-LOCATION:Nürnberg\, Germany
-TRANSP:TRANSPARENT
-URL:https://osmc.de/call-for-papers
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Open Source Monitoring conference
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261120
-UID:15917e2001ff-event@cfp-radar
-DESCRIPTION:Website: https://osmc.de\nCFP: https://osmc.de/call-for-papers
-LOCATION:Nürnberg\, Germany
-TRANSP:OPAQUE
-URL:https://osmc.de
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:ESPC
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261204
