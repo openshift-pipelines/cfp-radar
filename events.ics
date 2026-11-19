@@ -3,33 +3,6 @@ VERSION:2.0
 PRODID:-//CFP Radar//cfp-radar//EN
 X-WR-CALNAME:CFP Radar
 BEGIN:VEVENT
-SUMMARY:Cloud & AI Infrastructure Paris 2026
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261120
-UID:ea03aa44034c-event@cfp-radar
-DESCRIPTION:Formerly Cloud Expo Europe Paris\, this event brings together 
- IT decision-makers and architects to discuss the evolution of cloud infras
- tructure\, hybrid strategies\, and DevOps tools.\nWebsite: https://www.tec
- hshowparis.fr/cloud-ai-infrastructure-paris\nTopics: Cloud Infrastructure\
- , DevOps\, CI/CD\, Data Centers\, FinOps
-LOCATION:Paris\, France
-TRANSP:OPAQUE
-URL:https://www.techshowparis.fr/cloud-ai-infrastructure-paris
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Bengaluru Tech Summit 2026
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261121
-UID:db3c43a722b2-event@cfp-radar
-DESCRIPTION:A massive annual summit covering a broad range of technologies
- \, including significant sessions on cloud-driven operations and DevOps.\n
- Website: https://bengalurutechsummit.com/\nTopics: Innovation\, Cloud\, De
- vOps\, Enterprise Tech
-LOCATION:Bangalore\, India
-TRANSP:OPAQUE
-URL:https://bengalurutechsummit.com/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:apidays Paris 2026
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261204
@@ -136,39 +109,6 @@ DESCRIPTION:Website: https://apiconf.io
 LOCATION:Clear Water\, FL\, USA
 TRANSP:OPAQUE
 URL:https://apiconf.io
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[CFP Deadline] ASF Community Over Code / ChurConf
-DTSTART;VALUE=DATE:20260731
-DTEND;VALUE=DATE:20260801
-UID:945e8256171d-cfp@cfp-radar
-DESCRIPTION:Website: https://au.churconf.com\nCFP: https://tinyurl.com/asf
- churconfcfp
-LOCATION:Sidney\, Australia
-TRANSP:TRANSPARENT
-URL:https://tinyurl.com/asfchurconfcfp
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ASF Community Over Code / ChurConf
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261120
-UID:945e8256171d-event@cfp-radar
-DESCRIPTION:Website: https://au.churconf.com\nCFP: https://tinyurl.com/asf
- churconfcfp
-LOCATION:Sidney\, Australia
-TRANSP:OPAQUE
-URL:https://au.churconf.com
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Community Over Code Sydney
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261120
-UID:1ce4137f2b39-event@cfp-radar
-DESCRIPTION:Website: https://communityovercode.apache.org/events/sydney-20
- 26
-LOCATION:Sydney\, Australia
-TRANSP:OPAQUE
-URL:https://communityovercode.apache.org/events/sydney-2026
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CFP Deadline] X-Ops Conference Madrid
