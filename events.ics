@@ -111,28 +111,6 @@ TRANSP:OPAQUE
 URL:https://apiconf.io
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[CFP Deadline] Workplace Ninjas India
-DTSTART;VALUE=DATE:20260731
-DTEND;VALUE=DATE:20260801
-UID:6c147d2b1aeb-cfp@cfp-radar
-DESCRIPTION:Website: https://www.wpninjas-india.com\nCFP: https://sessioni
- ze.com/workplace-ninjas-india-2026
-LOCATION:Delhi\, India
-TRANSP:TRANSPARENT
-URL:https://sessionize.com/workplace-ninjas-india-2026
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Workplace Ninjas India
-DTSTART;VALUE=DATE:20261127
-DTEND;VALUE=DATE:20261129
-UID:6c147d2b1aeb-event@cfp-radar
-DESCRIPTION:Website: https://www.wpninjas-india.com\nCFP: https://sessioni
- ze.com/workplace-ninjas-india-2026
-LOCATION:Delhi\, India
-TRANSP:OPAQUE
-URL:https://www.wpninjas-india.com
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:FOSS for All Conference
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
